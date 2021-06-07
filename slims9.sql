@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 06, 2021 at 11:46 AM
+-- Generation Time: Jun 07, 2021 at 06:26 AM
 -- Server version: 10.5.10-MariaDB-log
 -- PHP Version: 8.0.6
 
@@ -1372,9 +1372,9 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
-(1, 'library_name', 's:7:\"Senayan\";'),
+(1, 'library_name', 's:15:\"MTSN 3 Magelang\";'),
 (2, 'library_subname', 's:37:\"Open Source Library Management System\";'),
-(3, 'template', 'a:2:{s:5:\"theme\";s:7:\"default\";s:3:\"css\";s:26:\"template/default/style.css\";}'),
+(3, 'template', 'a:2:{s:5:\"theme\";s:9:\"akasia-dz\";s:3:\"css\";s:28:\"template/akasia-dz/style.css\";}'),
 (4, 'admin_template', 'a:2:{s:5:\"theme\";s:7:\"default\";s:3:\"css\";s:32:\"admin_template/default/style.css\";}'),
 (5, 'default_lang', 's:5:\"en_US\";'),
 (6, 'opac_result_num', 's:2:\"10\";'),
@@ -1394,7 +1394,12 @@ INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
 (20, 'membercard_print_settings', 'a:1:{s:5:\"print\";a:1:{s:10:\"membercard\";a:61:{s:11:\"card_factor\";s:12:\"37.795275591\";s:21:\"card_include_id_label\";i:1;s:23:\"card_include_name_label\";i:1;s:22:\"card_include_pin_label\";i:1;s:23:\"card_include_inst_label\";i:0;s:24:\"card_include_email_label\";i:0;s:26:\"card_include_address_label\";i:1;s:26:\"card_include_barcode_label\";i:1;s:26:\"card_include_expired_label\";i:1;s:14:\"card_box_width\";d:8.5999999999999996447286321199499070644378662109375;s:15:\"card_box_height\";d:5.4000000000000003552713678800500929355621337890625;s:9:\"card_logo\";s:8:\"logo.png\";s:21:\"card_front_logo_width\";s:0:\"\";s:22:\"card_front_logo_height\";s:0:\"\";s:20:\"card_front_logo_left\";s:0:\"\";s:19:\"card_front_logo_top\";s:0:\"\";s:20:\"card_back_logo_width\";s:0:\"\";s:21:\"card_back_logo_height\";s:0:\"\";s:19:\"card_back_logo_left\";s:0:\"\";s:18:\"card_back_logo_top\";s:0:\"\";s:15:\"card_photo_left\";s:0:\"\";s:14:\"card_photo_top\";s:0:\"\";s:16:\"card_photo_width\";d:1.5;s:17:\"card_photo_height\";d:1.8000000000000000444089209850062616169452667236328125;s:23:\"card_front_header1_text\";s:19:\"Library Member Card\";s:28:\"card_front_header1_font_size\";s:2:\"12\";s:23:\"card_front_header2_text\";s:10:\"My Library\";s:28:\"card_front_header2_font_size\";s:2:\"12\";s:22:\"card_back_header1_text\";s:10:\"My Library\";s:27:\"card_back_header1_font_size\";s:2:\"12\";s:22:\"card_back_header2_text\";s:35:\"My Library Full Address and Website\";s:27:\"card_back_header2_font_size\";s:1:\"5\";s:17:\"card_header_color\";s:7:\"#0066FF\";s:18:\"card_bio_font_size\";s:2:\"11\";s:20:\"card_bio_font_weight\";s:4:\"bold\";s:20:\"card_bio_label_width\";s:3:\"100\";s:9:\"card_city\";s:9:\"City Name\";s:10:\"card_title\";s:15:\"Library Manager\";s:14:\"card_officials\";s:14:\"Librarian Name\";s:17:\"card_officials_id\";s:12:\"Librarian ID\";s:15:\"card_stamp_file\";s:9:\"stamp.png\";s:19:\"card_signature_file\";s:13:\"signature.png\";s:15:\"card_stamp_left\";s:0:\"\";s:14:\"card_stamp_top\";s:0:\"\";s:16:\"card_stamp_width\";s:0:\"\";s:17:\"card_stamp_height\";s:0:\"\";s:13:\"card_exp_left\";s:0:\"\";s:12:\"card_exp_top\";s:0:\"\";s:14:\"card_exp_width\";s:0:\"\";s:15:\"card_exp_height\";s:0:\"\";s:18:\"card_barcode_scale\";i:100;s:17:\"card_barcode_left\";s:0:\"\";s:16:\"card_barcode_top\";s:0:\"\";s:18:\"card_barcode_width\";s:0:\"\";s:19:\"card_barcode_height\";s:0:\"\";s:10:\"card_rules\";s:120:\"<ul><li>This card is published by Library.</li><li>Please return this card to its owner if you found it.</li></ul>\";s:20:\"card_rules_font_size\";s:1:\"8\";s:12:\"card_address\";s:76:\"My Library<br />website: http://slims.web.id, email : librarian@slims.web.id\";s:22:\"card_address_font_size\";s:1:\"7\";s:17:\"card_address_left\";s:0:\"\";s:16:\"card_address_top\";s:0:\"\";}}}'),
 (21, 'enable_visitor_limitation', 's:1:\"0\";'),
 (22, 'time_visitor_limitation', 's:2:\"60\";'),
-(23, 'logo_image', NULL);
+(23, 'logo_image', 's:8:\"logo.png\";'),
+(24, 'enable_counter_by_ip', 's:1:\"1\";'),
+(25, 'allowed_counter_ip', 'a:1:{i:0;s:9:\"127.0.0.1\";}'),
+(26, 'reserve_direct_database', 's:1:\"1\";'),
+(27, 'reserve_on_loan_only', 's:1:\"0\";'),
+(31, 'spellchecker_enabled', 'b:1;');
 
 -- --------------------------------------------------------
 
@@ -1468,7 +1473,25 @@ INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_modul
 (6, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-06 18:18:21'),
 (7, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-06 18:18:54'),
 (8, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-06 18:24:05'),
-(9, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-06 18:24:15');
+(9, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-06 18:24:15'),
+(10, 'staff', 'admin', 'Login', '', '', 'Login FAILED for user admin from address 127.0.0.1', '2021-06-07 08:54:44'),
+(11, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 08:54:51'),
+(12, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 08:55:20'),
+(13, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 08:56:41'),
+(14, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 12:01:44'),
+(15, 'staff', '1', 'system', 'Global Config', 'Update', 'Admin change application global configuration', '2021-06-07 12:02:13'),
+(16, 'staff', '1', 'system', 'Global Config', 'Update', 'Admin change application global configuration', '2021-06-07 12:02:24'),
+(17, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 12:02:45'),
+(18, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 12:26:34'),
+(19, 'staff', '1', 'system', 'Global Config', 'Update', 'Admin change application global configuration', '2021-06-07 12:27:55'),
+(20, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 12:28:07'),
+(21, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 12:28:32'),
+(22, 'staff', '1', 'system', 'Logo', 'Delete', 'Admin remove logo', '2021-06-07 12:28:38'),
+(23, 'staff', '1', 'system', 'Global Config', 'Update', 'Admin change application global configuration', '2021-06-07 12:29:08'),
+(24, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 12:29:14'),
+(25, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 13:08:56'),
+(26, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 13:09:16'),
+(27, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 13:20:31');
 
 -- --------------------------------------------------------
 
@@ -1499,7 +1522,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `username`, `realname`, `passwd`, `email`, `user_type`, `user_image`, `social_media`, `last_login`, `last_login_ip`, `groups`, `admin_template`, `forgot`, `input_date`, `last_update`) VALUES
-(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-06 18:24:05', '127.0.0.1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:7:\"default\";s:3:\"css\";s:32:\"admin_template/default/style.css\";}', NULL, '2021-06-04', '2021-06-04');
+(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-07 13:20:31', '127.0.0.1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
 
 -- --------------------------------------------------------
 
@@ -2156,7 +2179,7 @@ ALTER TABLE `serial`
 -- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `stock_take`
@@ -2168,7 +2191,7 @@ ALTER TABLE `stock_take`
 -- AUTO_INCREMENT for table `system_log`
 --
 ALTER TABLE `system_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `user`
