@@ -48,30 +48,6 @@
                     <?= $sysconf['template']['classic_footer_about_us']; ?>
                 </p>
             </div>
-            <div class="col-md-4 pt-8 md:pt-0">
-                <h4 class="mb-4"><?= __('Search'); ?></h4>
-                <div class="mb-2"><?= __('start it by typing one or more keywords for title, author or subject'); ?></div>
-                <form action="index.php">
-                    <div class="input-group mb-3">
-                        <input name="keywords" type="text" class="form-control"
-                               placeholder="<?= __('Enter keywords'); ?>"
-                               aria-label="Enter keywords"
-                               aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit" value="search" name="search"
-                                    id="button-addon2"><?= __('Find Collection'); ?>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <hr>
-                <a target="_blank" title="Support Us" class="btn btn-outline-success mb-2"
-                   href="https://slims.web.id/web/pages/support-us/"><i
-                            class="fas fa-heart mr-2"></i><?= __('Keep SLiMS Alive'); ?></a>
-                <a target="_blank" title="Contribute" class="btn btn-outline-light mb-2"
-                   href="https://github.com/slims/"><i
-                            class="fab fa-github mr-2"></i><?= __('Want to Contribute?'); ?></a>
-            </div>
         </div>
         <hr>
         <div class="flex font-thin text-sm">
