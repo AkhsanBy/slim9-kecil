@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 07, 2021 at 06:26 AM
--- Server version: 10.5.10-MariaDB-log
--- PHP Version: 8.0.6
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 08 Jun 2021 pada 05.06
+-- Versi server: 10.4.19-MariaDB
+-- Versi PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `backup_log`
+-- Struktur dari tabel `backup_log`
 --
 
 CREATE TABLE `backup_log` (
@@ -37,7 +37,7 @@ CREATE TABLE `backup_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio`
+-- Struktur dari tabel `biblio`
 --
 
 CREATE TABLE `biblio` (
@@ -73,30 +73,25 @@ CREATE TABLE `biblio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `biblio`
+-- Dumping data untuk tabel `biblio`
 --
 
 INSERT INTO `biblio` (`biblio_id`, `gmd_id`, `title`, `sor`, `edition`, `isbn_issn`, `publisher_id`, `publish_year`, `collation`, `series_title`, `call_number`, `language_id`, `source`, `publish_place_id`, `classification`, `notes`, `image`, `file_att`, `opac_hide`, `promoted`, `labels`, `frequency_id`, `spec_detail_info`, `content_type_id`, `media_type_id`, `carrier_type_id`, `input_date`, `last_update`, `uid`) VALUES
-(1, 1, 'PHP 5 for dummies', NULL, NULL, '0764541668', 1, '2004', 'xiv, 392 p. : ill. ; 24 cm.', 'For dummies', '005.13/3-22 Jan p', 'en', NULL, 1, '005.13/3 22', NULL, 'php5_dummies.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 15:36:50', '2007-11-29 16:26:59', NULL),
-(2, 1, 'Linux In a Nutshell', NULL, 'Fifth Edition', '9780596009304', 2, '2005', 'xiv, 925 p. : ill. ; 23 cm.', 'In a Nutshell', '005.4/32-22 Ell l', 'en', NULL, 2, '005.4/32 22', NULL, 'linux_in_a_nutshell.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 15:53:35', '2007-11-29 16:26:10', NULL),
-(3, 1, 'The Definitive Guide to MySQL 5', NULL, NULL, '9781590595350', 3, '2005', '784p.', 'Definitive Guide Series', '005.75/85-22 Kof d', 'en', NULL, NULL, '005.75/85 22', NULL, 'mysql_def_guide.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:01:08', '2007-11-29 16:26:33', NULL),
-(4, 1, 'Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary', NULL, NULL, '0-596-00108-8', 2, '2001', '208p.', NULL, '005.4/3222 Ray c', 'en', NULL, 2, '005.4/32 22', 'The Cathedral & the Bazaar is a must for anyone who cares about the future of the computer industry or the dynamics of the information economy. This revised and expanded paperback edition includes new material on open source developments in 1999 and 2000. Raymond\'s clear and effective writing style accurately describing the benefits of open source software has been key to its success. (Source: http://safari.oreilly.com/0596001088)', 'cathedral_bazaar.jpg', 'cathedral-bazaar.pdf', 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:14:44', '2007-11-29 16:25:43', NULL),
-(5, 1, 'Producing open source software : how to run a successful free software project', NULL, '1st ed.', '9780596007591', 2, '2005', 'xx, 279 p. ; 24 cm.', NULL, '005.1-22 Fog p', 'en', NULL, 2, '005.1 22', 'Includes index.', 'producing_oss.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:20:45', '2007-11-29 16:31:21', NULL),
-(6, 1, 'PostgreSQL : a comprehensive guide to building, programming, and administering PostgreSQL databases', NULL, '1st ed.', '0735712573', 4, '2003', 'xvii, 790 p. : ill. ; 23cm.', 'DeveloperÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s library', '005.75/85-22 Kor p', 'en', NULL, 3, '005.75/85 22', 'PostgreSQL is the world\'s most advanced open-source database. PostgreSQL is the most comprehensive, in-depth, and easy-to-read guide to this award-winning database. This book starts with a thorough overview of SQL, a description of all PostgreSQL data types, and a complete explanation of PostgreSQL commands.', 'postgresql.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:29:33', '2021-06-04 18:55:32', NULL),
-(7, 1, 'Web application architecture : principles, protocols, and practices', NULL, NULL, '0471486566', 5, '2003', 'xi, 357 p. : ill. ; 23 cm.', NULL, '005.7/2-21 Leo w', 'en', NULL, 1, '005.7/2 21', 'An in-depth examination of the core concepts and general principles of Web application development.\r\nThis book uses examples from specific technologies (e.g., servlet API or XSL), without promoting or endorsing particular platforms or APIs. Such knowledge is critical when designing and debugging complex systems. This conceptual understanding makes it easier to learn new APIs that arise in the rapidly changing Internet environment.', 'webapp_arch.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:41:57', '2007-11-29 16:32:46', NULL),
-(8, 1, 'Ajax : creating Web pages with asynchronous JavaScript and XML', NULL, NULL, '9780132272674', 6, '2007', 'xxii, 384 p. : ill. ; 24 cm.', 'Bruce PerensÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ Open Source series', '006.7/86-22 Woy a', 'en', NULL, 4, '006.7/86 22', 'Using Ajax, you can build Web applications with the sophistication and usability of traditional desktop applications and you can do it using standards and open source software. Now, for the first time, there\'s an easy, example-driven guide to Ajax for every Web and open source developer, regardless of experience.', 'ajax.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:47:20', '2021-06-04 18:55:32', NULL),
-(9, 1, 'The organization of information', NULL, '2nd ed.', '1563089769', 7, '2004', 'xxvii, 417 p. : ill. ; 27 cm.', 'Library and information science text series', '025-22 Tay o', 'en', NULL, 5, '025 22', 'A basic textbook for students of library and information studies, and a guide for practicing school library media specialists. Describes the impact of global forces and the school district on the development and operation of a media center, the technical and human side of management, programmatic activities, supportive services to students, and the quality and quantity of resources available to support programs.', 'organization_information.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:54:12', '2007-11-29 16:27:20', NULL),
-(10, 1, 'Library and Information Center Management', NULL, '7th ed.', '9781591584063', 7, '2007', 'xxviii, 492 p. : ill. ; 27 cm.', 'Library and information science text series', '025.1-22 Stu l', 'en', NULL, 5, '025.1 22', NULL, 'library_info_center.JPG', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 16:58:51', '2007-11-29 16:27:40', NULL),
-(11, 1, 'Information Architecture for the World Wide Web: Designing Large-Scale Web Sites', NULL, '2nd ed.', '9780596000356', 2, '2002', '500p.', NULL, '006.7-22 Mor i', 'en', NULL, 6, '006.7 22', 'Information Architecture for the World Wide Web is about applying the principles of architecture and library science to web site design. Each website is like a public building, available for tourists and regulars alike to breeze through at their leisure. The job of the architect is to set up the framework for the site to make it comfortable and inviting for people to visit, relax in, and perhaps even return to someday.', 'information_arch.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 17:26:14', '2007-11-29 16:32:25', NULL),
-(12, 1, 'Corruption and development', NULL, NULL, '9780714649023', 8, '1998', '166 p. : ill. ; 22 cm.', NULL, '364.1 Rob c', 'en', NULL, 7, '364.1/322/091724 21', 'The articles assembled in this volume offer a fresh approach to analysing the problem of corruption in developing countries and the k means to tackle the phenomenon.', 'corruption_development.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 17:45:30', '2007-11-29 16:20:53', NULL),
-(13, 1, 'Corruption and development : the anti-corruption campaigns', NULL, NULL, '0230525504', 9, '2007', '310p.', NULL, '364.1 Bra c', 'en', NULL, 8, '364.1/323091724 22', 'This book provides a multidisciplinary interrogation of the global anti-corruption campaigns of the last ten years, arguing that while some positive change is observable, the period is also replete with perverse consequences and unintended outcomes', 'corruption_development_anti_campaign.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 17:49:49', '2007-11-29 16:19:48', NULL),
-(14, 1, 'Pigs at the trough : how corporate greed and political corruption are undermining America', NULL, NULL, '1400047714', 10, '2003', '275 p. ; 22 cm.', NULL, '364.1323 Huf p', 'en', NULL, 8, '364.1323', NULL, 'pigs_at_trough.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 17:56:00', '2007-11-29 16:18:33', NULL),
-(15, 1, 'Lords of poverty : the power, prestige, and corruption of the international aid business', NULL, NULL, '9780871134691', 11, '1994', 'xvi, 234 p. ; 22 cm.', NULL, '338.9 Han l', 'en', NULL, 8, '338.9/1/091724 20', 'Lords of Poverty is a case study in betrayals of a public trust. The shortcomings of aid are numerous, and serious enough to raise questions about the viability of the practice at its most fundamental levels. Hancocks report is thorough, deeply shocking, and certain to cause critical reevaluation of the governments motives in giving foreign aid, and of the true needs of our intended beneficiaries.', 'lords_of_poverty.jpg', NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2007-11-29 18:08:13', '2007-11-29 16:13:11', NULL);
+(25, 1, 'Bianca Castafiore', NULL, NULL, '978-979-225-343-6', 20, '2010', '44 hlm; ilus; 21 x 21 cm', NULL, '1700158', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(22, 1, 'Takjub Bukti Kebesaran Allah', NULL, NULL, '978-979-335-112-8', 17, '2005', 'vi + 91 hlm, 11 x 18 cm', NULL, '1700155', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(23, 1, 'Doa Untuk Sebuah Negeri', NULL, NULL, '978-979-943-545-5', 18, '2001', 'xii + 125 hlm, 12 x 20 cm', NULL, '1700156', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(24, 1, 'Robin Pendekar Sherwood - Si Lelaki Berkerudung', NULL, NULL, '978-979-523-018-2', 19, '1990', 'ii + 150 hlm, 11,5 x 18 cm', NULL, '1700157', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(21, 1, 'Seni Menganyam', NULL, NULL, '978-979-121-602-9', 16, '2006', 'vi + 78 hlm, 15 x 21 cm', NULL, '1700154', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(16, 1, 'Mengenal Pahlawan Nasional 1', '', '', '978-602-7596-71-9', 12, '2012', '166 hlm; 25 cm x 17,5 cm', '', '1500001', 'id', NULL, 9, 'NONE', '', '_slims_img_cache_200_x_139.49329359165_1.png.png.png', NULL, 0, 0, NULL, 0, '', NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:58:00', NULL),
+(17, 1, 'Misteri Penginapan Tua (The Pale House)', NULL, NULL, '978-979-22-8014-2', 13, '2014', '336 hlm; 11 x 18 cm', NULL, '1600079', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(18, 1, 'Assalamualaikum Beijing', NULL, NULL, '978-602-9055-25-2', 14, '2014', '360 hlm; 13 x 20 cm', NULL, '1600084', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(19, 1, 'Pesantren Impian', NULL, NULL, '978-602-9055-29-0', 14, '2014', 'vi+314 hlm; 13 x 20 cm', NULL, '1600085', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL),
+(20, 1, 'Pemanfaatan Tumbuh-tumbuhan Alami untuk Kesehatan dan Pengobatan Alternatif', NULL, NULL, NULL, 15, NULL, 'iv+76 hlm; 15,5 x 20,5 cm', NULL, '1600062', 'id', NULL, 9, 'NONE', NULL, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, '2021-06-08 09:57:09', '2021-06-08 09:57:09', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_attachment`
+-- Struktur dari tabel `biblio_attachment`
 --
 
 CREATE TABLE `biblio_attachment` (
@@ -110,7 +105,7 @@ CREATE TABLE `biblio_attachment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_author`
+-- Struktur dari tabel `biblio_author`
 --
 
 CREATE TABLE `biblio_author` (
@@ -120,39 +115,25 @@ CREATE TABLE `biblio_author` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `biblio_author`
+-- Dumping data untuk tabel `biblio_author`
 --
 
 INSERT INTO `biblio_author` (`biblio_id`, `author_id`, `level`) VALUES
-(1, 1, 1),
-(2, 2, 1),
-(2, 3, 2),
-(2, 4, 2),
-(2, 5, 2),
-(2, 6, 2),
-(3, 7, 1),
-(3, 8, 2),
-(4, 9, 1),
-(5, 10, 1),
-(6, 11, 1),
-(6, 12, 2),
-(7, 13, 1),
-(7, 14, 2),
-(8, 15, 1),
-(9, 16, 1),
-(10, 17, 1),
-(10, 18, 2),
-(11, 19, 1),
-(11, 20, 2),
-(12, 21, 1),
-(13, 22, 1),
-(14, 23, 1),
-(15, 24, 1);
+(25, 33, 2),
+(24, 32, 2),
+(23, 31, 2),
+(22, 30, 2),
+(21, 29, 2),
+(20, 28, 2),
+(19, 27, 2),
+(18, 27, 2),
+(17, 26, 2),
+(16, 25, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_custom`
+-- Struktur dari tabel `biblio_custom`
 --
 
 CREATE TABLE `biblio_custom` (
@@ -162,7 +143,7 @@ CREATE TABLE `biblio_custom` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_log`
+-- Struktur dari tabel `biblio_log`
 --
 
 CREATE TABLE `biblio_log` (
@@ -179,10 +160,34 @@ CREATE TABLE `biblio_log` (
   `date` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data untuk tabel `biblio_log`
+--
+
+INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `title`, `ip`, `action`, `affectedrow`, `rawdata`, `additional_information`, `date`) VALUES
+(1, 6, 1, 'Admin', 'PostgreSQL : a comprehensive guide to building, programming, and administering PostgreSQL databases', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%226%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%226%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%226%22%3Bs%3A5%3A%22title%22%3Bs%3A99%3A%22PostgreSQL+%3A+a+comprehensive+guide+to+building%2C+programming%2C+and+administering+PostgreSQL+databases%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A7%3A%221st+ed.%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A10%3A%220735712573%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A4%3A%22Sams%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222003%22%3Bs%3A9%3A%22collation%22%3Bs%3A27%3A%22xvii%2C+790+p.+%3A+ill.+%3B+23cm.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A56%3A%22Developer%C3%83%C6%92%C3%82%C2%A2%C3%83%C2%A2%C3%A2%E2%82%AC%C5%A1%C3%82%C2%AC%C3%83%C2%A2%C3%A2%E2%82%AC%C5%BE%C3%82%C2%A2s+library%22%3Bs%3A11%3A%22call_number%22%3Bs%3A18%3A%22005.75%2F85-22+Kor+p%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A12%3A%22Indianapolis%22%3Bs%3A14%3A%22classification%22%3Bs%3A12%3A%22005.75%2F85+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A309%3A%22PostgreSQL+is+the+world%27s+most+advanced+open-source+database.+PostgreSQL+is+the+most+comprehensive%2C+in-depth%2C+and+easy-to-read+guide+to+this+award-winning+database.+This+book+starts+with+a+thorough+overview+of+SQL%2C+a+description+of+all+PostgreSQL+data+types%2C+and+a+complete+explanation+of+PostgreSQL+commands.%22%3Bs%3A5%3A%22image%22%3Bs%3A14%3A%22postgresql.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Douglas%2C+Korry%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Douglas%2C+Susan%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Programming%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A5%3A%22RDBMS%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%228e162954abedec2881b040e895e9905f7490534c%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22563ecd3169619ca48558f42ce90ee17fd71584c2%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%220bb053c271c116ffae238ad9b2b2a8fab5179bc2%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ed3ecd5d1a1262460ef8340ae9b5b6a1bf515a58%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22f23419a21e9f33280a31f8d28b2a5245346a89ca%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A29%3A33%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-04+18%3A55%3A32%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:52:21'),
+(2, 8, 1, 'Admin', 'Ajax : creating Web pages with asynchronous JavaScript and XML', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%228%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%228%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%228%22%3Bs%3A5%3A%22title%22%3Bs%3A62%3A%22Ajax+%3A+creating+Web+pages+with+asynchronous+JavaScript+and+XML%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780132272674%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A13%3A%22Prentice+Hall%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222007%22%3Bs%3A9%3A%22collation%22%3Bs%3A28%3A%22xxii%2C+384+p.+%3A+ill.+%3B+24+cm.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A69%3A%22Bruce+Perens%C3%83%C6%92%C3%82%C2%A2%C3%83%C2%A2%C3%A2%E2%82%AC%C5%A1%C3%82%C2%AC%C3%83%C2%A2%C3%A2%E2%82%AC%C5%BE%C3%82%C2%A2+Open+Source+series%22%3Bs%3A11%3A%22call_number%22%3Bs%3A17%3A%22006.7%2F86-22+Woy+a%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A22%3A%22Upper+Saddle+River%2C+NJ%22%3Bs%3A14%3A%22classification%22%3Bs%3A11%3A%22006.7%2F86+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A314%3A%22Using+Ajax%2C+you+can+build+Web+applications+with+the+sophistication+and+usability+of+traditional+desktop+applications+and+you+can+do+it+using+standards+and+open+source+software.+Now%2C+for+the+first+time%2C+there%27s+an+easy%2C+example-driven+guide+to+Ajax+for+every+Web+and+open+source+developer%2C+regardless+of+experience.%22%3Bs%3A5%3A%22image%22%3Bs%3A8%3A%22ajax.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A18%3A%22Woychowsky%2C+Edmond%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Programming%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Website%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22842755920290de0babd123a92bb1b55346514e6e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22d49ac44a4b401a695b35ead4390eeebfb207dcc6%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22dc5333f90fe1b44dd2910c71fd266ae29080aa7c%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%2254c9c4d42d7e0bb2f1e065c9a1836036d8025edc%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22bdccec2b19c5136737ee30940e24901e8aa47583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A47%3A20%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-04+18%3A55%3A32%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:52:52'),
+(3, 7, 1, 'Admin', 'Web application architecture : principles, protocols, and practices', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%227%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%227%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%227%22%3Bs%3A5%3A%22title%22%3Bs%3A67%3A%22Web+application+architecture+%3A+principles%2C+protocols%2C+and+practices%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A10%3A%220471486566%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A10%3A%22John+Wiley%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222003%22%3Bs%3A9%3A%22collation%22%3Bs%3A26%3A%22xi%2C+357+p.+%3A+ill.+%3B+23+cm.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A16%3A%22005.7%2F2-21+Leo+w%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A11%3A%22Hoboken%2C+NJ%22%3Bs%3A14%3A%22classification%22%3Bs%3A10%3A%22005.7%2F2+21%22%3Bs%3A5%3A%22notes%22%3Bs%3A434%3A%22An+in-depth+examination+of+the+core+concepts+and+general+principles+of+Web+application+development.%0D%0AThis+book+uses+examples+from+specific+technologies+%28e.g.%2C+servlet+API+or+XSL%29%2C+without+promoting+or+endorsing+particular+platforms+or+APIs.+Such+knowledge+is+critical+when+designing+and+debugging+complex+systems.+This+conceptual+understanding+makes+it+easier+to+learn+new+APIs+that+arise+in+the+rapidly+changing+Internet+environment.%22%3Bs%3A5%3A%22image%22%3Bs%3A15%3A%22webapp_arch.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A12%3A%22Shklar%2C+Leon%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Rosen%2C+Richard%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Website%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A6%3A%22Design%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%224aaf4de97e025d9b0f5a0366cec18ed20bdbfa15%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%227ed5d2258df5462df0e45ce35ba8fada5176847c%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%228356add32cf20f5e49e6048c972e346375abb668%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22f6787b31b5bb370ffeb2157b5343f504f1049200%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22d71f049a4c5e362922f8adf287d7ae52f13ae200%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A41%3A57%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A32%3A46%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(4, 11, 1, 'Admin', 'Information Architecture for the World Wide Web: Designing Large-Scale Web Sites', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2211%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2211%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2211%22%3Bs%3A5%3A%22title%22%3Bs%3A80%3A%22Information+Architecture+for+the+World+Wide+Web%3A+Designing+Large-Scale+Web+Sites%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A7%3A%222nd+ed.%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780596000356%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A7%3A%22OReilly%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222002%22%3Bs%3A9%3A%22collation%22%3Bs%3A5%3A%22500p.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A14%3A%22006.7-22+Mor+i%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A15%3A%22Cambridge%2C+Mass%22%3Bs%3A14%3A%22classification%22%3Bs%3A8%3A%22006.7+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A422%3A%22Information+Architecture+for+the+World+Wide+Web+is+about+applying+the+principles+of+architecture+and+library+science+to+web+site+design.+Each+website+is+like+a+public+building%2C+available+for+tourists+and+regulars+alike+to+breeze+through+at+their+leisure.+The+job+of+the+architect+is+to+set+up+the+framework+for+the+site+to+make+it+comfortable+and+inviting+for+people+to+visit%2C+relax+in%2C+and+perhaps+even+return+to+someday.%22%3Bs%3A5%3A%22image%22%3Bs%3A20%3A%22information_arch.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Morville%2C+Peter%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A16%3A%22Rosenfeld%2C+Louis%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22ca1a559386dcd3460824b884e25451a89089558d%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%225236104ffb4bd9da3c0d51f5937b9d800d20659b%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2231e9cf1b5767a886b1482dbc5170cab0ea8bdcff%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%227f2342448ff4512ec5fe2f71a27bf2956e3e3b6c%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+17%3A26%3A14%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A32%3A25%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(5, 5, 1, 'Admin', 'Producing open source software : how to run a successful free software project', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%225%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%225%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%225%22%3Bs%3A5%3A%22title%22%3Bs%3A78%3A%22Producing+open+source+software+%3A+how+to+run+a+successful+free+software+project%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A7%3A%221st+ed.%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780596007591%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A7%3A%22OReilly%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222005%22%3Bs%3A9%3A%22collation%22%3Bs%3A19%3A%22xx%2C+279+p.+%3B+24+cm.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A14%3A%22005.1-22+Fog+p%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A14%3A%22Sebastopol%2C+CA%22%3Bs%3A14%3A%22classification%22%3Bs%3A8%3A%22005.1+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A15%3A%22Includes+index.%22%3Bs%3A5%3A%22image%22%3Bs%3A17%3A%22producing_oss.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A11%3A%22Fogel%2C+Karl%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Open+Source%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Project%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2282e9bcb8a26a820ae210d47c84d626517b7ecba7%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%2238e6a377fbc9a84029228cc962c9daf9113cafd3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22efd6d9d474156514e34b3230eca2b72f9a8e0e6e%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22a5182e0a9ccef15d63f649f51bf5d0a4f11e81c7%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22410c48e2b0f00f8f01cbc00f0815c119e38664f9%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A20%3A45%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A31%3A21%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(6, 10, 1, 'Admin', 'Library and Information Center Management', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2210%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2210%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2210%22%3Bs%3A5%3A%22title%22%3Bs%3A41%3A%22Library+and+Information+Center+Management%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A7%3A%227th+ed.%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229781591584063%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A19%3A%22Libraries+Unlimited%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222007%22%3Bs%3A9%3A%22collation%22%3Bs%3A30%3A%22xxviii%2C+492+p.+%3A+ill.+%3B+27+cm.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A43%3A%22Library+and+information+science+text+series%22%3Bs%3A11%3A%22call_number%22%3Bs%3A14%3A%22025.1-22+Stu+l%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A15%3A%22Westport%2C+Conn.%22%3Bs%3A14%3A%22classification%22%3Bs%3A8%3A%22025.1+22%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3Bs%3A23%3A%22library_info_center.JPG%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A18%3A%22Stueart%2C+Robert+D.%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A17%3A%22Moran%2C+Barbara+B.%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Information%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Library%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2244110021007c5fd057b98207562bdf2da96d3c09%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22bc909d8ac9280d2f6048b5a93bc21c5b8a761a09%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%225fee58c57f143f1a28cb1a88710405d01fc35eba%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%222c18a76cce7190f0f823fd18bfa9e8ddc4b47410%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22edcf0974798c75b9956e7d2110a78485f329073d%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A58%3A51%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A27%3A40%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(7, 9, 1, 'Admin', 'The organization of information', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%229%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%229%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%229%22%3Bs%3A5%3A%22title%22%3Bs%3A31%3A%22The+organization+of+information%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A7%3A%222nd+ed.%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A10%3A%221563089769%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A19%3A%22Libraries+Unlimited%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222004%22%3Bs%3A9%3A%22collation%22%3Bs%3A29%3A%22xxvii%2C+417+p.+%3A+ill.+%3B+27+cm.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A43%3A%22Library+and+information+science+text+series%22%3Bs%3A11%3A%22call_number%22%3Bs%3A12%3A%22025-22+Tay+o%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A15%3A%22Westport%2C+Conn.%22%3Bs%3A14%3A%22classification%22%3Bs%3A6%3A%22025+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A415%3A%22A+basic+textbook+for+students+of+library+and+information+studies%2C+and+a+guide+for+practicing+school+library+media+specialists.+Describes+the+impact+of+global+forces+and+the+school+district+on+the+development+and+operation+of+a+media+center%2C+the+technical+and+human+side+of+management%2C+programmatic+activities%2C+supportive+services+to+students%2C+and+the+quality+and+quantity+of+resources+available+to+support+programs.%22%3Bs%3A5%3A%22image%22%3Bs%3A28%3A%22organization_information.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A17%3A%22Taylor%2C+Arlene+G.%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A3%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Information%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A12%3A%22Organization%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7Di%3A2%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A8%3A%22Metadata%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2221bf04f6158c768756ff6dfdab30fd4fb9d5f1dd%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22f088ceff1bf71988d5246d7334368c94425dc126%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%224d59e57e76611058d1d75527ff80d206108daed1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%227e317d8dd5874de821d81f892543b930fe74857c%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22875b9ea03fb13c9b5aaf55f79ab0a52063b1f21a%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A54%3A12%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A27%3A20%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(8, 1, 1, 'Admin', 'PHP 5 for dummies', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%221%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%221%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%221%22%3Bs%3A5%3A%22title%22%3Bs%3A17%3A%22PHP+5+for+dummies%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A10%3A%220764541668%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A5%3A%22Wiley%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222004%22%3Bs%3A9%3A%22collation%22%3Bs%3A27%3A%22xiv%2C+392+p.+%3A+ill.+%3B+24+cm.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A11%3A%22For+dummies%22%3Bs%3A11%3A%22call_number%22%3Bs%3A17%3A%22005.13%2F3-22+Jan+p%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A11%3A%22Hoboken%2C+NJ%22%3Bs%3A14%3A%22classification%22%3Bs%3A11%3A%22005.13%2F3+22%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3Bs%3A16%3A%22php5_dummies.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A13%3A%22Valade%2C+Janet%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Programming%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Website%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22743b8cbe1c874c88774699cfda8a983964290c3d%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%224e11c51cfc245447b4d9826a5acc1ddee9bf4825%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2230e10e5e8f6e0c078614c69ed8d8fd6a9a60754b%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%2254c9c4d42d7e0bb2f1e065c9a1836036d8025edc%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2276c37d2525ebc4776bfb9c48d6faa88da955661e%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+15%3A36%3A50%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A26%3A59%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(9, 3, 1, 'Admin', 'The Definitive Guide to MySQL 5', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%223%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%223%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%223%22%3Bs%3A5%3A%22title%22%3Bs%3A31%3A%22The+Definitive+Guide+to+MySQL+5%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229781590595350%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A6%3A%22Apress%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222005%22%3Bs%3A9%3A%22collation%22%3Bs%3A5%3A%22784p.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A23%3A%22Definitive+Guide+Series%22%3Bs%3A11%3A%22call_number%22%3Bs%3A18%3A%22005.75%2F85-22+Kof+d%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3BN%3Bs%3A14%3A%22classification%22%3Bs%3A12%3A%22005.75%2F85+22%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3Bs%3A19%3A%22mysql_def_guide.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Kofler%2C+Michael%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A13%3A%22Kramer%2C+David%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A3%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Programming%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A8%3A%22Database%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7Di%3A2%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A5%3A%22RDBMS%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2210344fb8fe3715a7e8c3e40af77840d99ad46eba%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22563ecd3169619ca48558f42ce90ee17fd71584c2%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2252a1d6a6be3dbb59c10e2665c44227227d68fe6d%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ef95e677e5e78459873128ada315e46114b8ae1f%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%228517ee2d4b694cb2028afd7c7462fdb9c2b57062%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A01%3A08%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A26%3A33%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:09'),
+(10, 2, 1, 'Admin', 'Linux In a Nutshell', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%222%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%222%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%222%22%3Bs%3A5%3A%22title%22%3Bs%3A19%3A%22Linux+In+a+Nutshell%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A13%3A%22Fifth+Edition%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780596009304%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A7%3A%22OReilly%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222005%22%3Bs%3A9%3A%22collation%22%3Bs%3A27%3A%22xiv%2C+925+p.+%3A+ill.+%3B+23+cm.%22%3Bs%3A12%3A%22series_title%22%3Bs%3A13%3A%22In+a+Nutshell%22%3Bs%3A11%3A%22call_number%22%3Bs%3A17%3A%22005.4%2F32-22+Ell+l%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A14%3A%22Sebastopol%2C+CA%22%3Bs%3A14%3A%22classification%22%3Bs%3A11%3A%22005.4%2F32+22%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3Bs%3A23%3A%22linux_in_a_nutshell.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A5%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A13%3A%22Siever%2C+Ellen%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A12%3A%22Love%2C+Robert%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7Di%3A2%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Robbins%2C+Arnold%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7Di%3A3%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A16%3A%22Figgins%2C+Stephen%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7Di%3A4%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A12%3A%22Weber%2C+Aaron%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A3%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A16%3A%22Operating+System%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A5%3A%22Linux%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7Di%3A2%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A8%3A%22Computer%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22199fa56d6333e0ef0c2ef97d97e6c982424f4048%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22962f34fd399555fa390a21b9c4e3902f294fa5e5%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22cb7c55f48ef3896349c0b2e6194a11ba5fba1c86%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22c88cb1d19bd08700152f3de76fce9103702ff245%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22822a220b411197fca71b9618be963a526d45975a%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+15%3A53%3A35%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A26%3A10%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:28'),
+(11, 4, 1, 'Admin', 'Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A1%3A%224%22%3Bs%3A3%3A%22_id%22%3Bs%3A1%3A%224%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A1%3A%224%22%3Bs%3A5%3A%22title%22%3Bs%3A89%3A%22Cathedral+and+the+Bazaar%3A+Musings+on+Linux+and+Open+Source+by+an+Accidental+Revolutionary%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%220-596-00108-8%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A7%3A%22OReilly%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222001%22%3Bs%3A9%3A%22collation%22%3Bs%3A5%3A%22208p.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A16%3A%22005.4%2F3222+Ray+c%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A14%3A%22Sebastopol%2C+CA%22%3Bs%3A14%3A%22classification%22%3Bs%3A11%3A%22005.4%2F32+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A434%3A%22The+Cathedral+%26+the+Bazaar+is+a+must+for+anyone+who+cares+about+the+future+of+the+computer+industry+or+the+dynamics+of+the+information+economy.+This+revised+and+expanded+paperback+edition+includes+new+material+on+open+source+developments+in+1999+and+2000.+Raymond%27s+clear+and+effective+writing+style+accurately+describing+the+benefits+of+open+source+software+has+been+key+to+its+success.+%28Source%3A+http%3A%2F%2Fsafari.oreilly.com%2F0596001088%29%22%3Bs%3A5%3A%22image%22%3Bs%3A20%3A%22cathedral_bazaar.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A13%3A%22Raymond%2C+Eric%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A5%3A%22Linux%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Open+Source%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22f085412e969d3bf59094dfebfa193f768f635bdd%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22962f34fd399555fa390a21b9c4e3902f294fa5e5%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22c6ca940a7295713e273913ec3d9330229f0ab706%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22fccbd0506cfe62b95b212871f7328d7af3e3deae%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22a7f658f689e323d6ac9830c192237ea53ba1d35b%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+16%3A14%3A44%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A25%3A43%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:53:46'),
+(12, 12, 1, 'Admin', 'Corruption and development', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2212%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2212%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2212%22%3Bs%3A5%3A%22title%22%3Bs%3A26%3A%22Corruption+and+development%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780714649023%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A21%3A%22Taylor+%26+Francis+Inc.%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%221998%22%3Bs%3A9%3A%22collation%22%3Bs%3A22%3A%22166+p.+%3A+ill.+%3B+22+cm.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A11%3A%22364.1+Rob+c%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A6%3A%22London%22%3Bs%3A14%3A%22classification%22%3Bs%3A19%3A%22364.1%2F322%2F091724+21%22%3Bs%3A5%3A%22notes%22%3Bs%3A165%3A%22The+articles+assembled+in+this+volume+offer+a+fresh+approach+to+analysing+the+problem+of+corruption+in+developing+countries+and+the+k+means+to+tackle+the+phenomenon.%22%3Bs%3A5%3A%22image%22%3Bs%3A26%3A%22corruption_development.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Robinson%2C+Mark%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A10%3A%22Corruption%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A11%3A%22Development%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22c9c1a7e641cef1828df925bd7a326c5cc2220162%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22bd69bcf4bade4f305e4f5511e6e449fdd7bd2019%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22f5c33534346aedfe0f9bd31429527390642b51ba%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22328cad9ff19b5c702bd0dd95ce6a51f3f092cf8e%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22356372a69619dcd28dba182b3624f7e245b035fd%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+17%3A45%3A30%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A20%3A53%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:54:01'),
+(13, 13, 1, 'Admin', 'Corruption and development : the anti-corruption campaigns', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2213%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2213%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2213%22%3Bs%3A5%3A%22title%22%3Bs%3A58%3A%22Corruption+and+development+%3A+the+anti-corruption+campaigns%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A10%3A%220230525504%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A18%3A%22Palgrave+Macmillan%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222007%22%3Bs%3A9%3A%22collation%22%3Bs%3A5%3A%22310p.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A11%3A%22364.1+Bra+c%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A8%3A%22New+York%22%3Bs%3A14%3A%22classification%22%3Bs%3A18%3A%22364.1%2F323091724+22%22%3Bs%3A5%3A%22notes%22%3Bs%3A248%3A%22This+book+provides+a+multidisciplinary+interrogation+of+the+global+anti-corruption+campaigns+of+the+last+ten+years%2C+arguing+that+while+some+positive+change+is+observable%2C+the+period+is+also+replete+with+perverse+consequences+and+unintended+outcomes%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22corruption_development_anti_campaign.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Bracking%2C+Sarah%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A10%3A%22Corruption%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2250b98f852b0efc5a1befa996ad3a9198cc0a9861%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22c9447a84e6a2eccb682ffbcc1894a2671aadb061%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2275c01981bae7f8bafa70066ad75d8126f334a3b0%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22fcd617453b79fb8b7a08273d17a22968385813ef%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22cf08b377066e7ed0b5bb9313eeec00dd6457451e%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+17%3A49%3A49%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A19%3A48%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:54:18'),
+(14, 14, 1, 'Admin', 'Pigs at the trough : how corporate greed and political corruption are undermining America', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2214%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2214%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2214%22%3Bs%3A5%3A%22title%22%3Bs%3A89%3A%22Pigs+at+the+trough+%3A+how+corporate+greed+and+political+corruption+are+undermining+America%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A10%3A%221400047714%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A16%3A%22Crown+publishers%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222003%22%3Bs%3A9%3A%22collation%22%3Bs%3A15%3A%22275+p.+%3B+22+cm.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A14%3A%22364.1323+Huf+p%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A8%3A%22New+York%22%3Bs%3A14%3A%22classification%22%3Bs%3A8%3A%22364.1323%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3Bs%3A18%3A%22pigs_at_trough.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A34%3A%22Huffington%2C+Arianna+Stassinopoulos%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A10%3A%22Corruption%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2239e7a0cc09d07e337ebe152e35e1ee40034715b0%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%223a95b55debef2868eb9c8be1ca384bca8fbb4659%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2282fdd08719b79e9d7740429b619f3d8face3fb12%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22fcd617453b79fb8b7a08273d17a22968385813ef%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22c34fddaae200afa3ddaa1d0a8f84b05f3133952a%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+17%3A56%3A00%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A18%3A33%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:54:33'),
+(15, 15, 1, 'Admin', 'Lords of poverty : the power, prestige, and corruption of the international aid business', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2215%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2215%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2215%22%3Bs%3A5%3A%22title%22%3Bs%3A88%3A%22Lords+of+poverty+%3A+the+power%2C+prestige%2C+and+corruption+of+the+international+aid+business%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780871134691%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A22%3A%22Atlantic+Monthly+Press%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%221994%22%3Bs%3A9%3A%22collation%22%3Bs%3A20%3A%22xvi%2C+234+p.+%3B+22+cm.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A11%3A%22338.9+Han+l%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A8%3A%22New+York%22%3Bs%3A14%3A%22classification%22%3Bs%3A17%3A%22338.9%2F1%2F091724+20%22%3Bs%3A5%3A%22notes%22%3Bs%3A400%3A%22Lords+of+Poverty+is+a+case+study+in+betrayals+of+a+public+trust.+The+shortcomings+of+aid+are+numerous%2C+and+serious+enough+to+raise+questions+about+the+viability+of+the+practice+at+its+most+fundamental+levels.+Hancocks+report+is+thorough%2C+deeply+shocking%2C+and+certain+to+cause+critical+reevaluation+of+the+governments+motives+in+giving+foreign+aid%2C+and+of+the+true+needs+of+our+intended+beneficiaries.%22%3Bs%3A5%3A%22image%22%3Bs%3A20%3A%22lords_of_poverty.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Hancock%2C+Graham%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A10%3A%22Corruption%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Poverty%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%223f8b0cbbcb0d6ac1c6702388b9d714dfe3dc85a2%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22d032c9329f2ed12f05b1eaa533d546bfee48a00f%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22dbb89d1f405cce8357b93c1fd842d468745f9e90%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22522f51abfe16afeb6d561a59b329051d5a314882%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%221e44b9f521ce1a367f3e073aa0d14f9055660642%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+18%3A08%3A13%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A13%3A11%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:54:58'),
+(16, 16, 1, 'Admin', 'Mengenal Pahlawan Nasional 1', '::1', 'update', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2216%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2216%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2216%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Mengenal+Pahlawan+Nasional+1%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22edition%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-7596-71-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A23%3A%22Esensi+%28Erlangga+Group%29%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222012%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%22166+hlm%3B+25+cm+x+17%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3Bs%3A0%3A%22%22%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221500001%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3Bs%3A0%3A%22%22%3Bs%3A5%3A%22image%22%3Bs%3A52%3A%22_slims_img_cache_200_x_139.49329359165_1.png.png.png%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Dina+Alfiyanti%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A19%3A%7Bs%3A7%3A%22item_id%22%3Bs%3A2%3A%2211%22%3Bs%3A9%3A%22item_code%22%3Bs%3A7%3A%221500001%22%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A14%3A%22coll_type_name%22%3BN%3Bs%3A14%3A%22shelf_location%22%3BN%3Bs%3A13%3A%22location_name%22%3BN%3Bs%3A14%3A%22inventory_code%22%3BN%3Bs%3A11%3A%22item_status%22%3Bs%3A9%3A%22Available%22%3Bs%3A8%3A%22order_no%22%3BN%3Bs%3A10%3A%22order_date%22%3BN%3Bs%3A13%3A%22received_date%22%3BN%3Bs%3A13%3A%22supplier_name%22%3BN%3Bs%3A7%3A%22invoice%22%3BN%3Bs%3A12%3A%22invoice_date%22%3BN%3Bs%3A5%3A%22price%22%3BN%3Bs%3A14%3A%22price_currency%22%3BN%3Bs%3A10%3A%22input_date%22%3BN%3Bs%3A11%3A%22last_update%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3B%7D%7Ds%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22d87811f519d08451a9f7c36c54f3143ffad2709e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ce9428795e3e8a4cfb85951e6d241378fe72f5f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2284cd8cf609c866021fafcfb3e1338785f8a31583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-08+09%3A57%3A09%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-08+09%3A58%3A00%22%3B%7D', 'Updated data. Bibliography.', '2021-06-08 09:58:00');
+INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `title`, `ip`, `action`, `affectedrow`, `rawdata`, `additional_information`, `date`) VALUES
+(17, 16, 1, 'Admin', 'Mengenal Pahlawan Nasional 1', '::1', 'update', 'cover', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2216%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2216%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2216%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Mengenal+Pahlawan+Nasional+1%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22edition%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-7596-71-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A23%3A%22Esensi+%28Erlangga+Group%29%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222012%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%22166+hlm%3B+25+cm+x+17%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3Bs%3A0%3A%22%22%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221500001%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3Bs%3A0%3A%22%22%3Bs%3A5%3A%22image%22%3Bs%3A52%3A%22_slims_img_cache_200_x_139.49329359165_1.png.png.png%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Dina+Alfiyanti%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A19%3A%7Bs%3A7%3A%22item_id%22%3Bs%3A2%3A%2211%22%3Bs%3A9%3A%22item_code%22%3Bs%3A7%3A%221500001%22%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A14%3A%22coll_type_name%22%3BN%3Bs%3A14%3A%22shelf_location%22%3BN%3Bs%3A13%3A%22location_name%22%3BN%3Bs%3A14%3A%22inventory_code%22%3BN%3Bs%3A11%3A%22item_status%22%3Bs%3A9%3A%22Available%22%3Bs%3A8%3A%22order_no%22%3BN%3Bs%3A10%3A%22order_date%22%3BN%3Bs%3A13%3A%22received_date%22%3BN%3Bs%3A13%3A%22supplier_name%22%3BN%3Bs%3A7%3A%22invoice%22%3BN%3Bs%3A12%3A%22invoice_date%22%3BN%3Bs%3A5%3A%22price%22%3BN%3Bs%3A14%3A%22price_currency%22%3BN%3Bs%3A10%3A%22input_date%22%3BN%3Bs%3A11%3A%22last_update%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3B%7D%7Ds%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22d87811f519d08451a9f7c36c54f3143ffad2709e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ce9428795e3e8a4cfb85951e6d241378fe72f5f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2284cd8cf609c866021fafcfb3e1338785f8a31583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-08+09%3A57%3A09%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-08+09%3A58%3A00%22%3B%7D', 'Updated data. Image. File: _slims_img_cache_200_x_139.49329359165_1.png.png.png', '2021-06-08 09:58:00');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_relation`
+-- Struktur dari tabel `biblio_relation`
 --
 
 CREATE TABLE `biblio_relation` (
@@ -194,7 +199,7 @@ CREATE TABLE `biblio_relation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_topic`
+-- Struktur dari tabel `biblio_topic`
 --
 
 CREATE TABLE `biblio_topic` (
@@ -203,45 +208,10 @@ CREATE TABLE `biblio_topic` (
   `level` int(1) NOT NULL DEFAULT 1
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dumping data for table `biblio_topic`
---
-
-INSERT INTO `biblio_topic` (`biblio_id`, `topic_id`, `level`) VALUES
-(1, 1, 1),
-(1, 2, 2),
-(2, 3, 1),
-(2, 4, 2),
-(2, 5, 2),
-(3, 1, 1),
-(3, 6, 2),
-(3, 7, 2),
-(4, 4, 1),
-(4, 8, 2),
-(5, 8, 1),
-(5, 9, 2),
-(6, 1, 1),
-(6, 7, 2),
-(7, 2, 1),
-(7, 10, 2),
-(8, 1, 1),
-(8, 2, 2),
-(9, 11, 1),
-(9, 12, 2),
-(9, 13, 2),
-(10, 11, 1),
-(10, 14, 2),
-(12, 15, 1),
-(12, 16, 2),
-(13, 15, 1),
-(14, 15, 1),
-(15, 15, 1),
-(15, 17, 2);
-
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comment`
+-- Struktur dari tabel `comment`
 --
 
 CREATE TABLE `comment` (
@@ -256,7 +226,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `content`
+-- Struktur dari tabel `content`
 --
 
 CREATE TABLE `content` (
@@ -271,7 +241,7 @@ CREATE TABLE `content` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `content`
+-- Dumping data untuk tabel `content`
 --
 
 INSERT INTO `content` (`content_id`, `content_title`, `content_desc`, `content_path`, `is_news`, `input_date`, `last_update`, `content_ownpage`) VALUES
@@ -288,7 +258,7 @@ INSERT INTO `content` (`content_id`, `content_title`, `content_desc`, `content_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files`
+-- Struktur dari tabel `files`
 --
 
 CREATE TABLE `files` (
@@ -307,7 +277,7 @@ CREATE TABLE `files` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files_read`
+-- Struktur dari tabel `files_read`
 --
 
 CREATE TABLE `files_read` (
@@ -322,7 +292,7 @@ CREATE TABLE `files_read` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fines`
+-- Struktur dari tabel `fines`
 --
 
 CREATE TABLE `fines` (
@@ -337,7 +307,7 @@ CREATE TABLE `fines` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `group_access`
+-- Struktur dari tabel `group_access`
 --
 
 CREATE TABLE `group_access` (
@@ -349,7 +319,7 @@ CREATE TABLE `group_access` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `group_access`
+-- Dumping data untuk tabel `group_access`
 --
 
 INSERT INTO `group_access` (`group_id`, `module_id`, `menus`, `r`, `w`) VALUES
@@ -365,7 +335,7 @@ INSERT INTO `group_access` (`group_id`, `module_id`, `menus`, `r`, `w`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `holiday`
+-- Struktur dari tabel `holiday`
 --
 
 CREATE TABLE `holiday` (
@@ -376,7 +346,7 @@ CREATE TABLE `holiday` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `holiday`
+-- Dumping data untuk tabel `holiday`
 --
 
 INSERT INTO `holiday` (`holiday_id`, `holiday_dayname`, `holiday_date`, `description`) VALUES
@@ -390,7 +360,7 @@ INSERT INTO `holiday` (`holiday_id`, `holiday_dayname`, `holiday_date`, `descrip
 -- --------------------------------------------------------
 
 --
--- Table structure for table `item`
+-- Struktur dari tabel `item`
 --
 
 CREATE TABLE `item` (
@@ -418,25 +388,25 @@ CREATE TABLE `item` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `item`
+-- Dumping data untuk tabel `item`
 --
 
 INSERT INTO `item` (`item_id`, `biblio_id`, `call_number`, `coll_type_id`, `item_code`, `inventory_code`, `received_date`, `supplier_id`, `order_no`, `location_id`, `order_date`, `item_status_id`, `site`, `source`, `invoice`, `price`, `price_currency`, `invoice_date`, `input_date`, `last_update`, `uid`) VALUES
-(1, 8, NULL, 1, 'B00001', 'INV/B00001', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 500000, 'Rupiah', '2007-11-29', '2008-12-26 22:11:10', '2008-12-26 22:14:13', NULL),
-(2, 6, NULL, 1, 'B00002', 'INV/B00002', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 700000, 'Rupiah', '2007-11-29', '2008-12-26 22:11:45', '2008-12-26 22:13:45', NULL),
-(3, 15, NULL, 1, 'B00003', 'INV/B00003', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 300000, 'Rupiah', '2007-11-29', '2008-12-26 22:15:09', '2008-12-26 22:15:09', NULL),
-(4, 14, NULL, 1, 'B00004', 'INV/B00004', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 250000, 'Rupiah', '2007-11-29', '2008-12-26 22:15:49', '2008-12-26 22:15:49', NULL),
-(5, 13, NULL, 1, 'B00005', 'INV/B00005', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 2, '', 0, NULL, '2007-11-29', '2008-12-26 22:17:04', '2008-12-26 22:17:04', NULL),
-(6, 12, NULL, 1, 'B00006', 'INV/B00006', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 350000, 'Rupiah', '2007-11-29', '2008-12-26 22:17:52', '2008-12-26 22:17:52', NULL),
-(7, 4, NULL, 1, 'B00007', 'INV/B00007', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 450000, 'Rupiah', '2007-11-29', '2008-12-26 22:18:29', '2008-12-26 22:18:29', NULL),
-(8, 4, NULL, 1, 'B00008', 'INV/B00008', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 2, '', 0, NULL, '2007-11-29', '2008-12-26 22:18:51', '2008-12-26 22:18:51', NULL),
-(9, 2, NULL, 1, 'B00009', 'INV/B00009', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 630000, 'Rupiah', '2007-11-29', '2008-12-26 22:19:28', '2008-12-26 22:19:28', NULL),
-(10, 2, NULL, 1, 'B00010', 'INV/B00010', '2007-11-29', '0', '', 'SL', '2007-11-29', '0', '', 1, '', 630000, 'Rupiah', '2007-11-29', '2008-12-26 22:19:57', '2008-12-26 22:19:57', NULL);
+(11, 16, NULL, NULL, '1500001', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(12, 17, NULL, NULL, '1600079', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(13, 18, NULL, NULL, '1600084', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(14, 19, NULL, NULL, '1600085', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(15, 20, NULL, NULL, '1600062', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(16, 21, NULL, NULL, '1700154', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(17, 22, NULL, NULL, '1700155', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(18, 23, NULL, NULL, '1700156', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(19, 24, NULL, NULL, '1700157', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL),
+(20, 25, NULL, NULL, '1700158', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kardex`
+-- Struktur dari tabel `kardex`
 --
 
 CREATE TABLE `kardex` (
@@ -453,7 +423,7 @@ CREATE TABLE `kardex` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loan`
+-- Struktur dari tabel `loan`
 --
 
 CREATE TABLE `loan` (
@@ -474,7 +444,7 @@ CREATE TABLE `loan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Triggers `loan`
+-- Trigger `loan`
 --
 DELIMITER $$
 CREATE TRIGGER `delete_loan_history` AFTER DELETE ON `loan` FOR EACH ROW DELETE FROM `loan_history` WHERE loan_id=OLD.loan_id
@@ -518,7 +488,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loan_history`
+-- Struktur dari tabel `loan_history`
 --
 
 CREATE TABLE `loan_history` (
@@ -548,7 +518,7 @@ CREATE TABLE `loan_history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Struktur dari tabel `member`
 --
 
 CREATE TABLE `member` (
@@ -579,10 +549,17 @@ CREATE TABLE `member` (
   `last_update` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data untuk tabel `member`
+--
+
+INSERT INTO `member` (`member_id`, `member_name`, `gender`, `birth_date`, `member_type_id`, `member_address`, `member_mail_address`, `member_email`, `postal_code`, `inst_name`, `is_new`, `member_image`, `pin`, `member_phone`, `member_fax`, `member_since_date`, `register_date`, `expire_date`, `member_notes`, `is_pending`, `mpasswd`, `last_login`, `last_login_ip`, `input_date`, `last_update`) VALUES
+('1500001', 'Yoshua Ragil', 1, '2000-02-27', 1, '', '', '', '', 'STMIK Bina Patria', NULL, 'member_1500001.png', '', '', '', '2021-06-08', '2021-06-08', '2022-06-08', '', 0, NULL, NULL, NULL, '2021-06-08', '2021-06-08');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member_custom`
+-- Struktur dari tabel `member_custom`
 --
 
 CREATE TABLE `member_custom` (
@@ -592,7 +569,7 @@ CREATE TABLE `member_custom` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_author`
+-- Struktur dari tabel `mst_author`
 --
 
 CREATE TABLE `mst_author` (
@@ -606,7 +583,7 @@ CREATE TABLE `mst_author` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_author`
+-- Dumping data untuk tabel `mst_author`
 --
 
 INSERT INTO `mst_author` (`author_id`, `author_name`, `author_year`, `authority_type`, `auth_list`, `input_date`, `last_update`) VALUES
@@ -633,12 +610,21 @@ INSERT INTO `mst_author` (`author_id`, `author_name`, `author_year`, `authority_
 (21, 'Robinson, Mark', NULL, 'p', NULL, '2007-11-29', '2007-11-29'),
 (22, 'Bracking, Sarah', NULL, 'p', NULL, '2007-11-29', '2007-11-29'),
 (23, 'Huffington, Arianna Stassinopoulos', NULL, 'p', NULL, '2007-11-29', '2007-11-29'),
-(24, 'Hancock, Graham', NULL, 'p', NULL, '2007-11-29', '2007-11-29');
+(24, 'Hancock, Graham', NULL, 'p', NULL, '2007-11-29', '2007-11-29'),
+(25, 'Dina Alfiyanti', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(26, 'Agatha Christie', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(27, 'Asma Nadia', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(28, 'Team', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(29, 'Ahmad Said', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(30, 'Sabaruddin', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(31, 'Forum Lingkar Pena Aceh', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(32, 'Richard Carpenter - Anthony Horwtz', NULL, 'p', NULL, '2021-06-08', '2021-06-08'),
+(33, 'Michael Farr', NULL, 'p', NULL, '2021-06-08', '2021-06-08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_carrier_type`
+-- Struktur dari tabel `mst_carrier_type`
 --
 
 CREATE TABLE `mst_carrier_type` (
@@ -651,7 +637,7 @@ CREATE TABLE `mst_carrier_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_carrier_type`
+-- Dumping data untuk tabel `mst_carrier_type`
 --
 
 INSERT INTO `mst_carrier_type` (`id`, `carrier_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -714,7 +700,7 @@ INSERT INTO `mst_carrier_type` (`id`, `carrier_type`, `code`, `code2`, `input_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_coll_type`
+-- Struktur dari tabel `mst_coll_type`
 --
 
 CREATE TABLE `mst_coll_type` (
@@ -725,7 +711,7 @@ CREATE TABLE `mst_coll_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_coll_type`
+-- Dumping data untuk tabel `mst_coll_type`
 --
 
 INSERT INTO `mst_coll_type` (`coll_type_id`, `coll_type_name`, `input_date`, `last_update`) VALUES
@@ -736,7 +722,7 @@ INSERT INTO `mst_coll_type` (`coll_type_id`, `coll_type_name`, `input_date`, `la
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_content_type`
+-- Struktur dari tabel `mst_content_type`
 --
 
 CREATE TABLE `mst_content_type` (
@@ -749,7 +735,7 @@ CREATE TABLE `mst_content_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_content_type`
+-- Dumping data untuk tabel `mst_content_type`
 --
 
 INSERT INTO `mst_content_type` (`id`, `content_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -782,7 +768,7 @@ INSERT INTO `mst_content_type` (`id`, `content_type`, `code`, `code2`, `input_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_custom_field`
+-- Struktur dari tabel `mst_custom_field`
 --
 
 CREATE TABLE `mst_custom_field` (
@@ -804,7 +790,7 @@ CREATE TABLE `mst_custom_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_frequency`
+-- Struktur dari tabel `mst_frequency`
 --
 
 CREATE TABLE `mst_frequency` (
@@ -818,7 +804,7 @@ CREATE TABLE `mst_frequency` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_frequency`
+-- Dumping data untuk tabel `mst_frequency`
 --
 
 INSERT INTO `mst_frequency` (`frequency_id`, `frequency`, `language_prefix`, `time_increment`, `time_unit`, `input_date`, `last_update`) VALUES
@@ -834,7 +820,7 @@ INSERT INTO `mst_frequency` (`frequency_id`, `frequency`, `language_prefix`, `ti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_gmd`
+-- Struktur dari tabel `mst_gmd`
 --
 
 CREATE TABLE `mst_gmd` (
@@ -847,7 +833,7 @@ CREATE TABLE `mst_gmd` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_gmd`
+-- Dumping data untuk tabel `mst_gmd`
 --
 
 INSERT INTO `mst_gmd` (`gmd_id`, `gmd_code`, `gmd_name`, `icon_image`, `input_date`, `last_update`) VALUES
@@ -886,7 +872,7 @@ INSERT INTO `mst_gmd` (`gmd_id`, `gmd_code`, `gmd_name`, `icon_image`, `input_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_item_status`
+-- Struktur dari tabel `mst_item_status`
 --
 
 CREATE TABLE `mst_item_status` (
@@ -900,7 +886,7 @@ CREATE TABLE `mst_item_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_item_status`
+-- Dumping data untuk tabel `mst_item_status`
 --
 
 INSERT INTO `mst_item_status` (`item_status_id`, `item_status_name`, `rules`, `no_loan`, `skip_stock_take`, `input_date`, `last_update`) VALUES
@@ -911,7 +897,7 @@ INSERT INTO `mst_item_status` (`item_status_id`, `item_status_name`, `rules`, `n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_label`
+-- Struktur dari tabel `mst_label`
 --
 
 CREATE TABLE `mst_label` (
@@ -924,7 +910,7 @@ CREATE TABLE `mst_label` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `mst_label`
+-- Dumping data untuk tabel `mst_label`
 --
 
 INSERT INTO `mst_label` (`label_id`, `label_name`, `label_desc`, `label_image`, `input_date`, `last_update`) VALUES
@@ -935,7 +921,7 @@ INSERT INTO `mst_label` (`label_id`, `label_name`, `label_desc`, `label_image`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_language`
+-- Struktur dari tabel `mst_language`
 --
 
 CREATE TABLE `mst_language` (
@@ -946,7 +932,7 @@ CREATE TABLE `mst_language` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_language`
+-- Dumping data untuk tabel `mst_language`
 --
 
 INSERT INTO `mst_language` (`language_id`, `language_name`, `input_date`, `last_update`) VALUES
@@ -956,7 +942,7 @@ INSERT INTO `mst_language` (`language_id`, `language_name`, `input_date`, `last_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_loan_rules`
+-- Struktur dari tabel `mst_loan_rules`
 --
 
 CREATE TABLE `mst_loan_rules` (
@@ -976,7 +962,7 @@ CREATE TABLE `mst_loan_rules` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_location`
+-- Struktur dari tabel `mst_location`
 --
 
 CREATE TABLE `mst_location` (
@@ -987,7 +973,7 @@ CREATE TABLE `mst_location` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_location`
+-- Dumping data untuk tabel `mst_location`
 --
 
 INSERT INTO `mst_location` (`location_id`, `location_name`, `input_date`, `last_update`) VALUES
@@ -996,7 +982,7 @@ INSERT INTO `mst_location` (`location_id`, `location_name`, `input_date`, `last_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_media_type`
+-- Struktur dari tabel `mst_media_type`
 --
 
 CREATE TABLE `mst_media_type` (
@@ -1009,7 +995,7 @@ CREATE TABLE `mst_media_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_media_type`
+-- Dumping data untuk tabel `mst_media_type`
 --
 
 INSERT INTO `mst_media_type` (`id`, `media_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -1027,7 +1013,7 @@ INSERT INTO `mst_media_type` (`id`, `media_type`, `code`, `code2`, `input_date`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_member_type`
+-- Struktur dari tabel `mst_member_type`
 --
 
 CREATE TABLE `mst_member_type` (
@@ -1046,16 +1032,16 @@ CREATE TABLE `mst_member_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_member_type`
+-- Dumping data untuk tabel `mst_member_type`
 --
 
 INSERT INTO `mst_member_type` (`member_type_id`, `member_type_name`, `loan_limit`, `loan_periode`, `enable_reserve`, `reserve_limit`, `member_periode`, `reborrow_limit`, `fine_each_day`, `grace_periode`, `input_date`, `last_update`) VALUES
-(1, 'Standard', 2, 7, 1, 2, 365, 1, 0, 0, '2021-06-04', '2021-06-04');
+(1, 'SISWA', 2, 1, 0, 0, 365, 1, 500, 2, '2021-06-04', '2021-06-08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_module`
+-- Struktur dari tabel `mst_module`
 --
 
 CREATE TABLE `mst_module` (
@@ -1066,7 +1052,7 @@ CREATE TABLE `mst_module` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `mst_module`
+-- Dumping data untuk tabel `mst_module`
 --
 
 INSERT INTO `mst_module` (`module_id`, `module_name`, `module_path`, `module_desc`) VALUES
@@ -1082,7 +1068,7 @@ INSERT INTO `mst_module` (`module_id`, `module_name`, `module_path`, `module_des
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_place`
+-- Struktur dari tabel `mst_place`
 --
 
 CREATE TABLE `mst_place` (
@@ -1093,7 +1079,7 @@ CREATE TABLE `mst_place` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_place`
+-- Dumping data untuk tabel `mst_place`
 --
 
 INSERT INTO `mst_place` (`place_id`, `place_name`, `input_date`, `last_update`) VALUES
@@ -1104,12 +1090,13 @@ INSERT INTO `mst_place` (`place_id`, `place_name`, `input_date`, `last_update`) 
 (5, 'Westport, Conn.', '2007-11-29', '2007-11-29'),
 (6, 'Cambridge, Mass', '2007-11-29', '2007-11-29'),
 (7, 'London', '2007-11-29', '2007-11-29'),
-(8, 'New York', '2007-11-29', '2007-11-29');
+(8, 'New York', '2007-11-29', '2007-11-29'),
+(9, '', '2021-06-08', '2021-06-08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_publisher`
+-- Struktur dari tabel `mst_publisher`
 --
 
 CREATE TABLE `mst_publisher` (
@@ -1120,7 +1107,7 @@ CREATE TABLE `mst_publisher` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_publisher`
+-- Dumping data untuk tabel `mst_publisher`
 --
 
 INSERT INTO `mst_publisher` (`publisher_id`, `publisher_name`, `input_date`, `last_update`) VALUES
@@ -1134,12 +1121,21 @@ INSERT INTO `mst_publisher` (`publisher_id`, `publisher_name`, `input_date`, `la
 (8, 'Taylor & Francis Inc.', '2007-11-29', '2007-11-29'),
 (9, 'Palgrave Macmillan', '2007-11-29', '2007-11-29'),
 (10, 'Crown publishers', '2007-11-29', '2007-11-29'),
-(11, 'Atlantic Monthly Press', '2007-11-29', '2007-11-29');
+(11, 'Atlantic Monthly Press', '2007-11-29', '2007-11-29'),
+(12, 'Esensi (Erlangga Group)', '2021-06-08', '2021-06-08'),
+(13, 'PT Gramedia Pustaka Utama', '2021-06-08', '2021-06-08'),
+(14, 'Asma Nadia Publishing House', '2021-06-08', '2021-06-08'),
+(15, 'Lembaga Litbangpemling', '2021-06-08', '2021-06-08'),
+(16, 'Citra Cipta Purwosari', '2021-06-08', '2021-06-08'),
+(17, 'Aku Anak saleh', '2021-06-08', '2021-06-08'),
+(18, 'Asy-Syaamil Press & Grafika', '2021-06-08', '2021-06-08'),
+(19, 'Dian Rakyat', '2021-06-08', '2021-06-08'),
+(20, 'Gramedia Pustaka Utama', '2021-06-08', '2021-06-08');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_relation_term`
+-- Struktur dari tabel `mst_relation_term`
 --
 
 CREATE TABLE `mst_relation_term` (
@@ -1149,7 +1145,7 @@ CREATE TABLE `mst_relation_term` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_relation_term`
+-- Dumping data untuk tabel `mst_relation_term`
 --
 
 INSERT INTO `mst_relation_term` (`ID`, `rt_id`, `rt_desc`) VALUES
@@ -1163,7 +1159,7 @@ INSERT INTO `mst_relation_term` (`ID`, `rt_id`, `rt_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_servers`
+-- Struktur dari tabel `mst_servers`
 --
 
 CREATE TABLE `mst_servers` (
@@ -1178,7 +1174,7 @@ CREATE TABLE `mst_servers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_supplier`
+-- Struktur dari tabel `mst_supplier`
 --
 
 CREATE TABLE `mst_supplier` (
@@ -1198,7 +1194,7 @@ CREATE TABLE `mst_supplier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_topic`
+-- Struktur dari tabel `mst_topic`
 --
 
 CREATE TABLE `mst_topic` (
@@ -1212,7 +1208,7 @@ CREATE TABLE `mst_topic` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_topic`
+-- Dumping data untuk tabel `mst_topic`
 --
 
 INSERT INTO `mst_topic` (`topic_id`, `topic`, `topic_type`, `auth_list`, `classification`, `input_date`, `last_update`) VALUES
@@ -1237,7 +1233,7 @@ INSERT INTO `mst_topic` (`topic_id`, `topic`, `topic_type`, `auth_list`, `classi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_voc_ctrl`
+-- Struktur dari tabel `mst_voc_ctrl`
 --
 
 CREATE TABLE `mst_voc_ctrl` (
@@ -1251,7 +1247,7 @@ CREATE TABLE `mst_voc_ctrl` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `plugins`
+-- Struktur dari tabel `plugins`
 --
 
 CREATE TABLE `plugins` (
@@ -1267,7 +1263,7 @@ CREATE TABLE `plugins` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reserve`
+-- Struktur dari tabel `reserve`
 --
 
 CREATE TABLE `reserve` (
@@ -1281,7 +1277,7 @@ CREATE TABLE `reserve` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `search_biblio`
+-- Struktur dari tabel `search_biblio`
 --
 
 CREATE TABLE `search_biblio` (
@@ -1317,30 +1313,25 @@ CREATE TABLE `search_biblio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='index table for advance searching technique for SLiMS';
 
 --
--- Dumping data for table `search_biblio`
+-- Dumping data untuk tabel `search_biblio`
 --
 
 INSERT INTO `search_biblio` (`biblio_id`, `title`, `edition`, `isbn_issn`, `author`, `topic`, `gmd`, `publisher`, `publish_place`, `language`, `classification`, `spec_detail_info`, `carrier_type`, `content_type`, `media_type`, `location`, `publish_year`, `notes`, `series_title`, `items`, `collection_types`, `call_number`, `opac_hide`, `promoted`, `labels`, `collation`, `image`, `input_date`, `last_update`) VALUES
-(1, 'PHP 5 for dummies', '', '0764541668', 'Valade, Janet', 'Programming - Website', 'Text', 'Wiley', 'Hoboken, NJ', 'English', '005.13/3 22', '', '', '', '', NULL, '2004', NULL, 'For dummies', NULL, NULL, '005.13/3-22 Jan p', 0, 0, NULL, 'xiv, 392 p. : ill. ; 24 cm.', 'php5_dummies.jpg', '2007-11-29 15:36:50', '2007-11-29 16:26:59'),
-(2, 'Linux In a Nutshell', 'Fifth Edition', '9780596009304', 'Siever, Ellen - Love, Robert - Robbins, Arnold - Figgins, Stephen - Weber, Aaron', 'Operating System - Linux - Computer', 'Text', 'OReilly', 'Sebastopol, CA', 'English', '005.4/32 22', '', '', '', '', 'My Library', '2005', NULL, 'In a Nutshell', 'B00009 - B00010', 'Reference', '005.4/32-22 Ell l', 0, 0, NULL, 'xiv, 925 p. : ill. ; 23 cm.', 'linux_in_a_nutshell.jpg', '2007-11-29 15:53:35', '2007-11-29 16:26:10'),
-(3, 'The Definitive Guide to MySQL 5', '', '9781590595350', 'Kofler, Michael - Kramer, David', 'Programming - Database - RDBMS', 'Text', 'Apress', '', 'English', '005.75/85 22', '', '', '', '', NULL, '2005', NULL, 'Definitive Guide Series', NULL, NULL, '005.75/85-22 Kof d', 0, 0, NULL, '784p.', 'mysql_def_guide.jpg', '2007-11-29 16:01:08', '2007-11-29 16:26:33'),
-(4, 'Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary', '', '0-596-00108-8', 'Raymond, Eric', 'Linux - Open Source', 'Text', 'OReilly', 'Sebastopol, CA', 'English', '005.4/32 22', '', '', '', '', 'My Library', '2001', 'The Cathedral & the Bazaar is a must for anyone who cares about the future of the computer industry or the dynamics of the information economy. This revised and expanded paperback edition includes new material on open source developments in 1999 and 2000. Raymond\'s clear and effective writing style accurately describing the benefits of open source software has been key to its success. (Source: http://safari.oreilly.com/0596001088)', NULL, 'B00007 - B00008', 'Reference', '005.4/3222 Ray c', 0, 0, NULL, '208p.', 'cathedral_bazaar.jpg', '2007-11-29 16:14:44', '2007-11-29 16:25:43'),
-(5, 'Producing open source software : how to run a successful free software project', '1st ed.', '9780596007591', 'Fogel, Karl', 'Open Source - Project', 'Text', 'OReilly', 'Sebastopol, CA', 'English', '005.1 22', '', '', '', '', NULL, '2005', 'Includes index.', NULL, NULL, NULL, '005.1-22 Fog p', 0, 0, NULL, 'xx, 279 p. ; 24 cm.', 'producing_oss.jpg', '2007-11-29 16:20:45', '2007-11-29 16:31:21'),
-(6, 'PostgreSQL : a comprehensive guide to building, programming, and administering PostgreSQL databases', '1st ed.', '0735712573', 'Douglas, Korry - Douglas, Susan', 'Programming - RDBMS', 'Text', 'Sams', 'Indianapolis', 'English', '005.75/85 22', '', '', '', '', 'My Library', '2003', 'PostgreSQL is the world\'s most advanced open-source database. PostgreSQL is the most comprehensive, in-depth, and easy-to-read guide to this award-winning database. This book starts with a thorough overview of SQL, a description of all PostgreSQL data types, and a complete explanation of PostgreSQL commands.', 'DeveloperÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s library', 'B00002', 'Reference', '005.75/85-22 Kor p', 0, 0, NULL, 'xvii, 790 p. : ill. ; 23cm.', 'postgresql.jpg', '2007-11-29 16:29:33', '2021-06-04 18:55:32'),
-(7, 'Web application architecture : principles, protocols, and practices', '', '0471486566', 'Shklar, Leon - Rosen, Richard', 'Website - Design', 'Text', 'John Wiley', 'Hoboken, NJ', 'English', '005.7/2 21', '', '', '', '', NULL, '2003', 'An in-depth examination of the core concepts and general principles of Web application development.\r\nThis book uses examples from specific technologies (e.g., servlet API or XSL), without promoting or endorsing particular platforms or APIs. Such knowledge is critical when designing and debugging complex systems. This conceptual understanding makes it easier to learn new APIs that arise in the rapidly changing Internet environment.', NULL, NULL, NULL, '005.7/2-21 Leo w', 0, 0, NULL, 'xi, 357 p. : ill. ; 23 cm.', 'webapp_arch.jpg', '2007-11-29 16:41:57', '2007-11-29 16:32:46'),
-(8, 'Ajax : creating Web pages with asynchronous JavaScript and XML', '', '9780132272674', 'Woychowsky, Edmond', 'Programming - Website', 'Text', 'Prentice Hall', 'Upper Saddle River, NJ', 'English', '006.7/86 22', '', '', '', '', 'My Library', '2007', 'Using Ajax, you can build Web applications with the sophistication and usability of traditional desktop applications and you can do it using standards and open source software. Now, for the first time, there\'s an easy, example-driven guide to Ajax for every Web and open source developer, regardless of experience.', 'Bruce PerensÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ Open Source series', 'B00001', 'Reference', '006.7/86-22 Woy a', 0, 0, NULL, 'xxii, 384 p. : ill. ; 24 cm.', 'ajax.jpg', '2007-11-29 16:47:20', '2021-06-04 18:55:32'),
-(9, 'The organization of information', '2nd ed.', '1563089769', 'Taylor, Arlene G.', 'Information - Organization - Metadata', 'Text', 'Libraries Unlimited', 'Westport, Conn.', 'English', '025 22', '', '', '', '', NULL, '2004', 'A basic textbook for students of library and information studies, and a guide for practicing school library media specialists. Describes the impact of global forces and the school district on the development and operation of a media center, the technical and human side of management, programmatic activities, supportive services to students, and the quality and quantity of resources available to support programs.', 'Library and information science text series', NULL, NULL, '025-22 Tay o', 0, 0, NULL, 'xxvii, 417 p. : ill. ; 27 cm.', 'organization_information.jpg', '2007-11-29 16:54:12', '2007-11-29 16:27:20'),
-(10, 'Library and Information Center Management', '7th ed.', '9781591584063', 'Stueart, Robert D. - Moran, Barbara B.', 'Information - Library', 'Text', 'Libraries Unlimited', 'Westport, Conn.', 'English', '025.1 22', '', '', '', '', NULL, '2007', NULL, 'Library and information science text series', NULL, NULL, '025.1-22 Stu l', 0, 0, NULL, 'xxviii, 492 p. : ill. ; 27 cm.', 'library_info_center.JPG', '2007-11-29 16:58:51', '2007-11-29 16:27:40'),
-(11, 'Information Architecture for the World Wide Web: Designing Large-Scale Web Sites', '2nd ed.', '9780596000356', 'Morville, Peter - Rosenfeld, Louis', NULL, 'Text', 'OReilly', 'Cambridge, Mass', 'English', '006.7 22', '', '', '', '', NULL, '2002', 'Information Architecture for the World Wide Web is about applying the principles of architecture and library science to web site design. Each website is like a public building, available for tourists and regulars alike to breeze through at their leisure. The job of the architect is to set up the framework for the site to make it comfortable and inviting for people to visit, relax in, and perhaps even return to someday.', NULL, NULL, NULL, '006.7-22 Mor i', 0, 0, NULL, '500p.', 'information_arch.jpg', '2007-11-29 17:26:14', '2007-11-29 16:32:25'),
-(12, 'Corruption and development', '', '9780714649023', 'Robinson, Mark', 'Corruption - Development', 'Text', 'Taylor & Francis Inc.', 'London', 'English', '364.1/322/091724 21', '', '', '', '', 'My Library', '1998', 'The articles assembled in this volume offer a fresh approach to analysing the problem of corruption in developing countries and the k means to tackle the phenomenon.', NULL, 'B00006', 'Reference', '364.1 Rob c', 0, 0, NULL, '166 p. : ill. ; 22 cm.', 'corruption_development.jpg', '2007-11-29 17:45:30', '2007-11-29 16:20:53'),
-(13, 'Corruption and development : the anti-corruption campaigns', '', '0230525504', 'Bracking, Sarah', 'Corruption', 'Text', 'Palgrave Macmillan', 'New York', 'English', '364.1/323091724 22', '', '', '', '', 'My Library', '2007', 'This book provides a multidisciplinary interrogation of the global anti-corruption campaigns of the last ten years, arguing that while some positive change is observable, the period is also replete with perverse consequences and unintended outcomes', NULL, 'B00005', 'Reference', '364.1 Bra c', 0, 0, NULL, '310p.', 'corruption_development_anti_campaign.jpg', '2007-11-29 17:49:49', '2007-11-29 16:19:48'),
-(14, 'Pigs at the trough : how corporate greed and political corruption are undermining America', '', '1400047714', 'Huffington, Arianna Stassinopoulos', 'Corruption', 'Text', 'Crown publishers', 'New York', 'English', '364.1323', '', '', '', '', 'My Library', '2003', NULL, NULL, 'B00004', 'Reference', '364.1323 Huf p', 0, 0, NULL, '275 p. ; 22 cm.', 'pigs_at_trough.jpg', '2007-11-29 17:56:00', '2007-11-29 16:18:33'),
-(15, 'Lords of poverty : the power, prestige, and corruption of the international aid business', '', '9780871134691', 'Hancock, Graham', 'Corruption - Poverty', 'Text', 'Atlantic Monthly Press', 'New York', 'English', '338.9/1/091724 20', '', '', '', '', 'My Library', '1994', 'Lords of Poverty is a case study in betrayals of a public trust. The shortcomings of aid are numerous, and serious enough to raise questions about the viability of the practice at its most fundamental levels. Hancocks report is thorough, deeply shocking, and certain to cause critical reevaluation of the governments motives in giving foreign aid, and of the true needs of our intended beneficiaries.', NULL, 'B00003', 'Reference', '338.9 Han l', 0, 0, NULL, 'xvi, 234 p. ; 22 cm.', 'lords_of_poverty.jpg', '2007-11-29 18:08:13', '2007-11-29 16:13:11');
+(24, 'Robin Pendekar Sherwood - Si Lelaki Berkerudung', '', '978-979-523-018-2', 'Richard Carpenter - Anthony Horwtz', NULL, 'Text', 'Dian Rakyat', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '1990', NULL, NULL, '1700157', NULL, '1700157', 0, 0, NULL, 'ii + 150 hlm, 11,5 x 18 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(25, 'Bianca Castafiore', '', '978-979-225-343-6', 'Michael Farr', NULL, 'Text', 'Gramedia Pustaka Utama', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2010', NULL, NULL, '1700158', NULL, '1700158', 0, 0, NULL, '44 hlm; ilus; 21 x 21 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(21, 'Seni Menganyam', '', '978-979-121-602-9', 'Ahmad Said', NULL, 'Text', 'Citra Cipta Purwosari', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2006', NULL, NULL, '1700154', NULL, '1700154', 0, 0, NULL, 'vi + 78 hlm, 15 x 21 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(22, 'Takjub Bukti Kebesaran Allah', '', '978-979-335-112-8', 'Sabaruddin', NULL, 'Text', 'Aku Anak saleh', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2005', NULL, NULL, '1700155', NULL, '1700155', 0, 0, NULL, 'vi + 91 hlm, 11 x 18 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(23, 'Doa Untuk Sebuah Negeri', '', '978-979-943-545-5', 'Forum Lingkar Pena Aceh', NULL, 'Text', 'Asy-Syaamil Press & Grafika', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2001', NULL, NULL, '1700156', NULL, '1700156', 0, 0, NULL, 'xii + 125 hlm, 12 x 20 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(20, 'Pemanfaatan Tumbuh-tumbuhan Alami untuk Kesehatan dan Pengobatan Alternatif', '', '', 'Team', NULL, 'Text', 'Lembaga Litbangpemling', '', 'Indonesia', 'NONE', '', '', '', '', NULL, NULL, NULL, NULL, '1600062', NULL, '1600062', 0, 0, NULL, 'iv+76 hlm; 15,5 x 20,5 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(16, 'Mengenal Pahlawan Nasional 1', '', '978-602-7596-71-9', 'Dina Alfiyanti', NULL, 'Text', 'Esensi (Erlangga Group)', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2012', NULL, NULL, '1500001', NULL, '1500001', 0, 0, NULL, '166 hlm; 25 cm x 17,5 cm', '_slims_img_cache_200_x_139.49329359165_1.png.png.png', '2021-06-08 09:57:09', '2021-06-08 09:58:00'),
+(17, 'Misteri Penginapan Tua (The Pale House)', '', '978-979-22-8014-2', 'Agatha Christie', NULL, 'Text', 'PT Gramedia Pustaka Utama', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2014', NULL, NULL, '1600079', NULL, '1600079', 0, 0, NULL, '336 hlm; 11 x 18 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(18, 'Assalamualaikum Beijing', '', '978-602-9055-25-2', 'Asma Nadia', NULL, 'Text', 'Asma Nadia Publishing House', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2014', NULL, NULL, '1600084', NULL, '1600084', 0, 0, NULL, '360 hlm; 13 x 20 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09'),
+(19, 'Pesantren Impian', '', '978-602-9055-29-0', 'Asma Nadia', NULL, 'Text', 'Asma Nadia Publishing House', '', 'Indonesia', 'NONE', '', '', '', '', NULL, '2014', NULL, NULL, '1600085', NULL, '1600085', 0, 0, NULL, 'vi+314 hlm; 13 x 20 cm', '', '2021-06-08 09:57:09', '2021-06-08 09:57:09');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `serial`
+-- Struktur dari tabel `serial`
 --
 
 CREATE TABLE `serial` (
@@ -1358,7 +1349,7 @@ CREATE TABLE `serial` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting`
+-- Struktur dari tabel `setting`
 --
 
 CREATE TABLE `setting` (
@@ -1368,7 +1359,7 @@ CREATE TABLE `setting` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `setting`
+-- Dumping data untuk tabel `setting`
 --
 
 INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
@@ -1404,7 +1395,7 @@ INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stock_take`
+-- Struktur dari tabel `stock_take`
 --
 
 CREATE TABLE `stock_take` (
@@ -1425,7 +1416,7 @@ CREATE TABLE `stock_take` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stock_take_item`
+-- Struktur dari tabel `stock_take_item`
 --
 
 CREATE TABLE `stock_take_item` (
@@ -1446,7 +1437,7 @@ CREATE TABLE `stock_take_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `system_log`
+-- Struktur dari tabel `system_log`
 --
 
 CREATE TABLE `system_log` (
@@ -1461,7 +1452,7 @@ CREATE TABLE `system_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `system_log`
+-- Dumping data untuk tabel `system_log`
 --
 
 INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_module`, `action`, `log_msg`, `log_date`) VALUES
@@ -1491,12 +1482,35 @@ INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_modul
 (24, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 12:29:14'),
 (25, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 13:08:56'),
 (26, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-07 13:09:16'),
-(27, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 13:20:31');
+(27, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-07 13:20:31'),
+(28, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address ::1', '2021-06-08 09:50:59'),
+(29, 'staff', 'admin', 'Login', '', '', 'Login FAILED for user admin from address ::1', '2021-06-08 09:51:21'),
+(30, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address ::1', '2021-06-08 09:51:29'),
+(31, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (PostgreSQL : a comprehensive guide to building, programming, and administering PostgreSQL databases) with biblio_id (6)', '2021-06-08 09:52:21'),
+(32, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Ajax : creating Web pages with asynchronous JavaScript and XML) with biblio_id (8)', '2021-06-08 09:52:52'),
+(33, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Web application architecture : principles, protocols, and practices) with biblio_id (7)', '2021-06-08 09:53:09'),
+(34, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Information Architecture for the World Wide Web: Designing Large-Scale Web Sites) with biblio_id (11)', '2021-06-08 09:53:09'),
+(35, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Producing open source software : how to run a successful free software project) with biblio_id (5)', '2021-06-08 09:53:09'),
+(36, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Library and Information Center Management) with biblio_id (10)', '2021-06-08 09:53:09'),
+(37, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (The organization of information) with biblio_id (9)', '2021-06-08 09:53:09'),
+(38, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (PHP 5 for dummies) with biblio_id (1)', '2021-06-08 09:53:09'),
+(39, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (The Definitive Guide to MySQL 5) with biblio_id (3)', '2021-06-08 09:53:09'),
+(40, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Linux In a Nutshell) with biblio_id (2)', '2021-06-08 09:53:28'),
+(41, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Cathedral and the Bazaar: Musings on Linux and Open Source by an Accidental Revolutionary) with biblio_id (4)', '2021-06-08 09:53:46'),
+(42, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Corruption and development) with biblio_id (12)', '2021-06-08 09:54:01'),
+(43, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Corruption and development : the anti-corruption campaigns) with biblio_id (13)', '2021-06-08 09:54:18'),
+(44, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Pigs at the trough : how corporate greed and political corruption are undermining America) with biblio_id (14)', '2021-06-08 09:54:33'),
+(45, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Lords of poverty : the power, prestige, and corruption of the international aid business) with biblio_id (15)', '2021-06-08 09:54:58'),
+(46, 'staff', '1', 'bibliography', 'Import', '', 'Importing 10 bibliographic records from file : data-buku.csv', '2021-06-08 09:57:09'),
+(47, 'staff', '1', 'bibliography', '', '', 'Admin upload image file _slims_img_cache_200_x_139.49329359165_1.png.png.png', '2021-06-08 09:58:00'),
+(48, 'staff', '1', 'bibliography', '', '', 'Admin update bibliographic data (Mengenal Pahlawan Nasional 1) with biblio_id (16)', '2021-06-08 09:58:00'),
+(49, 'staff', '1', 'membership', 'Photo', 'Add', 'Admin upload image file member_1500001.png', '2021-06-08 10:02:04'),
+(50, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (Yoshua Ragil) with ID (1500001)', '2021-06-08 10:02:04');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -1518,16 +1532,16 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `realname`, `passwd`, `email`, `user_type`, `user_image`, `social_media`, `last_login`, `last_login_ip`, `groups`, `admin_template`, `forgot`, `input_date`, `last_update`) VALUES
-(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-07 13:20:31', '127.0.0.1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
+(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-08 09:51:29', '::1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_group`
+-- Struktur dari tabel `user_group`
 --
 
 CREATE TABLE `user_group` (
@@ -1538,7 +1552,7 @@ CREATE TABLE `user_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user_group`
+-- Dumping data untuk tabel `user_group`
 --
 
 INSERT INTO `user_group` (`group_id`, `group_name`, `input_date`, `last_update`) VALUES
@@ -1547,7 +1561,7 @@ INSERT INTO `user_group` (`group_id`, `group_name`, `input_date`, `last_update`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `visitor_count`
+-- Struktur dari tabel `visitor_count`
 --
 
 CREATE TABLE `visitor_count` (
@@ -1563,13 +1577,13 @@ CREATE TABLE `visitor_count` (
 --
 
 --
--- Indexes for table `backup_log`
+-- Indeks untuk tabel `backup_log`
 --
 ALTER TABLE `backup_log`
   ADD PRIMARY KEY (`backup_log_id`);
 
 --
--- Indexes for table `biblio`
+-- Indeks untuk tabel `biblio`
 --
 ALTER TABLE `biblio`
   ADD PRIMARY KEY (`biblio_id`),
@@ -1583,7 +1597,7 @@ ALTER TABLE `biblio` ADD FULLTEXT KEY `notes_ft_idx` (`notes`);
 ALTER TABLE `biblio` ADD FULLTEXT KEY `labels` (`labels`);
 
 --
--- Indexes for table `biblio_attachment`
+-- Indeks untuk tabel `biblio_attachment`
 --
 ALTER TABLE `biblio_attachment`
   ADD KEY `biblio_id` (`biblio_id`),
@@ -1591,7 +1605,7 @@ ALTER TABLE `biblio_attachment`
   ADD KEY `biblio_id_2` (`biblio_id`,`file_id`);
 
 --
--- Indexes for table `biblio_author`
+-- Indeks untuk tabel `biblio_author`
 --
 ALTER TABLE `biblio_author`
   ADD PRIMARY KEY (`biblio_id`,`author_id`),
@@ -1599,13 +1613,13 @@ ALTER TABLE `biblio_author`
   ADD KEY `author_id` (`author_id`);
 
 --
--- Indexes for table `biblio_custom`
+-- Indeks untuk tabel `biblio_custom`
 --
 ALTER TABLE `biblio_custom`
   ADD PRIMARY KEY (`biblio_id`);
 
 --
--- Indexes for table `biblio_log`
+-- Indeks untuk tabel `biblio_log`
 --
 ALTER TABLE `biblio_log`
   ADD PRIMARY KEY (`biblio_log_id`),
@@ -1621,13 +1635,13 @@ ALTER TABLE `biblio_log` ADD FULLTEXT KEY `rawdata` (`rawdata`);
 ALTER TABLE `biblio_log` ADD FULLTEXT KEY `additional_information` (`additional_information`);
 
 --
--- Indexes for table `biblio_relation`
+-- Indeks untuk tabel `biblio_relation`
 --
 ALTER TABLE `biblio_relation`
   ADD PRIMARY KEY (`biblio_id`,`rel_biblio_id`);
 
 --
--- Indexes for table `biblio_topic`
+-- Indeks untuk tabel `biblio_topic`
 --
 ALTER TABLE `biblio_topic`
   ADD PRIMARY KEY (`biblio_id`,`topic_id`),
@@ -1635,13 +1649,13 @@ ALTER TABLE `biblio_topic`
   ADD KEY `topic_id` (`topic_id`);
 
 --
--- Indexes for table `comment`
+-- Indeks untuk tabel `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Indexes for table `content`
+-- Indeks untuk tabel `content`
 --
 ALTER TABLE `content`
   ADD PRIMARY KEY (`content_id`),
@@ -1650,7 +1664,7 @@ ALTER TABLE `content` ADD FULLTEXT KEY `content_title` (`content_title`);
 ALTER TABLE `content` ADD FULLTEXT KEY `content_desc` (`content_desc`);
 
 --
--- Indexes for table `files`
+-- Indeks untuk tabel `files`
 --
 ALTER TABLE `files`
   ADD PRIMARY KEY (`file_id`);
@@ -1658,33 +1672,33 @@ ALTER TABLE `files` ADD FULLTEXT KEY `file_name` (`file_name`);
 ALTER TABLE `files` ADD FULLTEXT KEY `file_dir` (`file_dir`);
 
 --
--- Indexes for table `files_read`
+-- Indeks untuk tabel `files_read`
 --
 ALTER TABLE `files_read`
   ADD PRIMARY KEY (`filelog_id`);
 
 --
--- Indexes for table `fines`
+-- Indeks untuk tabel `fines`
 --
 ALTER TABLE `fines`
   ADD PRIMARY KEY (`fines_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- Indexes for table `group_access`
+-- Indeks untuk tabel `group_access`
 --
 ALTER TABLE `group_access`
   ADD PRIMARY KEY (`group_id`,`module_id`);
 
 --
--- Indexes for table `holiday`
+-- Indeks untuk tabel `holiday`
 --
 ALTER TABLE `holiday`
   ADD PRIMARY KEY (`holiday_id`),
   ADD UNIQUE KEY `holiday_dayname` (`holiday_dayname`,`holiday_date`);
 
 --
--- Indexes for table `item`
+-- Indeks untuk tabel `item`
 --
 ALTER TABLE `item`
   ADD PRIMARY KEY (`item_id`),
@@ -1694,14 +1708,14 @@ ALTER TABLE `item`
   ADD KEY `biblio_id_idx` (`biblio_id`);
 
 --
--- Indexes for table `kardex`
+-- Indeks untuk tabel `kardex`
 --
 ALTER TABLE `kardex`
   ADD PRIMARY KEY (`kardex_id`),
   ADD KEY `fk_serial` (`serial_id`);
 
 --
--- Indexes for table `loan`
+-- Indeks untuk tabel `loan`
 --
 ALTER TABLE `loan`
   ADD PRIMARY KEY (`loan_id`),
@@ -1710,14 +1724,14 @@ ALTER TABLE `loan`
   ADD KEY `input_date` (`input_date`,`last_update`,`uid`);
 
 --
--- Indexes for table `loan_history`
+-- Indeks untuk tabel `loan_history`
 --
 ALTER TABLE `loan_history`
   ADD PRIMARY KEY (`loan_id`),
   ADD KEY `member_name` (`member_name`);
 
 --
--- Indexes for table `member`
+-- Indeks untuk tabel `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`member_id`),
@@ -1725,20 +1739,20 @@ ALTER TABLE `member`
   ADD KEY `member_type_id` (`member_type_id`);
 
 --
--- Indexes for table `member_custom`
+-- Indeks untuk tabel `member_custom`
 --
 ALTER TABLE `member_custom`
   ADD PRIMARY KEY (`member_id`);
 
 --
--- Indexes for table `mst_author`
+-- Indeks untuk tabel `mst_author`
 --
 ALTER TABLE `mst_author`
   ADD PRIMARY KEY (`author_id`),
   ADD UNIQUE KEY `author_name` (`author_name`,`authority_type`);
 
 --
--- Indexes for table `mst_carrier_type`
+-- Indeks untuk tabel `mst_carrier_type`
 --
 ALTER TABLE `mst_carrier_type`
   ADD PRIMARY KEY (`id`),
@@ -1746,14 +1760,14 @@ ALTER TABLE `mst_carrier_type`
   ADD KEY `code` (`code`);
 
 --
--- Indexes for table `mst_coll_type`
+-- Indeks untuk tabel `mst_coll_type`
 --
 ALTER TABLE `mst_coll_type`
   ADD PRIMARY KEY (`coll_type_id`),
   ADD UNIQUE KEY `coll_type_name` (`coll_type_name`);
 
 --
--- Indexes for table `mst_content_type`
+-- Indeks untuk tabel `mst_content_type`
 --
 ALTER TABLE `mst_content_type`
   ADD PRIMARY KEY (`id`),
@@ -1761,20 +1775,20 @@ ALTER TABLE `mst_content_type`
   ADD KEY `code` (`code`);
 
 --
--- Indexes for table `mst_custom_field`
+-- Indeks untuk tabel `mst_custom_field`
 --
 ALTER TABLE `mst_custom_field`
   ADD PRIMARY KEY (`dbfield`),
   ADD UNIQUE KEY `field_id` (`field_id`);
 
 --
--- Indexes for table `mst_frequency`
+-- Indeks untuk tabel `mst_frequency`
 --
 ALTER TABLE `mst_frequency`
   ADD PRIMARY KEY (`frequency_id`);
 
 --
--- Indexes for table `mst_gmd`
+-- Indeks untuk tabel `mst_gmd`
 --
 ALTER TABLE `mst_gmd`
   ADD PRIMARY KEY (`gmd_id`),
@@ -1782,41 +1796,41 @@ ALTER TABLE `mst_gmd`
   ADD UNIQUE KEY `gmd_code` (`gmd_code`);
 
 --
--- Indexes for table `mst_item_status`
+-- Indeks untuk tabel `mst_item_status`
 --
 ALTER TABLE `mst_item_status`
   ADD PRIMARY KEY (`item_status_id`),
   ADD UNIQUE KEY `item_status_name` (`item_status_name`);
 
 --
--- Indexes for table `mst_label`
+-- Indeks untuk tabel `mst_label`
 --
 ALTER TABLE `mst_label`
   ADD PRIMARY KEY (`label_id`),
   ADD UNIQUE KEY `label_name` (`label_name`);
 
 --
--- Indexes for table `mst_language`
+-- Indeks untuk tabel `mst_language`
 --
 ALTER TABLE `mst_language`
   ADD PRIMARY KEY (`language_id`),
   ADD UNIQUE KEY `language_name` (`language_name`);
 
 --
--- Indexes for table `mst_loan_rules`
+-- Indeks untuk tabel `mst_loan_rules`
 --
 ALTER TABLE `mst_loan_rules`
   ADD PRIMARY KEY (`loan_rules_id`);
 
 --
--- Indexes for table `mst_location`
+-- Indeks untuk tabel `mst_location`
 --
 ALTER TABLE `mst_location`
   ADD PRIMARY KEY (`location_id`),
   ADD UNIQUE KEY `location_name` (`location_name`);
 
 --
--- Indexes for table `mst_media_type`
+-- Indeks untuk tabel `mst_media_type`
 --
 ALTER TABLE `mst_media_type`
   ADD PRIMARY KEY (`id`),
@@ -1824,73 +1838,73 @@ ALTER TABLE `mst_media_type`
   ADD KEY `code` (`code`);
 
 --
--- Indexes for table `mst_member_type`
+-- Indeks untuk tabel `mst_member_type`
 --
 ALTER TABLE `mst_member_type`
   ADD PRIMARY KEY (`member_type_id`),
   ADD UNIQUE KEY `member_type_name` (`member_type_name`);
 
 --
--- Indexes for table `mst_module`
+-- Indeks untuk tabel `mst_module`
 --
 ALTER TABLE `mst_module`
   ADD PRIMARY KEY (`module_id`),
   ADD UNIQUE KEY `module_name` (`module_name`,`module_path`);
 
 --
--- Indexes for table `mst_place`
+-- Indeks untuk tabel `mst_place`
 --
 ALTER TABLE `mst_place`
   ADD PRIMARY KEY (`place_id`),
   ADD UNIQUE KEY `place_name` (`place_name`);
 
 --
--- Indexes for table `mst_publisher`
+-- Indeks untuk tabel `mst_publisher`
 --
 ALTER TABLE `mst_publisher`
   ADD PRIMARY KEY (`publisher_id`),
   ADD UNIQUE KEY `publisher_name` (`publisher_name`);
 
 --
--- Indexes for table `mst_relation_term`
+-- Indeks untuk tabel `mst_relation_term`
 --
 ALTER TABLE `mst_relation_term`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `mst_servers`
+-- Indeks untuk tabel `mst_servers`
 --
 ALTER TABLE `mst_servers`
   ADD PRIMARY KEY (`server_id`);
 
 --
--- Indexes for table `mst_supplier`
+-- Indeks untuk tabel `mst_supplier`
 --
 ALTER TABLE `mst_supplier`
   ADD PRIMARY KEY (`supplier_id`),
   ADD UNIQUE KEY `supplier_name` (`supplier_name`);
 
 --
--- Indexes for table `mst_topic`
+-- Indeks untuk tabel `mst_topic`
 --
 ALTER TABLE `mst_topic`
   ADD PRIMARY KEY (`topic_id`),
   ADD UNIQUE KEY `topic` (`topic`,`topic_type`);
 
 --
--- Indexes for table `mst_voc_ctrl`
+-- Indeks untuk tabel `mst_voc_ctrl`
 --
 ALTER TABLE `mst_voc_ctrl`
   ADD PRIMARY KEY (`vocabolary_id`);
 
 --
--- Indexes for table `plugins`
+-- Indeks untuk tabel `plugins`
 --
 ALTER TABLE `plugins`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indexes for table `reserve`
+-- Indeks untuk tabel `reserve`
 --
 ALTER TABLE `reserve`
   ADD PRIMARY KEY (`reserve_id`),
@@ -1898,7 +1912,7 @@ ALTER TABLE `reserve`
   ADD KEY `item_code_idx` (`item_code`);
 
 --
--- Indexes for table `search_biblio`
+-- Indeks untuk tabel `search_biblio`
 --
 ALTER TABLE `search_biblio`
   ADD UNIQUE KEY `biblio_id` (`biblio_id`),
@@ -1914,7 +1928,7 @@ ALTER TABLE `search_biblio` ADD FULLTEXT KEY `collection_types` (`collection_typ
 ALTER TABLE `search_biblio` ADD FULLTEXT KEY `labels` (`labels`);
 
 --
--- Indexes for table `serial`
+-- Indeks untuk tabel `serial`
 --
 ALTER TABLE `serial`
   ADD PRIMARY KEY (`serial_id`),
@@ -1922,20 +1936,20 @@ ALTER TABLE `serial`
   ADD KEY `fk_serial_gmd` (`gmd_id`);
 
 --
--- Indexes for table `setting`
+-- Indeks untuk tabel `setting`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`setting_id`),
   ADD UNIQUE KEY `setting_name` (`setting_name`);
 
 --
--- Indexes for table `stock_take`
+-- Indeks untuk tabel `stock_take`
 --
 ALTER TABLE `stock_take`
   ADD PRIMARY KEY (`stock_take_id`);
 
 --
--- Indexes for table `stock_take_item`
+-- Indeks untuk tabel `stock_take_item`
 --
 ALTER TABLE `stock_take_item`
   ADD PRIMARY KEY (`stock_take_id`,`item_id`),
@@ -1944,7 +1958,7 @@ ALTER TABLE `stock_take_item`
   ADD KEY `item_properties_idx` (`gmd_name`,`classification`,`coll_type_name`,`location`);
 
 --
--- Indexes for table `system_log`
+-- Indeks untuk tabel `system_log`
 --
 ALTER TABLE `system_log`
   ADD PRIMARY KEY (`log_id`),
@@ -1952,7 +1966,7 @@ ALTER TABLE `system_log`
   ADD KEY `id` (`id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`),
@@ -1960,253 +1974,253 @@ ALTER TABLE `user`
   ADD KEY `realname` (`realname`);
 
 --
--- Indexes for table `user_group`
+-- Indeks untuk tabel `user_group`
 --
 ALTER TABLE `user_group`
   ADD PRIMARY KEY (`group_id`),
   ADD UNIQUE KEY `group_name` (`group_name`);
 
 --
--- Indexes for table `visitor_count`
+-- Indeks untuk tabel `visitor_count`
 --
 ALTER TABLE `visitor_count`
   ADD PRIMARY KEY (`visitor_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `backup_log`
+-- AUTO_INCREMENT untuk tabel `backup_log`
 --
 ALTER TABLE `backup_log`
   MODIFY `backup_log_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `biblio`
+-- AUTO_INCREMENT untuk tabel `biblio`
 --
 ALTER TABLE `biblio`
-  MODIFY `biblio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `biblio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `biblio_log`
+-- AUTO_INCREMENT untuk tabel `biblio_log`
 --
 ALTER TABLE `biblio_log`
-  MODIFY `biblio_log_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `biblio_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT untuk tabel `comment`
 --
 ALTER TABLE `comment`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `content`
+-- AUTO_INCREMENT untuk tabel `content`
 --
 ALTER TABLE `content`
   MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `files`
+-- AUTO_INCREMENT untuk tabel `files`
 --
 ALTER TABLE `files`
   MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `files_read`
+-- AUTO_INCREMENT untuk tabel `files_read`
 --
 ALTER TABLE `files_read`
   MODIFY `filelog_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `fines`
+-- AUTO_INCREMENT untuk tabel `fines`
 --
 ALTER TABLE `fines`
   MODIFY `fines_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `holiday`
+-- AUTO_INCREMENT untuk tabel `holiday`
 --
 ALTER TABLE `holiday`
   MODIFY `holiday_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `item`
+-- AUTO_INCREMENT untuk tabel `item`
 --
 ALTER TABLE `item`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `kardex`
+-- AUTO_INCREMENT untuk tabel `kardex`
 --
 ALTER TABLE `kardex`
   MODIFY `kardex_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `loan`
+-- AUTO_INCREMENT untuk tabel `loan`
 --
 ALTER TABLE `loan`
   MODIFY `loan_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_author`
+-- AUTO_INCREMENT untuk tabel `mst_author`
 --
 ALTER TABLE `mst_author`
-  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `mst_carrier_type`
+-- AUTO_INCREMENT untuk tabel `mst_carrier_type`
 --
 ALTER TABLE `mst_carrier_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT for table `mst_coll_type`
+-- AUTO_INCREMENT untuk tabel `mst_coll_type`
 --
 ALTER TABLE `mst_coll_type`
   MODIFY `coll_type_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `mst_content_type`
+-- AUTO_INCREMENT untuk tabel `mst_content_type`
 --
 ALTER TABLE `mst_content_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `mst_custom_field`
+-- AUTO_INCREMENT untuk tabel `mst_custom_field`
 --
 ALTER TABLE `mst_custom_field`
   MODIFY `field_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_frequency`
+-- AUTO_INCREMENT untuk tabel `mst_frequency`
 --
 ALTER TABLE `mst_frequency`
   MODIFY `frequency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `mst_gmd`
+-- AUTO_INCREMENT untuk tabel `mst_gmd`
 --
 ALTER TABLE `mst_gmd`
   MODIFY `gmd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `mst_label`
+-- AUTO_INCREMENT untuk tabel `mst_label`
 --
 ALTER TABLE `mst_label`
   MODIFY `label_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `mst_loan_rules`
+-- AUTO_INCREMENT untuk tabel `mst_loan_rules`
 --
 ALTER TABLE `mst_loan_rules`
   MODIFY `loan_rules_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_media_type`
+-- AUTO_INCREMENT untuk tabel `mst_media_type`
 --
 ALTER TABLE `mst_media_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `mst_member_type`
+-- AUTO_INCREMENT untuk tabel `mst_member_type`
 --
 ALTER TABLE `mst_member_type`
   MODIFY `member_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `mst_module`
+-- AUTO_INCREMENT untuk tabel `mst_module`
 --
 ALTER TABLE `mst_module`
   MODIFY `module_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `mst_place`
+-- AUTO_INCREMENT untuk tabel `mst_place`
 --
 ALTER TABLE `mst_place`
-  MODIFY `place_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `place_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `mst_publisher`
+-- AUTO_INCREMENT untuk tabel `mst_publisher`
 --
 ALTER TABLE `mst_publisher`
-  MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT for table `mst_relation_term`
+-- AUTO_INCREMENT untuk tabel `mst_relation_term`
 --
 ALTER TABLE `mst_relation_term`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `mst_servers`
+-- AUTO_INCREMENT untuk tabel `mst_servers`
 --
 ALTER TABLE `mst_servers`
   MODIFY `server_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_supplier`
+-- AUTO_INCREMENT untuk tabel `mst_supplier`
 --
 ALTER TABLE `mst_supplier`
   MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_topic`
+-- AUTO_INCREMENT untuk tabel `mst_topic`
 --
 ALTER TABLE `mst_topic`
   MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `mst_voc_ctrl`
+-- AUTO_INCREMENT untuk tabel `mst_voc_ctrl`
 --
 ALTER TABLE `mst_voc_ctrl`
   MODIFY `vocabolary_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `reserve`
+-- AUTO_INCREMENT untuk tabel `reserve`
 --
 ALTER TABLE `reserve`
   MODIFY `reserve_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `serial`
+-- AUTO_INCREMENT untuk tabel `serial`
 --
 ALTER TABLE `serial`
   MODIFY `serial_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `setting`
+-- AUTO_INCREMENT untuk tabel `setting`
 --
 ALTER TABLE `setting`
   MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `stock_take`
+-- AUTO_INCREMENT untuk tabel `stock_take`
 --
 ALTER TABLE `stock_take`
   MODIFY `stock_take_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `system_log`
+-- AUTO_INCREMENT untuk tabel `system_log`
 --
 ALTER TABLE `system_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `user_group`
+-- AUTO_INCREMENT untuk tabel `user_group`
 --
 ALTER TABLE `user_group`
   MODIFY `group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `visitor_count`
+-- AUTO_INCREMENT untuk tabel `visitor_count`
 --
 ALTER TABLE `visitor_count`
   MODIFY `visitor_id` int(11) NOT NULL AUTO_INCREMENT;
