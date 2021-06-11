@@ -1,4 +1,3 @@
-<?php if ($_SERVER['REQUEST_URI'] === $sysconf['baseURL']): ?>
 <footer class="s-footer">
   <?php
   // Promoted titles - Only show at the homepage
@@ -40,14 +39,24 @@
     <?php endif; ?>
   <?php endif; ?>
 
-  <div class="row" style="margin: 10px 0;">
-    <div class="col" style="text-align: center;">
-      <p style="color: white; text-transform: capitalize; font-weight: bold;">bekerja sama dengan</p>
-      <img src="template/akasia/logo/himti.png" alt="Himti" width="50" height="50">
-      <img style="margin: 0 20px;" src="template/akasia/logo/slims.png" alt="Slim" width="50" height="50">
-      <img src="template/akasia/logo/kemenag.png" alt="Kemenag" width="50" height="50">
+  <div class="s-footer-content container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-3 col-xs-12">
+        <div class="s-footer-tagline">
+          <a href="//slims.web.id" target="_blank"><?php echo SENAYAN_VERSION; ?></a>
+        </div>
+      </div>
+      <nav class="col-lg-6 col-sm-9 col-xs-12">
+        <ul class="s-footer-menu">
+          <li><a href="index.php"><?php echo __('Home'); ?></a></li>
+          <li><a target="_blank" rel="archives" href="//www.facebook.com/groups/senayan.slims">Facebook</a></li>
+          <li><a target="_blank" rel="archives" href="//www.twitter.com/#!/slims_official">Twitter</a></li>
+          <li><a target="_blank" rel="archives" href="//www.youtube.com/user/senayanslims">Youtube</a></li>
+          <li><a target="_blank" rel="archives" href="//www.github.com/slims">Github</a></li>
+          <li><a target="_blank" rel="archives" href="//www.slims.web.id/forum">Forum</a></li>
+          <li><a target="_blank" rel="archives" href="index.php?rss=true" title="RSS" class="rss" >RSS</a></li>
+        </ul>
+      </nav>
     </div>
   </div>
 </footer>
-
-<?php endif ?>
