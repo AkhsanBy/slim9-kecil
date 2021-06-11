@@ -30,7 +30,8 @@
                       slides: [
                           { src: "<?php echo $sysconf['template']['dir'].'/'.$sysconf['template']['theme']; ?>/img/5.jpg" },
                           { src: "<?php echo $sysconf['template']['dir'].'/'.$sysconf['template']['theme']; ?>/img/6.jpg" },
-                          { src: "<?php echo $sysconf['template']['dir'].'/'.$sysconf['template']['theme']; ?>/img/7.jpg" }
+                          { src: "<?php echo $sysconf['template']['dir'].'/'.$sysconf['template']['theme']; ?>/img/7.jpg" },
+                          { src: "<?php echo $sysconf['template']['dir'].'/'.$sysconf['template']['theme']; ?>/img/8.jpg" }
                       ],
                       firstTransition: 'fade',
                       firstTransitionDuration: 2000,

@@ -15,14 +15,6 @@ $main_menus = [
     'text' => __('Information'),
     'url' => 'index.php?p=libinfo'
   ],
-  'news' => [
-    'text' => __('News'),
-    'url' => 'index.php?p=news'
-  ],
-  'help' => [
-    'text' => __('Help'),
-    'url' => 'index.php?p=help'
-  ],
   'librarian' => [
     'text' => __('Librarian'),
     'url' => 'index.php?p=login'

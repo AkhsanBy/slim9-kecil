@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 11, 2021 at 04:22 AM
--- Server version: 10.5.10-MariaDB-log
--- PHP Version: 8.0.6
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 10 Jun 2021 pada 07.41
+-- Versi server: 10.4.19-MariaDB
+-- Versi PHP: 7.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `backup_log`
+-- Struktur dari tabel `backup_log`
 --
 
 CREATE TABLE `backup_log` (
@@ -37,7 +37,7 @@ CREATE TABLE `backup_log` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio`
+-- Struktur dari tabel `biblio`
 --
 
 CREATE TABLE `biblio` (
@@ -73,7 +73,7 @@ CREATE TABLE `biblio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `biblio`
+-- Dumping data untuk tabel `biblio`
 --
 
 INSERT INTO `biblio` (`biblio_id`, `gmd_id`, `title`, `sor`, `edition`, `isbn_issn`, `publisher_id`, `publish_year`, `collation`, `series_title`, `call_number`, `language_id`, `source`, `publish_place_id`, `classification`, `notes`, `image`, `file_att`, `opac_hide`, `promoted`, `labels`, `frequency_id`, `spec_detail_info`, `content_type_id`, `media_type_id`, `carrier_type_id`, `input_date`, `last_update`, `uid`) VALUES
@@ -91,7 +91,7 @@ INSERT INTO `biblio` (`biblio_id`, `gmd_id`, `title`, `sor`, `edition`, `isbn_is
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_attachment`
+-- Struktur dari tabel `biblio_attachment`
 --
 
 CREATE TABLE `biblio_attachment` (
@@ -105,7 +105,7 @@ CREATE TABLE `biblio_attachment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_author`
+-- Struktur dari tabel `biblio_author`
 --
 
 CREATE TABLE `biblio_author` (
@@ -115,7 +115,7 @@ CREATE TABLE `biblio_author` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `biblio_author`
+-- Dumping data untuk tabel `biblio_author`
 --
 
 INSERT INTO `biblio_author` (`biblio_id`, `author_id`, `level`) VALUES
@@ -133,7 +133,7 @@ INSERT INTO `biblio_author` (`biblio_id`, `author_id`, `level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_custom`
+-- Struktur dari tabel `biblio_custom`
 --
 
 CREATE TABLE `biblio_custom` (
@@ -143,7 +143,7 @@ CREATE TABLE `biblio_custom` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_log`
+-- Struktur dari tabel `biblio_log`
 --
 
 CREATE TABLE `biblio_log` (
@@ -161,7 +161,7 @@ CREATE TABLE `biblio_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `biblio_log`
+-- Dumping data untuk tabel `biblio_log`
 --
 
 INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `title`, `ip`, `action`, `affectedrow`, `rawdata`, `additional_information`, `date`) VALUES
@@ -210,7 +210,7 @@ INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_relation`
+-- Struktur dari tabel `biblio_relation`
 --
 
 CREATE TABLE `biblio_relation` (
@@ -222,7 +222,7 @@ CREATE TABLE `biblio_relation` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `biblio_topic`
+-- Struktur dari tabel `biblio_topic`
 --
 
 CREATE TABLE `biblio_topic` (
@@ -234,7 +234,7 @@ CREATE TABLE `biblio_topic` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comment`
+-- Struktur dari tabel `comment`
 --
 
 CREATE TABLE `comment` (
@@ -249,7 +249,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `content`
+-- Struktur dari tabel `content`
 --
 
 CREATE TABLE `content` (
@@ -264,7 +264,7 @@ CREATE TABLE `content` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `content`
+-- Dumping data untuk tabel `content`
 --
 
 INSERT INTO `content` (`content_id`, `content_title`, `content_desc`, `content_path`, `is_news`, `input_date`, `last_update`, `content_ownpage`) VALUES
@@ -281,7 +281,7 @@ INSERT INTO `content` (`content_id`, `content_title`, `content_desc`, `content_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files`
+-- Struktur dari tabel `files`
 --
 
 CREATE TABLE `files` (
@@ -300,7 +300,7 @@ CREATE TABLE `files` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `files_read`
+-- Struktur dari tabel `files_read`
 --
 
 CREATE TABLE `files_read` (
@@ -315,7 +315,7 @@ CREATE TABLE `files_read` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fines`
+-- Struktur dari tabel `fines`
 --
 
 CREATE TABLE `fines` (
@@ -330,7 +330,7 @@ CREATE TABLE `fines` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `group_access`
+-- Struktur dari tabel `group_access`
 --
 
 CREATE TABLE `group_access` (
@@ -342,7 +342,7 @@ CREATE TABLE `group_access` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `group_access`
+-- Dumping data untuk tabel `group_access`
 --
 
 INSERT INTO `group_access` (`group_id`, `module_id`, `menus`, `r`, `w`) VALUES
@@ -358,7 +358,7 @@ INSERT INTO `group_access` (`group_id`, `module_id`, `menus`, `r`, `w`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `holiday`
+-- Struktur dari tabel `holiday`
 --
 
 CREATE TABLE `holiday` (
@@ -369,7 +369,7 @@ CREATE TABLE `holiday` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `holiday`
+-- Dumping data untuk tabel `holiday`
 --
 
 INSERT INTO `holiday` (`holiday_id`, `holiday_dayname`, `holiday_date`, `description`) VALUES
@@ -383,7 +383,7 @@ INSERT INTO `holiday` (`holiday_id`, `holiday_dayname`, `holiday_date`, `descrip
 -- --------------------------------------------------------
 
 --
--- Table structure for table `item`
+-- Struktur dari tabel `item`
 --
 
 CREATE TABLE `item` (
@@ -411,7 +411,7 @@ CREATE TABLE `item` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `item`
+-- Dumping data untuk tabel `item`
 --
 
 INSERT INTO `item` (`item_id`, `biblio_id`, `call_number`, `coll_type_id`, `item_code`, `inventory_code`, `received_date`, `supplier_id`, `order_no`, `location_id`, `order_date`, `item_status_id`, `site`, `source`, `invoice`, `price`, `price_currency`, `invoice_date`, `input_date`, `last_update`, `uid`) VALUES
@@ -429,7 +429,7 @@ INSERT INTO `item` (`item_id`, `biblio_id`, `call_number`, `coll_type_id`, `item
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kardex`
+-- Struktur dari tabel `kardex`
 --
 
 CREATE TABLE `kardex` (
@@ -446,7 +446,7 @@ CREATE TABLE `kardex` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loan`
+-- Struktur dari tabel `loan`
 --
 
 CREATE TABLE `loan` (
@@ -467,7 +467,7 @@ CREATE TABLE `loan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `loan`
+-- Dumping data untuk tabel `loan`
 --
 
 INSERT INTO `loan` (`loan_id`, `item_code`, `member_id`, `loan_date`, `due_date`, `renewed`, `loan_rules_id`, `actual`, `is_lent`, `is_return`, `return_date`, `input_date`, `last_update`, `uid`) VALUES
@@ -475,7 +475,7 @@ INSERT INTO `loan` (`loan_id`, `item_code`, `member_id`, `loan_date`, `due_date`
 (2, '1600084', '1500002', '2021-06-10', '2021-06-11', 0, 1, NULL, 1, 0, NULL, '2021-06-10 12:38:43', '2021-06-10 12:38:43', 1);
 
 --
--- Triggers `loan`
+-- Trigger `loan`
 --
 DELIMITER $$
 CREATE TRIGGER `delete_loan_history` AFTER DELETE ON `loan` FOR EACH ROW DELETE FROM `loan_history` WHERE loan_id=OLD.loan_id
@@ -519,7 +519,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loan_history`
+-- Struktur dari tabel `loan_history`
 --
 
 CREATE TABLE `loan_history` (
@@ -547,7 +547,7 @@ CREATE TABLE `loan_history` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `loan_history`
+-- Dumping data untuk tabel `loan_history`
 --
 
 INSERT INTO `loan_history` (`loan_id`, `item_code`, `biblio_id`, `title`, `call_number`, `classification`, `gmd_name`, `language_name`, `location_name`, `collection_type_name`, `member_id`, `member_name`, `member_type_name`, `loan_date`, `due_date`, `renewed`, `is_lent`, `is_return`, `return_date`, `input_date`, `last_update`) VALUES
@@ -557,7 +557,7 @@ INSERT INTO `loan_history` (`loan_id`, `item_code`, `biblio_id`, `title`, `call_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Struktur dari tabel `member`
 --
 
 CREATE TABLE `member` (
@@ -589,7 +589,7 @@ CREATE TABLE `member` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `member`
+-- Dumping data untuk tabel `member`
 --
 
 INSERT INTO `member` (`member_id`, `member_name`, `gender`, `birth_date`, `member_type_id`, `member_address`, `member_mail_address`, `member_email`, `postal_code`, `inst_name`, `is_new`, `member_image`, `pin`, `member_phone`, `member_fax`, `member_since_date`, `register_date`, `expire_date`, `member_notes`, `is_pending`, `mpasswd`, `last_login`, `last_login_ip`, `input_date`, `last_update`) VALUES
@@ -602,7 +602,7 @@ INSERT INTO `member` (`member_id`, `member_name`, `gender`, `birth_date`, `membe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member_custom`
+-- Struktur dari tabel `member_custom`
 --
 
 CREATE TABLE `member_custom` (
@@ -612,7 +612,7 @@ CREATE TABLE `member_custom` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_author`
+-- Struktur dari tabel `mst_author`
 --
 
 CREATE TABLE `mst_author` (
@@ -626,7 +626,7 @@ CREATE TABLE `mst_author` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_author`
+-- Dumping data untuk tabel `mst_author`
 --
 
 INSERT INTO `mst_author` (`author_id`, `author_name`, `author_year`, `authority_type`, `auth_list`, `input_date`, `last_update`) VALUES
@@ -667,7 +667,7 @@ INSERT INTO `mst_author` (`author_id`, `author_name`, `author_year`, `authority_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_carrier_type`
+-- Struktur dari tabel `mst_carrier_type`
 --
 
 CREATE TABLE `mst_carrier_type` (
@@ -680,7 +680,7 @@ CREATE TABLE `mst_carrier_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_carrier_type`
+-- Dumping data untuk tabel `mst_carrier_type`
 --
 
 INSERT INTO `mst_carrier_type` (`id`, `carrier_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -743,7 +743,7 @@ INSERT INTO `mst_carrier_type` (`id`, `carrier_type`, `code`, `code2`, `input_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_coll_type`
+-- Struktur dari tabel `mst_coll_type`
 --
 
 CREATE TABLE `mst_coll_type` (
@@ -754,7 +754,7 @@ CREATE TABLE `mst_coll_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_coll_type`
+-- Dumping data untuk tabel `mst_coll_type`
 --
 
 INSERT INTO `mst_coll_type` (`coll_type_id`, `coll_type_name`, `input_date`, `last_update`) VALUES
@@ -765,7 +765,7 @@ INSERT INTO `mst_coll_type` (`coll_type_id`, `coll_type_name`, `input_date`, `la
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_content_type`
+-- Struktur dari tabel `mst_content_type`
 --
 
 CREATE TABLE `mst_content_type` (
@@ -778,7 +778,7 @@ CREATE TABLE `mst_content_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_content_type`
+-- Dumping data untuk tabel `mst_content_type`
 --
 
 INSERT INTO `mst_content_type` (`id`, `content_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -811,7 +811,7 @@ INSERT INTO `mst_content_type` (`id`, `content_type`, `code`, `code2`, `input_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_custom_field`
+-- Struktur dari tabel `mst_custom_field`
 --
 
 CREATE TABLE `mst_custom_field` (
@@ -833,7 +833,7 @@ CREATE TABLE `mst_custom_field` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_frequency`
+-- Struktur dari tabel `mst_frequency`
 --
 
 CREATE TABLE `mst_frequency` (
@@ -847,7 +847,7 @@ CREATE TABLE `mst_frequency` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_frequency`
+-- Dumping data untuk tabel `mst_frequency`
 --
 
 INSERT INTO `mst_frequency` (`frequency_id`, `frequency`, `language_prefix`, `time_increment`, `time_unit`, `input_date`, `last_update`) VALUES
@@ -863,7 +863,7 @@ INSERT INTO `mst_frequency` (`frequency_id`, `frequency`, `language_prefix`, `ti
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_gmd`
+-- Struktur dari tabel `mst_gmd`
 --
 
 CREATE TABLE `mst_gmd` (
@@ -876,7 +876,7 @@ CREATE TABLE `mst_gmd` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_gmd`
+-- Dumping data untuk tabel `mst_gmd`
 --
 
 INSERT INTO `mst_gmd` (`gmd_id`, `gmd_code`, `gmd_name`, `icon_image`, `input_date`, `last_update`) VALUES
@@ -922,7 +922,7 @@ INSERT INTO `mst_gmd` (`gmd_id`, `gmd_code`, `gmd_name`, `icon_image`, `input_da
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_item_status`
+-- Struktur dari tabel `mst_item_status`
 --
 
 CREATE TABLE `mst_item_status` (
@@ -936,7 +936,7 @@ CREATE TABLE `mst_item_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_item_status`
+-- Dumping data untuk tabel `mst_item_status`
 --
 
 INSERT INTO `mst_item_status` (`item_status_id`, `item_status_name`, `rules`, `no_loan`, `skip_stock_take`, `input_date`, `last_update`) VALUES
@@ -947,7 +947,7 @@ INSERT INTO `mst_item_status` (`item_status_id`, `item_status_name`, `rules`, `n
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_label`
+-- Struktur dari tabel `mst_label`
 --
 
 CREATE TABLE `mst_label` (
@@ -960,7 +960,7 @@ CREATE TABLE `mst_label` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `mst_label`
+-- Dumping data untuk tabel `mst_label`
 --
 
 INSERT INTO `mst_label` (`label_id`, `label_name`, `label_desc`, `label_image`, `input_date`, `last_update`) VALUES
@@ -971,7 +971,7 @@ INSERT INTO `mst_label` (`label_id`, `label_name`, `label_desc`, `label_image`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_language`
+-- Struktur dari tabel `mst_language`
 --
 
 CREATE TABLE `mst_language` (
@@ -982,7 +982,7 @@ CREATE TABLE `mst_language` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_language`
+-- Dumping data untuk tabel `mst_language`
 --
 
 INSERT INTO `mst_language` (`language_id`, `language_name`, `input_date`, `last_update`) VALUES
@@ -993,7 +993,7 @@ INSERT INTO `mst_language` (`language_id`, `language_name`, `input_date`, `last_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_loan_rules`
+-- Struktur dari tabel `mst_loan_rules`
 --
 
 CREATE TABLE `mst_loan_rules` (
@@ -1011,7 +1011,7 @@ CREATE TABLE `mst_loan_rules` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_loan_rules`
+-- Dumping data untuk tabel `mst_loan_rules`
 --
 
 INSERT INTO `mst_loan_rules` (`loan_rules_id`, `member_type_id`, `coll_type_id`, `gmd_id`, `loan_limit`, `loan_periode`, `reborrow_limit`, `fine_each_day`, `grace_periode`, `input_date`, `last_update`) VALUES
@@ -1020,7 +1020,7 @@ INSERT INTO `mst_loan_rules` (`loan_rules_id`, `member_type_id`, `coll_type_id`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_location`
+-- Struktur dari tabel `mst_location`
 --
 
 CREATE TABLE `mst_location` (
@@ -1031,7 +1031,7 @@ CREATE TABLE `mst_location` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_location`
+-- Dumping data untuk tabel `mst_location`
 --
 
 INSERT INTO `mst_location` (`location_id`, `location_name`, `input_date`, `last_update`) VALUES
@@ -1040,7 +1040,7 @@ INSERT INTO `mst_location` (`location_id`, `location_name`, `input_date`, `last_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_media_type`
+-- Struktur dari tabel `mst_media_type`
 --
 
 CREATE TABLE `mst_media_type` (
@@ -1053,7 +1053,7 @@ CREATE TABLE `mst_media_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_media_type`
+-- Dumping data untuk tabel `mst_media_type`
 --
 
 INSERT INTO `mst_media_type` (`id`, `media_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -1071,7 +1071,7 @@ INSERT INTO `mst_media_type` (`id`, `media_type`, `code`, `code2`, `input_date`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_member_type`
+-- Struktur dari tabel `mst_member_type`
 --
 
 CREATE TABLE `mst_member_type` (
@@ -1090,7 +1090,7 @@ CREATE TABLE `mst_member_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_member_type`
+-- Dumping data untuk tabel `mst_member_type`
 --
 
 INSERT INTO `mst_member_type` (`member_type_id`, `member_type_name`, `loan_limit`, `loan_periode`, `enable_reserve`, `reserve_limit`, `member_periode`, `reborrow_limit`, `fine_each_day`, `grace_periode`, `input_date`, `last_update`) VALUES
@@ -1099,7 +1099,7 @@ INSERT INTO `mst_member_type` (`member_type_id`, `member_type_name`, `loan_limit
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_module`
+-- Struktur dari tabel `mst_module`
 --
 
 CREATE TABLE `mst_module` (
@@ -1110,7 +1110,7 @@ CREATE TABLE `mst_module` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data for table `mst_module`
+-- Dumping data untuk tabel `mst_module`
 --
 
 INSERT INTO `mst_module` (`module_id`, `module_name`, `module_path`, `module_desc`) VALUES
@@ -1126,7 +1126,7 @@ INSERT INTO `mst_module` (`module_id`, `module_name`, `module_path`, `module_des
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_place`
+-- Struktur dari tabel `mst_place`
 --
 
 CREATE TABLE `mst_place` (
@@ -1137,7 +1137,7 @@ CREATE TABLE `mst_place` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_place`
+-- Dumping data untuk tabel `mst_place`
 --
 
 INSERT INTO `mst_place` (`place_id`, `place_name`, `input_date`, `last_update`) VALUES
@@ -1154,7 +1154,7 @@ INSERT INTO `mst_place` (`place_id`, `place_name`, `input_date`, `last_update`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_publisher`
+-- Struktur dari tabel `mst_publisher`
 --
 
 CREATE TABLE `mst_publisher` (
@@ -1165,7 +1165,7 @@ CREATE TABLE `mst_publisher` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_publisher`
+-- Dumping data untuk tabel `mst_publisher`
 --
 
 INSERT INTO `mst_publisher` (`publisher_id`, `publisher_name`, `input_date`, `last_update`) VALUES
@@ -1194,7 +1194,7 @@ INSERT INTO `mst_publisher` (`publisher_id`, `publisher_name`, `input_date`, `la
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_relation_term`
+-- Struktur dari tabel `mst_relation_term`
 --
 
 CREATE TABLE `mst_relation_term` (
@@ -1204,7 +1204,7 @@ CREATE TABLE `mst_relation_term` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_relation_term`
+-- Dumping data untuk tabel `mst_relation_term`
 --
 
 INSERT INTO `mst_relation_term` (`ID`, `rt_id`, `rt_desc`) VALUES
@@ -1218,7 +1218,7 @@ INSERT INTO `mst_relation_term` (`ID`, `rt_id`, `rt_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_servers`
+-- Struktur dari tabel `mst_servers`
 --
 
 CREATE TABLE `mst_servers` (
@@ -1233,7 +1233,7 @@ CREATE TABLE `mst_servers` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_supplier`
+-- Struktur dari tabel `mst_supplier`
 --
 
 CREATE TABLE `mst_supplier` (
@@ -1253,7 +1253,7 @@ CREATE TABLE `mst_supplier` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_topic`
+-- Struktur dari tabel `mst_topic`
 --
 
 CREATE TABLE `mst_topic` (
@@ -1267,7 +1267,7 @@ CREATE TABLE `mst_topic` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `mst_topic`
+-- Dumping data untuk tabel `mst_topic`
 --
 
 INSERT INTO `mst_topic` (`topic_id`, `topic`, `topic_type`, `auth_list`, `classification`, `input_date`, `last_update`) VALUES
@@ -1292,7 +1292,7 @@ INSERT INTO `mst_topic` (`topic_id`, `topic`, `topic_type`, `auth_list`, `classi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mst_voc_ctrl`
+-- Struktur dari tabel `mst_voc_ctrl`
 --
 
 CREATE TABLE `mst_voc_ctrl` (
@@ -1306,7 +1306,7 @@ CREATE TABLE `mst_voc_ctrl` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `plugins`
+-- Struktur dari tabel `plugins`
 --
 
 CREATE TABLE `plugins` (
@@ -1322,7 +1322,7 @@ CREATE TABLE `plugins` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reserve`
+-- Struktur dari tabel `reserve`
 --
 
 CREATE TABLE `reserve` (
@@ -1336,7 +1336,7 @@ CREATE TABLE `reserve` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `search_biblio`
+-- Struktur dari tabel `search_biblio`
 --
 
 CREATE TABLE `search_biblio` (
@@ -1372,7 +1372,7 @@ CREATE TABLE `search_biblio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='index table for advance searching technique for SLiMS';
 
 --
--- Dumping data for table `search_biblio`
+-- Dumping data untuk tabel `search_biblio`
 --
 
 INSERT INTO `search_biblio` (`biblio_id`, `title`, `edition`, `isbn_issn`, `author`, `topic`, `gmd`, `publisher`, `publish_place`, `language`, `classification`, `spec_detail_info`, `carrier_type`, `content_type`, `media_type`, `location`, `publish_year`, `notes`, `series_title`, `items`, `collection_types`, `call_number`, `opac_hide`, `promoted`, `labels`, `collation`, `image`, `input_date`, `last_update`) VALUES
@@ -1390,7 +1390,7 @@ INSERT INTO `search_biblio` (`biblio_id`, `title`, `edition`, `isbn_issn`, `auth
 -- --------------------------------------------------------
 
 --
--- Table structure for table `serial`
+-- Struktur dari tabel `serial`
 --
 
 CREATE TABLE `serial` (
@@ -1408,7 +1408,7 @@ CREATE TABLE `serial` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `setting`
+-- Struktur dari tabel `setting`
 --
 
 CREATE TABLE `setting` (
@@ -1418,15 +1418,15 @@ CREATE TABLE `setting` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `setting`
+-- Dumping data untuk tabel `setting`
 --
 
 INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
 (1, 'library_name', 's:15:\"MTSN 3 Magelang\";'),
-(2, 'library_subname', 's:33:\"Perpustakaan Sekolah Insan Islami\";'),
+(2, 'library_subname', 's:37:\"Open Source Library Management System\";'),
 (3, 'template', 'a:2:{s:5:\"theme\";s:6:\"akasia\";s:3:\"css\";s:25:\"template/akasia/style.css\";}'),
 (4, 'admin_template', 'a:2:{s:5:\"theme\";s:7:\"default\";s:3:\"css\";s:32:\"admin_template/default/style.css\";}'),
-(5, 'default_lang', 's:5:\"id_ID\";'),
+(5, 'default_lang', 's:5:\"en_US\";'),
 (6, 'opac_result_num', 's:2:\"10\";'),
 (7, 'enable_promote_titles', 'N;'),
 (8, 'quick_return', 'b:1;'),
@@ -1449,12 +1449,12 @@ INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
 (25, 'allowed_counter_ip', 'a:1:{i:0;s:9:\"127.0.0.1\";}'),
 (26, 'reserve_direct_database', 's:1:\"1\";'),
 (27, 'reserve_on_loan_only', 's:1:\"0\";'),
-(32, 'spellchecker_enabled', 'b:1;');
+(31, 'spellchecker_enabled', 'b:1;');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stock_take`
+-- Struktur dari tabel `stock_take`
 --
 
 CREATE TABLE `stock_take` (
@@ -1475,7 +1475,7 @@ CREATE TABLE `stock_take` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stock_take_item`
+-- Struktur dari tabel `stock_take_item`
 --
 
 CREATE TABLE `stock_take_item` (
@@ -1496,7 +1496,7 @@ CREATE TABLE `stock_take_item` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `system_log`
+-- Struktur dari tabel `system_log`
 --
 
 CREATE TABLE `system_log` (
@@ -1511,7 +1511,7 @@ CREATE TABLE `system_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `system_log`
+-- Dumping data untuk tabel `system_log`
 --
 
 INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_module`, `action`, `log_msg`, `log_date`) VALUES
@@ -1621,15 +1621,12 @@ INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_modul
 (104, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 12:39:18'),
 (105, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address ::1', '2021-06-10 12:39:38'),
 (106, 'member', '1500001', 'Login', '', '', 'Login success for member 1500001 from address ::1', '2021-06-10 12:40:06'),
-(107, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 12:40:20'),
-(108, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-11 09:30:39'),
-(109, 'staff', '1', 'system', 'Global Config', 'Update', 'Admin change application global configuration', '2021-06-11 09:31:23'),
-(110, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-11 09:33:32');
+(107, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 12:40:20');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -1651,16 +1648,16 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `realname`, `passwd`, `email`, `user_type`, `user_image`, `social_media`, `last_login`, `last_login_ip`, `groups`, `admin_template`, `forgot`, `input_date`, `last_update`) VALUES
-(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-11 09:30:39', '127.0.0.1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
+(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-10 11:42:50', '::1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_group`
+-- Struktur dari tabel `user_group`
 --
 
 CREATE TABLE `user_group` (
@@ -1671,7 +1668,7 @@ CREATE TABLE `user_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `user_group`
+-- Dumping data untuk tabel `user_group`
 --
 
 INSERT INTO `user_group` (`group_id`, `group_name`, `input_date`, `last_update`) VALUES
@@ -1680,7 +1677,7 @@ INSERT INTO `user_group` (`group_id`, `group_name`, `input_date`, `last_update`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `visitor_count`
+-- Struktur dari tabel `visitor_count`
 --
 
 CREATE TABLE `visitor_count` (
@@ -1692,7 +1689,7 @@ CREATE TABLE `visitor_count` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `visitor_count`
+-- Dumping data untuk tabel `visitor_count`
 --
 
 INSERT INTO `visitor_count` (`visitor_id`, `member_id`, `member_name`, `institution`, `checkin_date`) VALUES
@@ -1705,13 +1702,13 @@ INSERT INTO `visitor_count` (`visitor_id`, `member_id`, `member_name`, `institut
 --
 
 --
--- Indexes for table `backup_log`
+-- Indeks untuk tabel `backup_log`
 --
 ALTER TABLE `backup_log`
   ADD PRIMARY KEY (`backup_log_id`);
 
 --
--- Indexes for table `biblio`
+-- Indeks untuk tabel `biblio`
 --
 ALTER TABLE `biblio`
   ADD PRIMARY KEY (`biblio_id`),
@@ -1725,7 +1722,7 @@ ALTER TABLE `biblio` ADD FULLTEXT KEY `notes_ft_idx` (`notes`);
 ALTER TABLE `biblio` ADD FULLTEXT KEY `labels` (`labels`);
 
 --
--- Indexes for table `biblio_attachment`
+-- Indeks untuk tabel `biblio_attachment`
 --
 ALTER TABLE `biblio_attachment`
   ADD KEY `biblio_id` (`biblio_id`),
@@ -1733,7 +1730,7 @@ ALTER TABLE `biblio_attachment`
   ADD KEY `biblio_id_2` (`biblio_id`,`file_id`);
 
 --
--- Indexes for table `biblio_author`
+-- Indeks untuk tabel `biblio_author`
 --
 ALTER TABLE `biblio_author`
   ADD PRIMARY KEY (`biblio_id`,`author_id`),
@@ -1741,13 +1738,13 @@ ALTER TABLE `biblio_author`
   ADD KEY `author_id` (`author_id`);
 
 --
--- Indexes for table `biblio_custom`
+-- Indeks untuk tabel `biblio_custom`
 --
 ALTER TABLE `biblio_custom`
   ADD PRIMARY KEY (`biblio_id`);
 
 --
--- Indexes for table `biblio_log`
+-- Indeks untuk tabel `biblio_log`
 --
 ALTER TABLE `biblio_log`
   ADD PRIMARY KEY (`biblio_log_id`),
@@ -1763,13 +1760,13 @@ ALTER TABLE `biblio_log` ADD FULLTEXT KEY `rawdata` (`rawdata`);
 ALTER TABLE `biblio_log` ADD FULLTEXT KEY `additional_information` (`additional_information`);
 
 --
--- Indexes for table `biblio_relation`
+-- Indeks untuk tabel `biblio_relation`
 --
 ALTER TABLE `biblio_relation`
   ADD PRIMARY KEY (`biblio_id`,`rel_biblio_id`);
 
 --
--- Indexes for table `biblio_topic`
+-- Indeks untuk tabel `biblio_topic`
 --
 ALTER TABLE `biblio_topic`
   ADD PRIMARY KEY (`biblio_id`,`topic_id`),
@@ -1777,13 +1774,13 @@ ALTER TABLE `biblio_topic`
   ADD KEY `topic_id` (`topic_id`);
 
 --
--- Indexes for table `comment`
+-- Indeks untuk tabel `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Indexes for table `content`
+-- Indeks untuk tabel `content`
 --
 ALTER TABLE `content`
   ADD PRIMARY KEY (`content_id`),
@@ -1792,7 +1789,7 @@ ALTER TABLE `content` ADD FULLTEXT KEY `content_title` (`content_title`);
 ALTER TABLE `content` ADD FULLTEXT KEY `content_desc` (`content_desc`);
 
 --
--- Indexes for table `files`
+-- Indeks untuk tabel `files`
 --
 ALTER TABLE `files`
   ADD PRIMARY KEY (`file_id`);
@@ -1800,33 +1797,33 @@ ALTER TABLE `files` ADD FULLTEXT KEY `file_name` (`file_name`);
 ALTER TABLE `files` ADD FULLTEXT KEY `file_dir` (`file_dir`);
 
 --
--- Indexes for table `files_read`
+-- Indeks untuk tabel `files_read`
 --
 ALTER TABLE `files_read`
   ADD PRIMARY KEY (`filelog_id`);
 
 --
--- Indexes for table `fines`
+-- Indeks untuk tabel `fines`
 --
 ALTER TABLE `fines`
   ADD PRIMARY KEY (`fines_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- Indexes for table `group_access`
+-- Indeks untuk tabel `group_access`
 --
 ALTER TABLE `group_access`
   ADD PRIMARY KEY (`group_id`,`module_id`);
 
 --
--- Indexes for table `holiday`
+-- Indeks untuk tabel `holiday`
 --
 ALTER TABLE `holiday`
   ADD PRIMARY KEY (`holiday_id`),
   ADD UNIQUE KEY `holiday_dayname` (`holiday_dayname`,`holiday_date`);
 
 --
--- Indexes for table `item`
+-- Indeks untuk tabel `item`
 --
 ALTER TABLE `item`
   ADD PRIMARY KEY (`item_id`),
@@ -1836,14 +1833,14 @@ ALTER TABLE `item`
   ADD KEY `biblio_id_idx` (`biblio_id`);
 
 --
--- Indexes for table `kardex`
+-- Indeks untuk tabel `kardex`
 --
 ALTER TABLE `kardex`
   ADD PRIMARY KEY (`kardex_id`),
   ADD KEY `fk_serial` (`serial_id`);
 
 --
--- Indexes for table `loan`
+-- Indeks untuk tabel `loan`
 --
 ALTER TABLE `loan`
   ADD PRIMARY KEY (`loan_id`),
@@ -1852,14 +1849,14 @@ ALTER TABLE `loan`
   ADD KEY `input_date` (`input_date`,`last_update`,`uid`);
 
 --
--- Indexes for table `loan_history`
+-- Indeks untuk tabel `loan_history`
 --
 ALTER TABLE `loan_history`
   ADD PRIMARY KEY (`loan_id`),
   ADD KEY `member_name` (`member_name`);
 
 --
--- Indexes for table `member`
+-- Indeks untuk tabel `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`member_id`),
@@ -1867,20 +1864,20 @@ ALTER TABLE `member`
   ADD KEY `member_type_id` (`member_type_id`);
 
 --
--- Indexes for table `member_custom`
+-- Indeks untuk tabel `member_custom`
 --
 ALTER TABLE `member_custom`
   ADD PRIMARY KEY (`member_id`);
 
 --
--- Indexes for table `mst_author`
+-- Indeks untuk tabel `mst_author`
 --
 ALTER TABLE `mst_author`
   ADD PRIMARY KEY (`author_id`),
   ADD UNIQUE KEY `author_name` (`author_name`,`authority_type`);
 
 --
--- Indexes for table `mst_carrier_type`
+-- Indeks untuk tabel `mst_carrier_type`
 --
 ALTER TABLE `mst_carrier_type`
   ADD PRIMARY KEY (`id`),
@@ -1888,14 +1885,14 @@ ALTER TABLE `mst_carrier_type`
   ADD KEY `code` (`code`);
 
 --
--- Indexes for table `mst_coll_type`
+-- Indeks untuk tabel `mst_coll_type`
 --
 ALTER TABLE `mst_coll_type`
   ADD PRIMARY KEY (`coll_type_id`),
   ADD UNIQUE KEY `coll_type_name` (`coll_type_name`);
 
 --
--- Indexes for table `mst_content_type`
+-- Indeks untuk tabel `mst_content_type`
 --
 ALTER TABLE `mst_content_type`
   ADD PRIMARY KEY (`id`),
@@ -1903,20 +1900,20 @@ ALTER TABLE `mst_content_type`
   ADD KEY `code` (`code`);
 
 --
--- Indexes for table `mst_custom_field`
+-- Indeks untuk tabel `mst_custom_field`
 --
 ALTER TABLE `mst_custom_field`
   ADD PRIMARY KEY (`dbfield`),
   ADD UNIQUE KEY `field_id` (`field_id`);
 
 --
--- Indexes for table `mst_frequency`
+-- Indeks untuk tabel `mst_frequency`
 --
 ALTER TABLE `mst_frequency`
   ADD PRIMARY KEY (`frequency_id`);
 
 --
--- Indexes for table `mst_gmd`
+-- Indeks untuk tabel `mst_gmd`
 --
 ALTER TABLE `mst_gmd`
   ADD PRIMARY KEY (`gmd_id`),
@@ -1924,41 +1921,41 @@ ALTER TABLE `mst_gmd`
   ADD UNIQUE KEY `gmd_code` (`gmd_code`);
 
 --
--- Indexes for table `mst_item_status`
+-- Indeks untuk tabel `mst_item_status`
 --
 ALTER TABLE `mst_item_status`
   ADD PRIMARY KEY (`item_status_id`),
   ADD UNIQUE KEY `item_status_name` (`item_status_name`);
 
 --
--- Indexes for table `mst_label`
+-- Indeks untuk tabel `mst_label`
 --
 ALTER TABLE `mst_label`
   ADD PRIMARY KEY (`label_id`),
   ADD UNIQUE KEY `label_name` (`label_name`);
 
 --
--- Indexes for table `mst_language`
+-- Indeks untuk tabel `mst_language`
 --
 ALTER TABLE `mst_language`
   ADD PRIMARY KEY (`language_id`),
   ADD UNIQUE KEY `language_name` (`language_name`);
 
 --
--- Indexes for table `mst_loan_rules`
+-- Indeks untuk tabel `mst_loan_rules`
 --
 ALTER TABLE `mst_loan_rules`
   ADD PRIMARY KEY (`loan_rules_id`);
 
 --
--- Indexes for table `mst_location`
+-- Indeks untuk tabel `mst_location`
 --
 ALTER TABLE `mst_location`
   ADD PRIMARY KEY (`location_id`),
   ADD UNIQUE KEY `location_name` (`location_name`);
 
 --
--- Indexes for table `mst_media_type`
+-- Indeks untuk tabel `mst_media_type`
 --
 ALTER TABLE `mst_media_type`
   ADD PRIMARY KEY (`id`),
@@ -1966,73 +1963,73 @@ ALTER TABLE `mst_media_type`
   ADD KEY `code` (`code`);
 
 --
--- Indexes for table `mst_member_type`
+-- Indeks untuk tabel `mst_member_type`
 --
 ALTER TABLE `mst_member_type`
   ADD PRIMARY KEY (`member_type_id`),
   ADD UNIQUE KEY `member_type_name` (`member_type_name`);
 
 --
--- Indexes for table `mst_module`
+-- Indeks untuk tabel `mst_module`
 --
 ALTER TABLE `mst_module`
   ADD PRIMARY KEY (`module_id`),
   ADD UNIQUE KEY `module_name` (`module_name`,`module_path`);
 
 --
--- Indexes for table `mst_place`
+-- Indeks untuk tabel `mst_place`
 --
 ALTER TABLE `mst_place`
   ADD PRIMARY KEY (`place_id`),
   ADD UNIQUE KEY `place_name` (`place_name`);
 
 --
--- Indexes for table `mst_publisher`
+-- Indeks untuk tabel `mst_publisher`
 --
 ALTER TABLE `mst_publisher`
   ADD PRIMARY KEY (`publisher_id`),
   ADD UNIQUE KEY `publisher_name` (`publisher_name`);
 
 --
--- Indexes for table `mst_relation_term`
+-- Indeks untuk tabel `mst_relation_term`
 --
 ALTER TABLE `mst_relation_term`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `mst_servers`
+-- Indeks untuk tabel `mst_servers`
 --
 ALTER TABLE `mst_servers`
   ADD PRIMARY KEY (`server_id`);
 
 --
--- Indexes for table `mst_supplier`
+-- Indeks untuk tabel `mst_supplier`
 --
 ALTER TABLE `mst_supplier`
   ADD PRIMARY KEY (`supplier_id`),
   ADD UNIQUE KEY `supplier_name` (`supplier_name`);
 
 --
--- Indexes for table `mst_topic`
+-- Indeks untuk tabel `mst_topic`
 --
 ALTER TABLE `mst_topic`
   ADD PRIMARY KEY (`topic_id`),
   ADD UNIQUE KEY `topic` (`topic`,`topic_type`);
 
 --
--- Indexes for table `mst_voc_ctrl`
+-- Indeks untuk tabel `mst_voc_ctrl`
 --
 ALTER TABLE `mst_voc_ctrl`
   ADD PRIMARY KEY (`vocabolary_id`);
 
 --
--- Indexes for table `plugins`
+-- Indeks untuk tabel `plugins`
 --
 ALTER TABLE `plugins`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indexes for table `reserve`
+-- Indeks untuk tabel `reserve`
 --
 ALTER TABLE `reserve`
   ADD PRIMARY KEY (`reserve_id`),
@@ -2040,7 +2037,7 @@ ALTER TABLE `reserve`
   ADD KEY `item_code_idx` (`item_code`);
 
 --
--- Indexes for table `search_biblio`
+-- Indeks untuk tabel `search_biblio`
 --
 ALTER TABLE `search_biblio`
   ADD UNIQUE KEY `biblio_id` (`biblio_id`),
@@ -2056,7 +2053,7 @@ ALTER TABLE `search_biblio` ADD FULLTEXT KEY `collection_types` (`collection_typ
 ALTER TABLE `search_biblio` ADD FULLTEXT KEY `labels` (`labels`);
 
 --
--- Indexes for table `serial`
+-- Indeks untuk tabel `serial`
 --
 ALTER TABLE `serial`
   ADD PRIMARY KEY (`serial_id`),
@@ -2064,20 +2061,20 @@ ALTER TABLE `serial`
   ADD KEY `fk_serial_gmd` (`gmd_id`);
 
 --
--- Indexes for table `setting`
+-- Indeks untuk tabel `setting`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`setting_id`),
   ADD UNIQUE KEY `setting_name` (`setting_name`);
 
 --
--- Indexes for table `stock_take`
+-- Indeks untuk tabel `stock_take`
 --
 ALTER TABLE `stock_take`
   ADD PRIMARY KEY (`stock_take_id`);
 
 --
--- Indexes for table `stock_take_item`
+-- Indeks untuk tabel `stock_take_item`
 --
 ALTER TABLE `stock_take_item`
   ADD PRIMARY KEY (`stock_take_id`,`item_id`),
@@ -2086,7 +2083,7 @@ ALTER TABLE `stock_take_item`
   ADD KEY `item_properties_idx` (`gmd_name`,`classification`,`coll_type_name`,`location`);
 
 --
--- Indexes for table `system_log`
+-- Indeks untuk tabel `system_log`
 --
 ALTER TABLE `system_log`
   ADD PRIMARY KEY (`log_id`),
@@ -2094,7 +2091,7 @@ ALTER TABLE `system_log`
   ADD KEY `id` (`id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`),
@@ -2102,253 +2099,253 @@ ALTER TABLE `user`
   ADD KEY `realname` (`realname`);
 
 --
--- Indexes for table `user_group`
+-- Indeks untuk tabel `user_group`
 --
 ALTER TABLE `user_group`
   ADD PRIMARY KEY (`group_id`),
   ADD UNIQUE KEY `group_name` (`group_name`);
 
 --
--- Indexes for table `visitor_count`
+-- Indeks untuk tabel `visitor_count`
 --
 ALTER TABLE `visitor_count`
   ADD PRIMARY KEY (`visitor_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `backup_log`
+-- AUTO_INCREMENT untuk tabel `backup_log`
 --
 ALTER TABLE `backup_log`
   MODIFY `backup_log_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `biblio`
+-- AUTO_INCREMENT untuk tabel `biblio`
 --
 ALTER TABLE `biblio`
   MODIFY `biblio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `biblio_log`
+-- AUTO_INCREMENT untuk tabel `biblio_log`
 --
 ALTER TABLE `biblio_log`
   MODIFY `biblio_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT for table `comment`
+-- AUTO_INCREMENT untuk tabel `comment`
 --
 ALTER TABLE `comment`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `content`
+-- AUTO_INCREMENT untuk tabel `content`
 --
 ALTER TABLE `content`
   MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `files`
+-- AUTO_INCREMENT untuk tabel `files`
 --
 ALTER TABLE `files`
   MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `files_read`
+-- AUTO_INCREMENT untuk tabel `files_read`
 --
 ALTER TABLE `files_read`
   MODIFY `filelog_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `fines`
+-- AUTO_INCREMENT untuk tabel `fines`
 --
 ALTER TABLE `fines`
   MODIFY `fines_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `holiday`
+-- AUTO_INCREMENT untuk tabel `holiday`
 --
 ALTER TABLE `holiday`
   MODIFY `holiday_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `item`
+-- AUTO_INCREMENT untuk tabel `item`
 --
 ALTER TABLE `item`
   MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `kardex`
+-- AUTO_INCREMENT untuk tabel `kardex`
 --
 ALTER TABLE `kardex`
   MODIFY `kardex_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `loan`
+-- AUTO_INCREMENT untuk tabel `loan`
 --
 ALTER TABLE `loan`
   MODIFY `loan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `mst_author`
+-- AUTO_INCREMENT untuk tabel `mst_author`
 --
 ALTER TABLE `mst_author`
   MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `mst_carrier_type`
+-- AUTO_INCREMENT untuk tabel `mst_carrier_type`
 --
 ALTER TABLE `mst_carrier_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT for table `mst_coll_type`
+-- AUTO_INCREMENT untuk tabel `mst_coll_type`
 --
 ALTER TABLE `mst_coll_type`
   MODIFY `coll_type_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `mst_content_type`
+-- AUTO_INCREMENT untuk tabel `mst_content_type`
 --
 ALTER TABLE `mst_content_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `mst_custom_field`
+-- AUTO_INCREMENT untuk tabel `mst_custom_field`
 --
 ALTER TABLE `mst_custom_field`
   MODIFY `field_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_frequency`
+-- AUTO_INCREMENT untuk tabel `mst_frequency`
 --
 ALTER TABLE `mst_frequency`
   MODIFY `frequency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `mst_gmd`
+-- AUTO_INCREMENT untuk tabel `mst_gmd`
 --
 ALTER TABLE `mst_gmd`
   MODIFY `gmd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `mst_label`
+-- AUTO_INCREMENT untuk tabel `mst_label`
 --
 ALTER TABLE `mst_label`
   MODIFY `label_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `mst_loan_rules`
+-- AUTO_INCREMENT untuk tabel `mst_loan_rules`
 --
 ALTER TABLE `mst_loan_rules`
   MODIFY `loan_rules_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `mst_media_type`
+-- AUTO_INCREMENT untuk tabel `mst_media_type`
 --
 ALTER TABLE `mst_media_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `mst_member_type`
+-- AUTO_INCREMENT untuk tabel `mst_member_type`
 --
 ALTER TABLE `mst_member_type`
   MODIFY `member_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `mst_module`
+-- AUTO_INCREMENT untuk tabel `mst_module`
 --
 ALTER TABLE `mst_module`
   MODIFY `module_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `mst_place`
+-- AUTO_INCREMENT untuk tabel `mst_place`
 --
 ALTER TABLE `mst_place`
   MODIFY `place_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `mst_publisher`
+-- AUTO_INCREMENT untuk tabel `mst_publisher`
 --
 ALTER TABLE `mst_publisher`
   MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `mst_relation_term`
+-- AUTO_INCREMENT untuk tabel `mst_relation_term`
 --
 ALTER TABLE `mst_relation_term`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `mst_servers`
+-- AUTO_INCREMENT untuk tabel `mst_servers`
 --
 ALTER TABLE `mst_servers`
   MODIFY `server_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_supplier`
+-- AUTO_INCREMENT untuk tabel `mst_supplier`
 --
 ALTER TABLE `mst_supplier`
   MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `mst_topic`
+-- AUTO_INCREMENT untuk tabel `mst_topic`
 --
 ALTER TABLE `mst_topic`
   MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `mst_voc_ctrl`
+-- AUTO_INCREMENT untuk tabel `mst_voc_ctrl`
 --
 ALTER TABLE `mst_voc_ctrl`
   MODIFY `vocabolary_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `reserve`
+-- AUTO_INCREMENT untuk tabel `reserve`
 --
 ALTER TABLE `reserve`
   MODIFY `reserve_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `serial`
+-- AUTO_INCREMENT untuk tabel `serial`
 --
 ALTER TABLE `serial`
   MODIFY `serial_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `setting`
+-- AUTO_INCREMENT untuk tabel `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `stock_take`
+-- AUTO_INCREMENT untuk tabel `stock_take`
 --
 ALTER TABLE `stock_take`
   MODIFY `stock_take_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `system_log`
+-- AUTO_INCREMENT untuk tabel `system_log`
 --
 ALTER TABLE `system_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `user_group`
+-- AUTO_INCREMENT untuk tabel `user_group`
 --
 ALTER TABLE `user_group`
   MODIFY `group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `visitor_count`
+-- AUTO_INCREMENT untuk tabel `visitor_count`
 --
 ALTER TABLE `visitor_count`
   MODIFY `visitor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
