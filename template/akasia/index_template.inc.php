@@ -243,7 +243,8 @@ include "partials/nav.php";
 include "partials/advsearch.php";
 
 // Footer
-include "partials/footer.php";
+// include "partials/footer.php";
+include "partials/new_footer.php";
 
 // Chat Engine
 include LIB . "contents/chat.php";
