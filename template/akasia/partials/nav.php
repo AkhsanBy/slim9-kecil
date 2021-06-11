@@ -8,9 +8,7 @@
     <li><a href="index.php?p=peta" class="openPopUp" width="600" height="400"><?php echo __('Library Location'); ?></a></li>
     <li><a href="index.php?p=member"><?php echo __('Member Area'); ?></a></li>
     <li><a href="index.php?p=librarian"><?php echo __('Librarian'); ?></a></li>
-    <li><a href="index.php?p=help"><?php echo __('Help on Search'); ?></a></li>
     <li><a href="index.php?p=login"><?php echo __('Librarian LOGIN'); ?></a></li>
-    <li><a href="index.php?p=slimsinfo"><?php echo __('About SLiMS'); ?></a></li>
   </ul>
 
   <!-- Language Translator
