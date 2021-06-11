@@ -39,14 +39,13 @@
     <?php endif; ?>
   <?php endif; ?>
 
-  <div class="s-footer-content container" style="
-    background-image: linear-gradient(to right, rgb(66, 163, 123, 1) , rgb(153, 179, 80, 1));
-  ">
+  <div class="s-footer-content container" style="background-image: linear-gradient(to right, rgb(66, 163, 123, 1), rgb(153, 179, 80, 1));">
     <div class="row">
-      <div class="col" style="display: flex; margin: -5px 0; align-items: center; justify-content: center;">
-        <img src="template/akasia/logo/himti.png" alt="Himti" width="40" height="40">
-        <img style="margin: 0 20px;" src="template/akasia/logo/slims.png" alt="Slim" width="40" height="40">
-        <img src="template/akasia/logo/kemenag.png" alt="Kemenag" width="40" height="40">
+      <div class="col" style="margin: -10px 0; align-items: center; justify-content: center;">
+        <p style="font-size: 1.5em; align-items: center; color: white; text-transform: capitalize;">bekerja sama dengan</p>
+        <img src="template/akasia/logo/himti.png" alt="Himti" width="35" height="35">
+        <img style="margin: 0 20px;" src="template/akasia/logo/slims.png" alt="Slim" width="35" height="35">
+        <img src="template/akasia/logo/kemenag.png" alt="Kemenag" width="35" height="35">
       </div>
     </div>
   </div>
