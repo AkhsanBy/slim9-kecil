@@ -1,3 +1,4 @@
+<?php if ($_SERVER['REQUEST_URI'] === $sysconf['baseURL']): ?>
 <footer class="s-footer">
   <?php
   // Promoted titles - Only show at the homepage
@@ -39,14 +40,14 @@
     <?php endif; ?>
   <?php endif; ?>
 
-  <div class="s-footer-content container" style="background-image: linear-gradient(to right, rgb(66, 163, 123, 1), rgb(153, 179, 80, 1));">
-    <div class="row">
-      <div class="col" style="margin: -10px 0; align-items: center; justify-content: center;">
-        <p style="font-size: 1.5em; align-items: center; color: white; text-transform: capitalize;">bekerja sama dengan</p>
-        <img src="template/akasia/logo/himti.png" alt="Himti" width="35" height="35">
-        <img style="margin: 0 20px;" src="template/akasia/logo/slims.png" alt="Slim" width="35" height="35">
-        <img src="template/akasia/logo/kemenag.png" alt="Kemenag" width="35" height="35">
-      </div>
+  <div class="row" style="margin: 10px 0;">
+    <div class="col" style="text-align: center;">
+      <p style="color: white; text-transform: capitalize; font-weight: bold;">bekerja sama dengan</p>
+      <img src="template/akasia/logo/himti.png" alt="Himti" width="50" height="50">
+      <img style="margin: 0 20px;" src="template/akasia/logo/slims.png" alt="Slim" width="50" height="50">
+      <img src="template/akasia/logo/kemenag.png" alt="Kemenag" width="50" height="50">
     </div>
   </div>
 </footer>
+
+<?php endif ?>
