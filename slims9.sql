@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 08 Jun 2021 pada 05.06
--- Versi server: 10.4.19-MariaDB
--- Versi PHP: 7.4.19
+-- Host: localhost:3306
+-- Generation Time: Jun 11, 2021 at 04:22 AM
+-- Server version: 10.5.10-MariaDB-log
+-- PHP Version: 8.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `backup_log`
+-- Table structure for table `backup_log`
 --
 
 CREATE TABLE `backup_log` (
@@ -37,7 +37,7 @@ CREATE TABLE `backup_log` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio`
+-- Table structure for table `biblio`
 --
 
 CREATE TABLE `biblio` (
@@ -73,7 +73,7 @@ CREATE TABLE `biblio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `biblio`
+-- Dumping data for table `biblio`
 --
 
 INSERT INTO `biblio` (`biblio_id`, `gmd_id`, `title`, `sor`, `edition`, `isbn_issn`, `publisher_id`, `publish_year`, `collation`, `series_title`, `call_number`, `language_id`, `source`, `publish_place_id`, `classification`, `notes`, `image`, `file_att`, `opac_hide`, `promoted`, `labels`, `frequency_id`, `spec_detail_info`, `content_type_id`, `media_type_id`, `carrier_type_id`, `input_date`, `last_update`, `uid`) VALUES
@@ -91,7 +91,7 @@ INSERT INTO `biblio` (`biblio_id`, `gmd_id`, `title`, `sor`, `edition`, `isbn_is
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio_attachment`
+-- Table structure for table `biblio_attachment`
 --
 
 CREATE TABLE `biblio_attachment` (
@@ -105,7 +105,7 @@ CREATE TABLE `biblio_attachment` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio_author`
+-- Table structure for table `biblio_author`
 --
 
 CREATE TABLE `biblio_author` (
@@ -115,7 +115,7 @@ CREATE TABLE `biblio_author` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `biblio_author`
+-- Dumping data for table `biblio_author`
 --
 
 INSERT INTO `biblio_author` (`biblio_id`, `author_id`, `level`) VALUES
@@ -133,7 +133,7 @@ INSERT INTO `biblio_author` (`biblio_id`, `author_id`, `level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio_custom`
+-- Table structure for table `biblio_custom`
 --
 
 CREATE TABLE `biblio_custom` (
@@ -143,7 +143,7 @@ CREATE TABLE `biblio_custom` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio_log`
+-- Table structure for table `biblio_log`
 --
 
 CREATE TABLE `biblio_log` (
@@ -161,7 +161,7 @@ CREATE TABLE `biblio_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `biblio_log`
+-- Dumping data for table `biblio_log`
 --
 
 INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `title`, `ip`, `action`, `affectedrow`, `rawdata`, `additional_information`, `date`) VALUES
@@ -182,12 +182,35 @@ INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `
 (15, 15, 1, 'Admin', 'Lords of poverty : the power, prestige, and corruption of the international aid business', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2215%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2215%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2215%22%3Bs%3A5%3A%22title%22%3Bs%3A88%3A%22Lords+of+poverty+%3A+the+power%2C+prestige%2C+and+corruption+of+the+international+aid+business%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A13%3A%229780871134691%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A22%3A%22Atlantic+Monthly+Press%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%221994%22%3Bs%3A9%3A%22collation%22%3Bs%3A20%3A%22xvi%2C+234+p.+%3B+22+cm.%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A11%3A%22338.9+Han+l%22%3Bs%3A13%3A%22language_name%22%3Bs%3A7%3A%22English%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A8%3A%22New+York%22%3Bs%3A14%3A%22classification%22%3Bs%3A17%3A%22338.9%2F1%2F091724+20%22%3Bs%3A5%3A%22notes%22%3Bs%3A400%3A%22Lords+of+Poverty+is+a+case+study+in+betrayals+of+a+public+trust.+The+shortcomings+of+aid+are+numerous%2C+and+serious+enough+to+raise+questions+about+the+viability+of+the+practice+at+its+most+fundamental+levels.+Hancocks+report+is+thorough%2C+deeply+shocking%2C+and+certain+to+cause+critical+reevaluation+of+the+governments+motives+in+giving+foreign+aid%2C+and+of+the+true+needs+of+our+intended+beneficiaries.%22%3Bs%3A5%3A%22image%22%3Bs%3A20%3A%22lords_of_poverty.jpg%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Hancock%2C+Graham%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A14%3A%22Primary+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3Ba%3A2%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A10%3A%22Corruption%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A7%3A%22Primary%22%3B%7Di%3A1%3Ba%3A3%3A%7Bs%3A5%3A%22topic%22%3Bs%3A7%3A%22Poverty%22%3Bs%3A10%3A%22topic_type%22%3Bs%3A5%3A%22Topic%22%3Bs%3A11%3A%22topic_level%22%3Bs%3A10%3A%22Additional%22%3B%7D%7Ds%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%223f8b0cbbcb0d6ac1c6702388b9d714dfe3dc85a2%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22d032c9329f2ed12f05b1eaa533d546bfee48a00f%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22dbb89d1f405cce8357b93c1fd842d468745f9e90%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22522f51abfe16afeb6d561a59b329051d5a314882%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%221e44b9f521ce1a367f3e073aa0d14f9055660642%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222007-11-29+18%3A08%3A13%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222007-11-29+16%3A13%3A11%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-08 09:54:58'),
 (16, 16, 1, 'Admin', 'Mengenal Pahlawan Nasional 1', '::1', 'update', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2216%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2216%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2216%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Mengenal+Pahlawan+Nasional+1%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22edition%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-7596-71-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A23%3A%22Esensi+%28Erlangga+Group%29%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222012%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%22166+hlm%3B+25+cm+x+17%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3Bs%3A0%3A%22%22%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221500001%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3Bs%3A0%3A%22%22%3Bs%3A5%3A%22image%22%3Bs%3A52%3A%22_slims_img_cache_200_x_139.49329359165_1.png.png.png%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Dina+Alfiyanti%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A19%3A%7Bs%3A7%3A%22item_id%22%3Bs%3A2%3A%2211%22%3Bs%3A9%3A%22item_code%22%3Bs%3A7%3A%221500001%22%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A14%3A%22coll_type_name%22%3BN%3Bs%3A14%3A%22shelf_location%22%3BN%3Bs%3A13%3A%22location_name%22%3BN%3Bs%3A14%3A%22inventory_code%22%3BN%3Bs%3A11%3A%22item_status%22%3Bs%3A9%3A%22Available%22%3Bs%3A8%3A%22order_no%22%3BN%3Bs%3A10%3A%22order_date%22%3BN%3Bs%3A13%3A%22received_date%22%3BN%3Bs%3A13%3A%22supplier_name%22%3BN%3Bs%3A7%3A%22invoice%22%3BN%3Bs%3A12%3A%22invoice_date%22%3BN%3Bs%3A5%3A%22price%22%3BN%3Bs%3A14%3A%22price_currency%22%3BN%3Bs%3A10%3A%22input_date%22%3BN%3Bs%3A11%3A%22last_update%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3B%7D%7Ds%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22d87811f519d08451a9f7c36c54f3143ffad2709e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ce9428795e3e8a4cfb85951e6d241378fe72f5f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2284cd8cf609c866021fafcfb3e1338785f8a31583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-08+09%3A57%3A09%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-08+09%3A58%3A00%22%3B%7D', 'Updated data. Bibliography.', '2021-06-08 09:58:00');
 INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `title`, `ip`, `action`, `affectedrow`, `rawdata`, `additional_information`, `date`) VALUES
-(17, 16, 1, 'Admin', 'Mengenal Pahlawan Nasional 1', '::1', 'update', 'cover', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2216%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2216%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2216%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Mengenal+Pahlawan+Nasional+1%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22edition%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-7596-71-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A23%3A%22Esensi+%28Erlangga+Group%29%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222012%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%22166+hlm%3B+25+cm+x+17%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3Bs%3A0%3A%22%22%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221500001%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3Bs%3A0%3A%22%22%3Bs%3A5%3A%22image%22%3Bs%3A52%3A%22_slims_img_cache_200_x_139.49329359165_1.png.png.png%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Dina+Alfiyanti%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A19%3A%7Bs%3A7%3A%22item_id%22%3Bs%3A2%3A%2211%22%3Bs%3A9%3A%22item_code%22%3Bs%3A7%3A%221500001%22%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A14%3A%22coll_type_name%22%3BN%3Bs%3A14%3A%22shelf_location%22%3BN%3Bs%3A13%3A%22location_name%22%3BN%3Bs%3A14%3A%22inventory_code%22%3BN%3Bs%3A11%3A%22item_status%22%3Bs%3A9%3A%22Available%22%3Bs%3A8%3A%22order_no%22%3BN%3Bs%3A10%3A%22order_date%22%3BN%3Bs%3A13%3A%22received_date%22%3BN%3Bs%3A13%3A%22supplier_name%22%3BN%3Bs%3A7%3A%22invoice%22%3BN%3Bs%3A12%3A%22invoice_date%22%3BN%3Bs%3A5%3A%22price%22%3BN%3Bs%3A14%3A%22price_currency%22%3BN%3Bs%3A10%3A%22input_date%22%3BN%3Bs%3A11%3A%22last_update%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3B%7D%7Ds%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22d87811f519d08451a9f7c36c54f3143ffad2709e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ce9428795e3e8a4cfb85951e6d241378fe72f5f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2284cd8cf609c866021fafcfb3e1338785f8a31583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-08+09%3A57%3A09%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-08+09%3A58%3A00%22%3B%7D', 'Updated data. Image. File: _slims_img_cache_200_x_139.49329359165_1.png.png.png', '2021-06-08 09:58:00');
+(17, 16, 1, 'Admin', 'Mengenal Pahlawan Nasional 1', '::1', 'update', 'cover', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2216%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2216%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2216%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Mengenal+Pahlawan+Nasional+1%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3Bs%3A0%3A%22%22%3Bs%3A7%3A%22edition%22%3Bs%3A0%3A%22%22%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-7596-71-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A23%3A%22Esensi+%28Erlangga+Group%29%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222012%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%22166+hlm%3B+25+cm+x+17%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3Bs%3A0%3A%22%22%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221500001%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3Bs%3A0%3A%22%22%3Bs%3A5%3A%22image%22%3Bs%3A52%3A%22_slims_img_cache_200_x_139.49329359165_1.png.png.png%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Dina+Alfiyanti%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A19%3A%7Bs%3A7%3A%22item_id%22%3Bs%3A2%3A%2211%22%3Bs%3A9%3A%22item_code%22%3Bs%3A7%3A%221500001%22%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A14%3A%22coll_type_name%22%3BN%3Bs%3A14%3A%22shelf_location%22%3BN%3Bs%3A13%3A%22location_name%22%3BN%3Bs%3A14%3A%22inventory_code%22%3BN%3Bs%3A11%3A%22item_status%22%3Bs%3A9%3A%22Available%22%3Bs%3A8%3A%22order_no%22%3BN%3Bs%3A10%3A%22order_date%22%3BN%3Bs%3A13%3A%22received_date%22%3BN%3Bs%3A13%3A%22supplier_name%22%3BN%3Bs%3A7%3A%22invoice%22%3BN%3Bs%3A12%3A%22invoice_date%22%3BN%3Bs%3A5%3A%22price%22%3BN%3Bs%3A14%3A%22price_currency%22%3BN%3Bs%3A10%3A%22input_date%22%3BN%3Bs%3A11%3A%22last_update%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3B%7D%7Ds%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22d87811f519d08451a9f7c36c54f3143ffad2709e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ce9428795e3e8a4cfb85951e6d241378fe72f5f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2284cd8cf609c866021fafcfb3e1338785f8a31583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-08+09%3A57%3A09%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-08+09%3A58%3A00%22%3B%7D', 'Updated data. Image. File: _slims_img_cache_200_x_139.49329359165_1.png.png.png', '2021-06-08 09:58:00'),
+(18, 26, 1, 'Admin', 'Mengenal Pahlawan Nasional 1;Text;;978-602-7596-71-9;Esensi (Erlangga Group);2012;\"166 hlm; 25 cm x 17', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2226%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2226%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2226%22%3Bs%3A5%3A%22title%22%3Bs%3A102%3A%22Mengenal+Pahlawan+Nasional+1%3BText%3B%3B978-602-7596-71-9%3BEsensi+%28Erlangga+Group%29%3B2012%3B%22166+hlm%3B+25+cm+x+17%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A30%3A%225+cm%5C%22%3B%3B1500001%3BIndonesia%3B%3BNON%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3BN%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%228f00bf8f7217637bc3eb150ccc40cef4479d8c4c%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(19, 27, 1, 'Admin', 'Bianca Castafiore;Text;;978-979-225-343-6;Gramedia Pustaka Utama;2010;\"44 hlm; ilus; 21 x 21 cm\";;1700158;Indonesia;;NONE;;;;<Michael Farr>;;<1700158>', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2227%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2227%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2227%22%3Bs%3A5%3A%22title%22%3Bs%3A150%3A%22Bianca+Castafiore%3BText%3B%3B978-979-225-343-6%3BGramedia+Pustaka+Utama%3B2010%3B%2244+hlm%3B+ilus%3B+21+x+21+cm%22%3B%3B1700158%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CMichael+Farr%3E%3B%3B%3C1700158%3E%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A0%3A%22%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%228aa386e4437301854775b195dc6205450625d567%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(20, 28, 1, 'Admin', 'Takjub Bukti Kebesaran Allah;Text;;978-979-335-112-8;Aku Anak saleh;2005;vi + 91 hlm', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2228%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2228%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2228%22%3Bs%3A5%3A%22title%22%3Bs%3A84%3A%22Takjub+Bukti+Kebesaran+Allah%3BText%3B%3B978-979-335-112-8%3BAku+Anak+saleh%3B2005%3Bvi+%2B+91+hlm%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A30%3A%2211+x+18+cm%3B%3B1700155%3BIndonesia%3B%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22229e341e44dca879b237af6a82abadc35de8ace1%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(21, 29, 1, 'Admin', 'Doa Untuk Sebuah Negeri;Text;;978-979-943-545-5;Asy-Syaamil Press & Grafika;2001;xii + 125 hlm', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2229%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2229%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2229%22%3Bs%3A5%3A%22title%22%3Bs%3A94%3A%22Doa+Untuk+Sebuah+Negeri%3BText%3B%3B978-979-943-545-5%3BAsy-Syaamil+Press+%26+Grafika%3B2001%3Bxii+%2B+125+hlm%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A30%3A%2212+x+20+cm%3B%3B1700156%3BIndonesia%3B%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22adeb9ddfde1999e249c001e529d57b7ecaea3401%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(22, 30, 1, 'Admin', 'Robin Pendekar Sherwood - Si Lelaki Berkerudung;Text;;978-979-523-018-2;Dian Rakyat;1990;ii + 150 hlm', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2230%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2230%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2230%22%3Bs%3A5%3A%22title%22%3Bs%3A101%3A%22Robin+Pendekar+Sherwood+-+Si+Lelaki+Berkerudung%3BText%3B%3B978-979-523-018-2%3BDian+Rakyat%3B1990%3Bii+%2B+150+hlm%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A2%3A%2211%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A50%3A%225+x+18+cm%3B%3B1700157%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CRichard+Car%22%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22ec757f5081427d05d8ab7ca9591d7f175c88e5ee%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(23, 31, 1, 'Admin', 'Seni Menganyam;Text;;978-979-121-602-9;Citra Cipta Purwosari;2006;vi + 78 hlm', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2231%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2231%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2231%22%3Bs%3A5%3A%22title%22%3Bs%3A77%3A%22Seni+Menganyam%3BText%3B%3B978-979-121-602-9%3BCitra+Cipta+Purwosari%3B2006%3Bvi+%2B+78+hlm%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A30%3A%2215+x+21+cm%3B%3B1700154%3BIndonesia%3B%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%220106c0e279d18e83d2cfe212d5712388ea6517a2%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(24, 32, 1, 'Admin', 'Misteri Penginapan Tua (The Pale House);Text;;978-979-22-8014-2;PT Gramedia Pustaka Utama;2014;\"336 hlm; 11 x 18 cm\";;1600079;Indonesia;;NONE;;;;<Agatha Christie>;;<1600079>', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2232%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2232%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2232%22%3Bs%3A5%3A%22title%22%3Bs%3A173%3A%22Misteri+Penginapan+Tua+%28The+Pale+House%29%3BText%3B%3B978-979-22-8014-2%3BPT+Gramedia+Pustaka+Utama%3B2014%3B%22336+hlm%3B+11+x+18+cm%22%3B%3B1600079%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CAgatha+Christie%3E%3B%3B%3C1600079%3E%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A0%3A%22%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22ae3b1e5a7cc3139637bc8a17353109e0c96c462d%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(25, 33, 1, 'Admin', 'Assalamualaikum Beijing;Text;;978-602-9055-25-2;Asma Nadia Publishing House;2014;\"360 hlm; 13 x 20 cm\";;1600084;Indonesia;;NONE;;;;<Asma Nadia>;;<1600084>', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2233%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2233%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2233%22%3Bs%3A5%3A%22title%22%3Bs%3A154%3A%22Assalamualaikum+Beijing%3BText%3B%3B978-602-9055-25-2%3BAsma+Nadia+Publishing+House%3B2014%3B%22360+hlm%3B+13+x+20+cm%22%3B%3B1600084%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CAsma+Nadia%3E%3B%3B%3C1600084%3E%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A0%3A%22%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22ce0d89c758528c30e866875501ce28f4cc87fa85%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(26, 34, 1, 'Admin', 'Pesantren Impian;Text;;978-602-9055-29-0;Asma Nadia Publishing House;2014;\"vi+314 hlm; 13 x 20 cm\";;1600085;Indonesia;;NONE;;;;<Asma Nadia>;;<1600085>', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2234%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2234%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2234%22%3Bs%3A5%3A%22title%22%3Bs%3A150%3A%22Pesantren+Impian%3BText%3B%3B978-602-9055-29-0%3BAsma+Nadia+Publishing+House%3B2014%3B%22vi%2B314+hlm%3B+13+x+20+cm%22%3B%3B1600085%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CAsma+Nadia%3E%3B%3B%3C1600085%3E%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A0%3A%22%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22ddff3a77512d97528f60b3be41f36834920fc366%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(27, 35, 1, 'Admin', 'Pemanfaatan Tumbuh-tumbuhan Alami untuk Kesehatan dan Pengobatan Alternatif;Text;;;Lembaga Litbangpemling;;\"iv+76 hlm; 15', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2235%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2235%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2235%22%3Bs%3A5%3A%22title%22%3Bs%3A121%3A%22Pemanfaatan+Tumbuh-tumbuhan+Alami+untuk+Kesehatan+dan+Pengobatan+Alternatif%3BText%3B%3B%3BLembaga+Litbangpemling%3B%3B%22iv%2B76+hlm%3B+15%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A6%3A%225+x+20%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A50%3A%225+cm%22%3B%3B1600062%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CTeam%3E%3B%3B%3C1600062%22%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%220f1eb4fbb57eaab60ab8c261907a0e666b6edf8f%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(28, 36, 1, 'Admin', 'sehatan dan Pengobatan Alternatif;Text;;;Lembaga Litbangpemling;;\"iv+76 hlm; 15', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2236%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2236%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2236%22%3Bs%3A5%3A%22title%22%3Bs%3A79%3A%22sehatan+dan+Pengobatan+Alternatif%3BText%3B%3B%3BLembaga+Litbangpemling%3B%3B%22iv%2B76+hlm%3B+15%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A6%3A%225+x+20%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3Bs%3A50%3A%225+cm%22%3B%3B1600062%3BIndonesia%3B%3BNONE%3B%3B%3B%3B%3CTeam%3E%3B%3B%3C1600068%22%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A0%3A%22%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3BN%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3BN%3Bs%3A13%3A%22language_name%22%3Bs%3A0%3A%22%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3BN%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3BN%3Bs%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2219a5e8dfe75f4da81a7c9cdaa96cbd4432e384ab%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A09%3A36%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:10:18'),
+(29, 37, 1, 'Admin', 'Mengenal Pahlawan Nasional 1', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2237%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2237%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2237%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Mengenal+Pahlawan+Nasional+1%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-7596-71-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A23%3A%22Esensi+%28Erlangga+Group%29%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222012%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%22166+hlm%3B+25+cm+x+17%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221500001%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3Bs%3A52%3A%22_slims_img_cache_200_x_139.49329359165_1.png.png.png%22%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A14%3A%22Dina+Alfiyanti%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22c394563da2ddac7d861adf8396ceb8cd58d8f684%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22ce9428795e3e8a4cfb85951e6d241378fe72f5f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%2284cd8cf609c866021fafcfb3e1338785f8a31583%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(30, 38, 1, 'Admin', 'Bianca Castafiore', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2238%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2238%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2238%22%3Bs%3A5%3A%22title%22%3Bs%3A17%3A%22Bianca+Castafiore%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-979-225-343-6%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A22%3A%22Gramedia+Pustaka+Utama%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222010%22%3Bs%3A9%3A%22collation%22%3Bs%3A24%3A%2244+hlm%3B+ilus%3B+21+x+21+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221700158%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A12%3A%22Michael+Farr%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22fe913647037a6a122768183ceab6f780b6e79ba1%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%222d0cf78229098033f0c14699c6c87be88299f5e5%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(31, 39, 1, 'Admin', 'Takjub Bukti Kebesaran Allah', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2239%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2239%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2239%22%3Bs%3A5%3A%22title%22%3Bs%3A28%3A%22Takjub+Bukti+Kebesaran+Allah%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-979-335-112-8%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A14%3A%22Aku+Anak+saleh%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222005%22%3Bs%3A9%3A%22collation%22%3Bs%3A23%3A%22vi+%2B+91+hlm%2C+11+x+18+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221700155%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A10%3A%22Sabaruddin%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22ee176ea1a28a85eadd81a83c5a733abb0191af91%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%229c98bccafbffd879fd137ebc993ff251eb9da4ce%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(32, 40, 1, 'Admin', 'Doa Untuk Sebuah Negeri', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2240%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2240%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2240%22%3Bs%3A5%3A%22title%22%3Bs%3A23%3A%22Doa+Untuk+Sebuah+Negeri%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-979-943-545-5%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A27%3A%22Asy-Syaamil+Press+%26+Grafika%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222001%22%3Bs%3A9%3A%22collation%22%3Bs%3A25%3A%22xii+%2B+125+hlm%2C+12+x+20+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221700156%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A23%3A%22Forum+Lingkar+Pena+Aceh%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%222a1d2696b0b54b388956bd0ccaf0b4785fe49cfd%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22d942547d2d4f06c0ee6d21098c57a3f9a0c49291%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(33, 41, 1, 'Admin', 'Robin Pendekar Sherwood - Si Lelaki Berkerudung', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2241%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2241%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2241%22%3Bs%3A5%3A%22title%22%3Bs%3A47%3A%22Robin+Pendekar+Sherwood+-+Si+Lelaki+Berkerudung%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-979-523-018-2%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A11%3A%22Dian+Rakyat%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%221990%22%3Bs%3A9%3A%22collation%22%3Bs%3A26%3A%22ii+%2B+150+hlm%2C+11%2C5+x+18+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221700157%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A34%3A%22Richard+Carpenter+-+Anthony+Horwtz%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2213547e9b3e03d291a4429cfb5af3d64d993da7b9%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22a69171688e0f7d3bb83bc4487ac7a47a4ec6ceb6%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(34, 42, 1, 'Admin', 'Seni Menganyam', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2242%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2242%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2242%22%3Bs%3A5%3A%22title%22%3Bs%3A14%3A%22Seni+Menganyam%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-979-121-602-9%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A21%3A%22Citra+Cipta+Purwosari%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222006%22%3Bs%3A9%3A%22collation%22%3Bs%3A23%3A%22vi+%2B+78+hlm%2C+15+x+21+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221700154%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A10%3A%22Ahmad+Said%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22688df2bd01d0758c96e15774565bacbfda9a407c%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2297370bddb5ec0e24df5f969241d8ebf849121068%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(35, 43, 1, 'Admin', 'Misteri Penginapan Tua (The Pale House)', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2243%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2243%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2243%22%3Bs%3A5%3A%22title%22%3Bs%3A39%3A%22Misteri+Penginapan+Tua+%28The+Pale+House%29%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-979-22-8014-2%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A25%3A%22PT+Gramedia+Pustaka+Utama%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222014%22%3Bs%3A9%3A%22collation%22%3Bs%3A19%3A%22336+hlm%3B+11+x+18+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221600079%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A15%3A%22Agatha+Christie%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22775d7dbd34163671a8f9c360671a58242ebd8bf3%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%228a1f56d1b2ad9663aeea9489573d370d0f39e1f1%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(36, 44, 1, 'Admin', 'Assalamualaikum Beijing', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2244%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2244%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2244%22%3Bs%3A5%3A%22title%22%3Bs%3A23%3A%22Assalamualaikum+Beijing%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-9055-25-2%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A27%3A%22Asma+Nadia+Publishing+House%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222014%22%3Bs%3A9%3A%22collation%22%3Bs%3A19%3A%22360+hlm%3B+13+x+20+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221600084%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A10%3A%22Asma+Nadia%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22cacbc68eb8ef78658818802d0d4cc30716773e71%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2216843d39623c070f1446382a3340af49c0f46dc0%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(37, 45, 1, 'Admin', 'Pesantren Impian', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2245%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2245%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2245%22%3Bs%3A5%3A%22title%22%3Bs%3A16%3A%22Pesantren+Impian%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3Bs%3A17%3A%22978-602-9055-29-0%22%3Bs%3A14%3A%22publisher_name%22%3Bs%3A27%3A%22Asma+Nadia+Publishing+House%22%3Bs%3A12%3A%22publish_year%22%3Bs%3A4%3A%222014%22%3Bs%3A9%3A%22collation%22%3Bs%3A22%3A%22vi%2B314+hlm%3B+13+x+20+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221600085%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A10%3A%22Asma+Nadia%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%22f68713832195578cabfd8409019505740cb5f17e%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%2216843d39623c070f1446382a3340af49c0f46dc0%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06'),
+(38, 46, 1, 'Admin', 'Pemanfaatan Tumbuh-tumbuhan Alami untuk Kesehatan dan Pengobatan Alternatif', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2246%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2246%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2246%22%3Bs%3A5%3A%22title%22%3Bs%3A75%3A%22Pemanfaatan+Tumbuh-tumbuhan+Alami+untuk+Kesehatan+dan+Pengobatan+Alternatif%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A22%3A%22Lembaga+Litbangpemling%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3Bs%3A25%3A%22iv%2B76+hlm%3B+15%2C5+x+20%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221600062%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A4%3A%22Team%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2208c7150c54e51e57d9ee29dcd8f5e6e22c4d3d96%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22bc7bc7c0fb4359a82379b7f3f89c66a18e712c81%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:12:06');
+INSERT INTO `biblio_log` (`biblio_log_id`, `biblio_id`, `user_id`, `realname`, `title`, `ip`, `action`, `affectedrow`, `rawdata`, `additional_information`, `date`) VALUES
+(39, 47, 1, 'Admin', 'sehatan dan Pengobatan Alternatif', '::1', 'delete', 'description', 'a%3A34%3A%7Bs%3A2%3A%22id%22%3Bs%3A2%3A%2247%22%3Bs%3A3%3A%22_id%22%3Bs%3A2%3A%2247%22%3Bs%3A9%3A%22biblio_id%22%3Bs%3A2%3A%2247%22%3Bs%3A5%3A%22title%22%3Bs%3A33%3A%22sehatan+dan+Pengobatan+Alternatif%22%3Bs%3A8%3A%22gmd_name%22%3Bs%3A4%3A%22Text%22%3Bs%3A3%3A%22sor%22%3BN%3Bs%3A7%3A%22edition%22%3BN%3Bs%3A9%3A%22isbn_issn%22%3BN%3Bs%3A14%3A%22publisher_name%22%3Bs%3A22%3A%22Lembaga+Litbangpemling%22%3Bs%3A12%3A%22publish_year%22%3BN%3Bs%3A9%3A%22collation%22%3Bs%3A25%3A%22iv%2B76+hlm%3B+15%2C5+x+20%2C5+cm%22%3Bs%3A12%3A%22series_title%22%3BN%3Bs%3A11%3A%22call_number%22%3Bs%3A7%3A%221600062%22%3Bs%3A13%3A%22language_name%22%3Bs%3A9%3A%22Indonesia%22%3Bs%3A6%3A%22source%22%3BN%3Bs%3A5%3A%22place%22%3Bs%3A0%3A%22%22%3Bs%3A14%3A%22classification%22%3Bs%3A4%3A%22NONE%22%3Bs%3A5%3A%22notes%22%3BN%3Bs%3A5%3A%22image%22%3BN%3Bs%3A9%3A%22opac_hide%22%3Bs%3A1%3A%220%22%3Bs%3A8%3A%22promoted%22%3Bs%3A1%3A%220%22%3Bs%3A6%3A%22labels%22%3BN%3Bs%3A9%3A%22frequency%22%3BN%3Bs%3A16%3A%22spec_detail_info%22%3BN%3Bs%3A12%3A%22content_type%22%3BN%3Bs%3A10%3A%22media_type%22%3BN%3Bs%3A12%3A%22carrier_type%22%3BN%3Bs%3A3%3A%22uid%22%3BN%3Bs%3A7%3A%22authors%22%3Ba%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A11%3A%22author_name%22%3Bs%3A4%3A%22Team%22%3Bs%3A14%3A%22authority_type%22%3Bs%3A13%3A%22Personal+Name%22%3Bs%3A15%3A%22authority_level%22%3Bs%3A17%3A%22Additional+Author%22%3B%7D%7Ds%3A8%3A%22subjects%22%3BN%3Bs%3A5%3A%22items%22%3BN%3Bs%3A4%3A%22hash%22%3Ba%3A5%3A%7Bs%3A6%3A%22biblio%22%3Bs%3A40%3A%2270246ea251ae7d707a6793905955cbb834731fbe%22%3Bs%3A14%3A%22classification%22%3Bs%3A40%3A%22616812fb9175ff89175922ac26c496786c92b5e0%22%3Bs%3A7%3A%22authors%22%3Bs%3A40%3A%22bc7bc7c0fb4359a82379b7f3f89c66a18e712c81%22%3Bs%3A8%3A%22subjects%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3Bs%3A5%3A%22image%22%3Bs%3A40%3A%22ec0a0fa7e8b0092ad8f0bf8c93ff597b874fabe3%22%3B%7Ds%3A10%3A%22input_date%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3Bs%3A11%3A%22last_update%22%3Bs%3A19%3A%222021-06-09+16%3A10%3A38%22%3B%7D', 'Data bibliografi dihapus.', '2021-06-09 16:13:59');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio_relation`
+-- Table structure for table `biblio_relation`
 --
 
 CREATE TABLE `biblio_relation` (
@@ -199,7 +222,7 @@ CREATE TABLE `biblio_relation` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `biblio_topic`
+-- Table structure for table `biblio_topic`
 --
 
 CREATE TABLE `biblio_topic` (
@@ -211,7 +234,7 @@ CREATE TABLE `biblio_topic` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `comment`
+-- Table structure for table `comment`
 --
 
 CREATE TABLE `comment` (
@@ -226,7 +249,7 @@ CREATE TABLE `comment` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `content`
+-- Table structure for table `content`
 --
 
 CREATE TABLE `content` (
@@ -241,7 +264,7 @@ CREATE TABLE `content` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `content`
+-- Dumping data for table `content`
 --
 
 INSERT INTO `content` (`content_id`, `content_title`, `content_desc`, `content_path`, `is_news`, `input_date`, `last_update`, `content_ownpage`) VALUES
@@ -258,7 +281,7 @@ INSERT INTO `content` (`content_id`, `content_title`, `content_desc`, `content_p
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `files`
+-- Table structure for table `files`
 --
 
 CREATE TABLE `files` (
@@ -277,7 +300,7 @@ CREATE TABLE `files` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `files_read`
+-- Table structure for table `files_read`
 --
 
 CREATE TABLE `files_read` (
@@ -292,7 +315,7 @@ CREATE TABLE `files_read` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `fines`
+-- Table structure for table `fines`
 --
 
 CREATE TABLE `fines` (
@@ -307,7 +330,7 @@ CREATE TABLE `fines` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `group_access`
+-- Table structure for table `group_access`
 --
 
 CREATE TABLE `group_access` (
@@ -319,7 +342,7 @@ CREATE TABLE `group_access` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `group_access`
+-- Dumping data for table `group_access`
 --
 
 INSERT INTO `group_access` (`group_id`, `module_id`, `menus`, `r`, `w`) VALUES
@@ -335,7 +358,7 @@ INSERT INTO `group_access` (`group_id`, `module_id`, `menus`, `r`, `w`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `holiday`
+-- Table structure for table `holiday`
 --
 
 CREATE TABLE `holiday` (
@@ -346,7 +369,7 @@ CREATE TABLE `holiday` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `holiday`
+-- Dumping data for table `holiday`
 --
 
 INSERT INTO `holiday` (`holiday_id`, `holiday_dayname`, `holiday_date`, `description`) VALUES
@@ -360,7 +383,7 @@ INSERT INTO `holiday` (`holiday_id`, `holiday_dayname`, `holiday_date`, `descrip
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `item`
+-- Table structure for table `item`
 --
 
 CREATE TABLE `item` (
@@ -388,7 +411,7 @@ CREATE TABLE `item` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `item`
+-- Dumping data for table `item`
 --
 
 INSERT INTO `item` (`item_id`, `biblio_id`, `call_number`, `coll_type_id`, `item_code`, `inventory_code`, `received_date`, `supplier_id`, `order_no`, `location_id`, `order_date`, `item_status_id`, `site`, `source`, `invoice`, `price`, `price_currency`, `invoice_date`, `input_date`, `last_update`, `uid`) VALUES
@@ -406,7 +429,7 @@ INSERT INTO `item` (`item_id`, `biblio_id`, `call_number`, `coll_type_id`, `item
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kardex`
+-- Table structure for table `kardex`
 --
 
 CREATE TABLE `kardex` (
@@ -423,7 +446,7 @@ CREATE TABLE `kardex` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `loan`
+-- Table structure for table `loan`
 --
 
 CREATE TABLE `loan` (
@@ -444,7 +467,15 @@ CREATE TABLE `loan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Trigger `loan`
+-- Dumping data for table `loan`
+--
+
+INSERT INTO `loan` (`loan_id`, `item_code`, `member_id`, `loan_date`, `due_date`, `renewed`, `loan_rules_id`, `actual`, `is_lent`, `is_return`, `return_date`, `input_date`, `last_update`, `uid`) VALUES
+(1, '1500001', '1500001', '2021-06-08', '2021-06-09', 0, 1, NULL, 1, 0, NULL, '2021-06-08 10:27:44', '2021-06-08 10:27:44', 1),
+(2, '1600084', '1500002', '2021-06-10', '2021-06-11', 0, 1, NULL, 1, 0, NULL, '2021-06-10 12:38:43', '2021-06-10 12:38:43', 1);
+
+--
+-- Triggers `loan`
 --
 DELIMITER $$
 CREATE TRIGGER `delete_loan_history` AFTER DELETE ON `loan` FOR EACH ROW DELETE FROM `loan_history` WHERE loan_id=OLD.loan_id
@@ -488,7 +519,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `loan_history`
+-- Table structure for table `loan_history`
 --
 
 CREATE TABLE `loan_history` (
@@ -515,10 +546,18 @@ CREATE TABLE `loan_history` (
   `last_update` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `loan_history`
+--
+
+INSERT INTO `loan_history` (`loan_id`, `item_code`, `biblio_id`, `title`, `call_number`, `classification`, `gmd_name`, `language_name`, `location_name`, `collection_type_name`, `member_id`, `member_name`, `member_type_name`, `loan_date`, `due_date`, `renewed`, `is_lent`, `is_return`, `return_date`, `input_date`, `last_update`) VALUES
+(1, '1500001', 16, 'Mengenal Pahlawan Nasional 1', '1500001', 'NONE', 'Text', 'Indonesia', NULL, NULL, '1500001', 'Yoshua Ragil', 'SISWA', '2021-06-08', '2021-06-09', 0, 1, 0, NULL, '2021-06-08 10:27:44', '2021-06-08 10:27:44'),
+(2, '1600084', 18, 'Assalamualaikum Beijing', '1600084', 'NONE', 'Text', 'Indonesia', NULL, NULL, '1500002', 'Ricko', 'SISWA', '2021-06-10', '2021-06-11', 0, 1, 0, NULL, '2021-06-10 12:38:43', '2021-06-10 12:38:43');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `member`
+-- Table structure for table `member`
 --
 
 CREATE TABLE `member` (
@@ -550,16 +589,20 @@ CREATE TABLE `member` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `member`
+-- Dumping data for table `member`
 --
 
 INSERT INTO `member` (`member_id`, `member_name`, `gender`, `birth_date`, `member_type_id`, `member_address`, `member_mail_address`, `member_email`, `postal_code`, `inst_name`, `is_new`, `member_image`, `pin`, `member_phone`, `member_fax`, `member_since_date`, `register_date`, `expire_date`, `member_notes`, `is_pending`, `mpasswd`, `last_login`, `last_login_ip`, `input_date`, `last_update`) VALUES
-('1500001', 'Yoshua Ragil', 1, '2000-02-27', 1, '', '', '', '', 'STMIK Bina Patria', NULL, 'member_1500001.png', '', '', '', '2021-06-08', '2021-06-08', '2022-06-08', '', 0, NULL, NULL, NULL, '2021-06-08', '2021-06-08');
+('1500001', 'Yoshua Ragil', 1, '2000-02-27', 1, '', '', 'yoshua1234', '', 'STMIK Bina Patria', NULL, 'member_1500001.png', '', '', '', '2021-06-08', '2021-06-08', '2022-06-08', '', 0, '$2y$10$U0kglHYP.XzM/jhiXdXbjum5NunmRp6a1tF8PHaTRmoaDbCvBIPAi', '2021-06-10 12:40:06', '::1', '2021-06-08', '2021-06-10'),
+('1500002', 'Ricko', 1, '2000-12-12', 1, '', '', 'ricko12345@gmail.com', '', 'STMIK Bina Patria', NULL, NULL, '', '', '', '2021-06-10', '2021-06-10', '2022-06-10', '', 0, '$2y$10$XaxbGD1Q734Gd7WJFLmxdOE4fdmxCrpIhI0iDYp23r0RlOwmDIkD.', '2021-06-10 12:39:02', '::1', '2021-06-10', '2021-06-10'),
+('1500003', 'Adi', 1, '2000-12-12', 1, '', '', 'adi1234@gmail.com', '', '', NULL, NULL, '', '', '', '2021-06-10', '2021-06-10', '2022-06-10', '', 0, '$2y$10$oQIh.2B/DiZmGdKiKm1CIu5Vv.gC8WQ7dK9zsyW2Ks8ti/eLv6mSa', NULL, NULL, '2021-06-10', '2021-06-10'),
+('1500004', 'riska', 0, '2001-12-12', 1, '', '', 'riska1234@gmail.com', '', '', NULL, NULL, '', '', '', '2021-06-10', '2021-06-10', '2022-06-10', '', 0, '$2y$10$H/TT7ntoNcedVw/Te6SqKub80Xqt6gJUXw8vCzmeo7WAGevehXp1i', NULL, NULL, '2021-06-10', '2021-06-10'),
+('1500005', 'intan', 0, '2000-12-12', 1, '', '', 'intan1234@gmail.com', '', '', NULL, NULL, '', '', '', '2021-06-10', '2021-06-10', '2022-06-10', '', 0, '$2y$10$wEtAphXlSiIWAaaiGNDDduG1T3KLzyhtgdkNQS5yLf1oQWvemc8uO', NULL, NULL, '2021-06-10', '2021-06-10');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `member_custom`
+-- Table structure for table `member_custom`
 --
 
 CREATE TABLE `member_custom` (
@@ -569,7 +612,7 @@ CREATE TABLE `member_custom` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_author`
+-- Table structure for table `mst_author`
 --
 
 CREATE TABLE `mst_author` (
@@ -583,7 +626,7 @@ CREATE TABLE `mst_author` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_author`
+-- Dumping data for table `mst_author`
 --
 
 INSERT INTO `mst_author` (`author_id`, `author_name`, `author_year`, `authority_type`, `auth_list`, `input_date`, `last_update`) VALUES
@@ -624,7 +667,7 @@ INSERT INTO `mst_author` (`author_id`, `author_name`, `author_year`, `authority_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_carrier_type`
+-- Table structure for table `mst_carrier_type`
 --
 
 CREATE TABLE `mst_carrier_type` (
@@ -637,7 +680,7 @@ CREATE TABLE `mst_carrier_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_carrier_type`
+-- Dumping data for table `mst_carrier_type`
 --
 
 INSERT INTO `mst_carrier_type` (`id`, `carrier_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -700,7 +743,7 @@ INSERT INTO `mst_carrier_type` (`id`, `carrier_type`, `code`, `code2`, `input_da
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_coll_type`
+-- Table structure for table `mst_coll_type`
 --
 
 CREATE TABLE `mst_coll_type` (
@@ -711,7 +754,7 @@ CREATE TABLE `mst_coll_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_coll_type`
+-- Dumping data for table `mst_coll_type`
 --
 
 INSERT INTO `mst_coll_type` (`coll_type_id`, `coll_type_name`, `input_date`, `last_update`) VALUES
@@ -722,7 +765,7 @@ INSERT INTO `mst_coll_type` (`coll_type_id`, `coll_type_name`, `input_date`, `la
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_content_type`
+-- Table structure for table `mst_content_type`
 --
 
 CREATE TABLE `mst_content_type` (
@@ -735,7 +778,7 @@ CREATE TABLE `mst_content_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_content_type`
+-- Dumping data for table `mst_content_type`
 --
 
 INSERT INTO `mst_content_type` (`id`, `content_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -768,7 +811,7 @@ INSERT INTO `mst_content_type` (`id`, `content_type`, `code`, `code2`, `input_da
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_custom_field`
+-- Table structure for table `mst_custom_field`
 --
 
 CREATE TABLE `mst_custom_field` (
@@ -790,7 +833,7 @@ CREATE TABLE `mst_custom_field` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_frequency`
+-- Table structure for table `mst_frequency`
 --
 
 CREATE TABLE `mst_frequency` (
@@ -804,7 +847,7 @@ CREATE TABLE `mst_frequency` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_frequency`
+-- Dumping data for table `mst_frequency`
 --
 
 INSERT INTO `mst_frequency` (`frequency_id`, `frequency`, `language_prefix`, `time_increment`, `time_unit`, `input_date`, `last_update`) VALUES
@@ -820,7 +863,7 @@ INSERT INTO `mst_frequency` (`frequency_id`, `frequency`, `language_prefix`, `ti
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_gmd`
+-- Table structure for table `mst_gmd`
 --
 
 CREATE TABLE `mst_gmd` (
@@ -833,7 +876,7 @@ CREATE TABLE `mst_gmd` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_gmd`
+-- Dumping data for table `mst_gmd`
 --
 
 INSERT INTO `mst_gmd` (`gmd_id`, `gmd_code`, `gmd_name`, `icon_image`, `input_date`, `last_update`) VALUES
@@ -867,12 +910,19 @@ INSERT INTO `mst_gmd` (`gmd_id`, `gmd_code`, `gmd_name`, `icon_image`, `input_da
 (28, 'CD', 'CD-ROM', NULL, '2021-06-04', '2021-06-04'),
 (29, 'MV', 'Multimedia', NULL, '2021-06-04', '2021-06-04'),
 (30, 'ER', 'Electronic Resource', NULL, '2021-06-04', '2021-06-04'),
-(31, 'DVD', 'Digital Versatile Disc', NULL, '2021-06-04', '2021-06-04');
+(31, 'DVD', 'Digital Versatile Disc', NULL, '2021-06-04', '2021-06-04'),
+(32, NULL, '5 cm\\\";;1500001;Indonesia;;NON', NULL, '2021-06-09', '2021-06-09'),
+(33, NULL, '', NULL, '2021-06-09', '2021-06-09'),
+(34, NULL, '11 x 18 cm;;1700155;Indonesia;', NULL, '2021-06-09', '2021-06-09'),
+(35, NULL, '12 x 20 cm;;1700156;Indonesia;', NULL, '2021-06-09', '2021-06-09'),
+(36, NULL, '11', NULL, '2021-06-09', '2021-06-09'),
+(37, NULL, '15 x 21 cm;;1700154;Indonesia;', NULL, '2021-06-09', '2021-06-09'),
+(38, NULL, '5 x 20', NULL, '2021-06-09', '2021-06-09');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_item_status`
+-- Table structure for table `mst_item_status`
 --
 
 CREATE TABLE `mst_item_status` (
@@ -886,7 +936,7 @@ CREATE TABLE `mst_item_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_item_status`
+-- Dumping data for table `mst_item_status`
 --
 
 INSERT INTO `mst_item_status` (`item_status_id`, `item_status_name`, `rules`, `no_loan`, `skip_stock_take`, `input_date`, `last_update`) VALUES
@@ -897,7 +947,7 @@ INSERT INTO `mst_item_status` (`item_status_id`, `item_status_name`, `rules`, `n
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_label`
+-- Table structure for table `mst_label`
 --
 
 CREATE TABLE `mst_label` (
@@ -910,7 +960,7 @@ CREATE TABLE `mst_label` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data untuk tabel `mst_label`
+-- Dumping data for table `mst_label`
 --
 
 INSERT INTO `mst_label` (`label_id`, `label_name`, `label_desc`, `label_image`, `input_date`, `last_update`) VALUES
@@ -921,7 +971,7 @@ INSERT INTO `mst_label` (`label_id`, `label_name`, `label_desc`, `label_image`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_language`
+-- Table structure for table `mst_language`
 --
 
 CREATE TABLE `mst_language` (
@@ -932,17 +982,18 @@ CREATE TABLE `mst_language` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_language`
+-- Dumping data for table `mst_language`
 --
 
 INSERT INTO `mst_language` (`language_id`, `language_name`, `input_date`, `last_update`) VALUES
 ('id', 'Indonesia', '2021-06-04', '2021-06-04'),
-('en', 'English', '2021-06-04', '2021-06-04');
+('en', 'English', '2021-06-04', '2021-06-04'),
+('', '', '2021-06-09', '2021-06-09');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_loan_rules`
+-- Table structure for table `mst_loan_rules`
 --
 
 CREATE TABLE `mst_loan_rules` (
@@ -959,10 +1010,17 @@ CREATE TABLE `mst_loan_rules` (
   `last_update` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Dumping data for table `mst_loan_rules`
+--
+
+INSERT INTO `mst_loan_rules` (`loan_rules_id`, `member_type_id`, `coll_type_id`, `gmd_id`, `loan_limit`, `loan_periode`, `reborrow_limit`, `fine_each_day`, `grace_periode`, `input_date`, `last_update`) VALUES
+(1, 1, 0, 0, 1, 1, 1, 500, 0, '2021-06-08', '2021-06-08');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_location`
+-- Table structure for table `mst_location`
 --
 
 CREATE TABLE `mst_location` (
@@ -973,7 +1031,7 @@ CREATE TABLE `mst_location` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_location`
+-- Dumping data for table `mst_location`
 --
 
 INSERT INTO `mst_location` (`location_id`, `location_name`, `input_date`, `last_update`) VALUES
@@ -982,7 +1040,7 @@ INSERT INTO `mst_location` (`location_id`, `location_name`, `input_date`, `last_
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_media_type`
+-- Table structure for table `mst_media_type`
 --
 
 CREATE TABLE `mst_media_type` (
@@ -995,7 +1053,7 @@ CREATE TABLE `mst_media_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_media_type`
+-- Dumping data for table `mst_media_type`
 --
 
 INSERT INTO `mst_media_type` (`id`, `media_type`, `code`, `code2`, `input_date`, `last_update`) VALUES
@@ -1013,7 +1071,7 @@ INSERT INTO `mst_media_type` (`id`, `media_type`, `code`, `code2`, `input_date`,
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_member_type`
+-- Table structure for table `mst_member_type`
 --
 
 CREATE TABLE `mst_member_type` (
@@ -1032,7 +1090,7 @@ CREATE TABLE `mst_member_type` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_member_type`
+-- Dumping data for table `mst_member_type`
 --
 
 INSERT INTO `mst_member_type` (`member_type_id`, `member_type_name`, `loan_limit`, `loan_periode`, `enable_reserve`, `reserve_limit`, `member_periode`, `reborrow_limit`, `fine_each_day`, `grace_periode`, `input_date`, `last_update`) VALUES
@@ -1041,7 +1099,7 @@ INSERT INTO `mst_member_type` (`member_type_id`, `member_type_name`, `loan_limit
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_module`
+-- Table structure for table `mst_module`
 --
 
 CREATE TABLE `mst_module` (
@@ -1052,7 +1110,7 @@ CREATE TABLE `mst_module` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=DYNAMIC;
 
 --
--- Dumping data untuk tabel `mst_module`
+-- Dumping data for table `mst_module`
 --
 
 INSERT INTO `mst_module` (`module_id`, `module_name`, `module_path`, `module_desc`) VALUES
@@ -1068,7 +1126,7 @@ INSERT INTO `mst_module` (`module_id`, `module_name`, `module_path`, `module_des
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_place`
+-- Table structure for table `mst_place`
 --
 
 CREATE TABLE `mst_place` (
@@ -1079,7 +1137,7 @@ CREATE TABLE `mst_place` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_place`
+-- Dumping data for table `mst_place`
 --
 
 INSERT INTO `mst_place` (`place_id`, `place_name`, `input_date`, `last_update`) VALUES
@@ -1096,7 +1154,7 @@ INSERT INTO `mst_place` (`place_id`, `place_name`, `input_date`, `last_update`) 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_publisher`
+-- Table structure for table `mst_publisher`
 --
 
 CREATE TABLE `mst_publisher` (
@@ -1107,7 +1165,7 @@ CREATE TABLE `mst_publisher` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_publisher`
+-- Dumping data for table `mst_publisher`
 --
 
 INSERT INTO `mst_publisher` (`publisher_id`, `publisher_name`, `input_date`, `last_update`) VALUES
@@ -1130,12 +1188,13 @@ INSERT INTO `mst_publisher` (`publisher_id`, `publisher_name`, `input_date`, `la
 (17, 'Aku Anak saleh', '2021-06-08', '2021-06-08'),
 (18, 'Asy-Syaamil Press & Grafika', '2021-06-08', '2021-06-08'),
 (19, 'Dian Rakyat', '2021-06-08', '2021-06-08'),
-(20, 'Gramedia Pustaka Utama', '2021-06-08', '2021-06-08');
+(20, 'Gramedia Pustaka Utama', '2021-06-08', '2021-06-08'),
+(21, '', '2021-06-09', '2021-06-09');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_relation_term`
+-- Table structure for table `mst_relation_term`
 --
 
 CREATE TABLE `mst_relation_term` (
@@ -1145,7 +1204,7 @@ CREATE TABLE `mst_relation_term` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_relation_term`
+-- Dumping data for table `mst_relation_term`
 --
 
 INSERT INTO `mst_relation_term` (`ID`, `rt_id`, `rt_desc`) VALUES
@@ -1159,7 +1218,7 @@ INSERT INTO `mst_relation_term` (`ID`, `rt_id`, `rt_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_servers`
+-- Table structure for table `mst_servers`
 --
 
 CREATE TABLE `mst_servers` (
@@ -1174,7 +1233,7 @@ CREATE TABLE `mst_servers` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_supplier`
+-- Table structure for table `mst_supplier`
 --
 
 CREATE TABLE `mst_supplier` (
@@ -1194,7 +1253,7 @@ CREATE TABLE `mst_supplier` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_topic`
+-- Table structure for table `mst_topic`
 --
 
 CREATE TABLE `mst_topic` (
@@ -1208,7 +1267,7 @@ CREATE TABLE `mst_topic` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `mst_topic`
+-- Dumping data for table `mst_topic`
 --
 
 INSERT INTO `mst_topic` (`topic_id`, `topic`, `topic_type`, `auth_list`, `classification`, `input_date`, `last_update`) VALUES
@@ -1233,7 +1292,7 @@ INSERT INTO `mst_topic` (`topic_id`, `topic`, `topic_type`, `auth_list`, `classi
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mst_voc_ctrl`
+-- Table structure for table `mst_voc_ctrl`
 --
 
 CREATE TABLE `mst_voc_ctrl` (
@@ -1247,7 +1306,7 @@ CREATE TABLE `mst_voc_ctrl` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `plugins`
+-- Table structure for table `plugins`
 --
 
 CREATE TABLE `plugins` (
@@ -1263,7 +1322,7 @@ CREATE TABLE `plugins` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `reserve`
+-- Table structure for table `reserve`
 --
 
 CREATE TABLE `reserve` (
@@ -1277,7 +1336,7 @@ CREATE TABLE `reserve` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `search_biblio`
+-- Table structure for table `search_biblio`
 --
 
 CREATE TABLE `search_biblio` (
@@ -1313,7 +1372,7 @@ CREATE TABLE `search_biblio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='index table for advance searching technique for SLiMS';
 
 --
--- Dumping data untuk tabel `search_biblio`
+-- Dumping data for table `search_biblio`
 --
 
 INSERT INTO `search_biblio` (`biblio_id`, `title`, `edition`, `isbn_issn`, `author`, `topic`, `gmd`, `publisher`, `publish_place`, `language`, `classification`, `spec_detail_info`, `carrier_type`, `content_type`, `media_type`, `location`, `publish_year`, `notes`, `series_title`, `items`, `collection_types`, `call_number`, `opac_hide`, `promoted`, `labels`, `collation`, `image`, `input_date`, `last_update`) VALUES
@@ -1331,7 +1390,7 @@ INSERT INTO `search_biblio` (`biblio_id`, `title`, `edition`, `isbn_issn`, `auth
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `serial`
+-- Table structure for table `serial`
 --
 
 CREATE TABLE `serial` (
@@ -1349,7 +1408,7 @@ CREATE TABLE `serial` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `setting`
+-- Table structure for table `setting`
 --
 
 CREATE TABLE `setting` (
@@ -1359,15 +1418,15 @@ CREATE TABLE `setting` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `setting`
+-- Dumping data for table `setting`
 --
 
 INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
 (1, 'library_name', 's:15:\"MTSN 3 Magelang\";'),
-(2, 'library_subname', 's:37:\"Open Source Library Management System\";'),
-(3, 'template', 'a:2:{s:5:\"theme\";s:9:\"akasia-dz\";s:3:\"css\";s:28:\"template/akasia-dz/style.css\";}'),
+(2, 'library_subname', 's:33:\"Perpustakaan Sekolah Insan Islami\";'),
+(3, 'template', 'a:2:{s:5:\"theme\";s:6:\"akasia\";s:3:\"css\";s:25:\"template/akasia/style.css\";}'),
 (4, 'admin_template', 'a:2:{s:5:\"theme\";s:7:\"default\";s:3:\"css\";s:32:\"admin_template/default/style.css\";}'),
-(5, 'default_lang', 's:5:\"en_US\";'),
+(5, 'default_lang', 's:5:\"id_ID\";'),
 (6, 'opac_result_num', 's:2:\"10\";'),
 (7, 'enable_promote_titles', 'N;'),
 (8, 'quick_return', 'b:1;'),
@@ -1390,12 +1449,12 @@ INSERT INTO `setting` (`setting_id`, `setting_name`, `setting_value`) VALUES
 (25, 'allowed_counter_ip', 'a:1:{i:0;s:9:\"127.0.0.1\";}'),
 (26, 'reserve_direct_database', 's:1:\"1\";'),
 (27, 'reserve_on_loan_only', 's:1:\"0\";'),
-(31, 'spellchecker_enabled', 'b:1;');
+(32, 'spellchecker_enabled', 'b:1;');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `stock_take`
+-- Table structure for table `stock_take`
 --
 
 CREATE TABLE `stock_take` (
@@ -1416,7 +1475,7 @@ CREATE TABLE `stock_take` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `stock_take_item`
+-- Table structure for table `stock_take_item`
 --
 
 CREATE TABLE `stock_take_item` (
@@ -1437,7 +1496,7 @@ CREATE TABLE `stock_take_item` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `system_log`
+-- Table structure for table `system_log`
 --
 
 CREATE TABLE `system_log` (
@@ -1452,7 +1511,7 @@ CREATE TABLE `system_log` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `system_log`
+-- Dumping data for table `system_log`
 --
 
 INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_module`, `action`, `log_msg`, `log_date`) VALUES
@@ -1505,12 +1564,72 @@ INSERT INTO `system_log` (`log_id`, `log_type`, `id`, `log_location`, `sub_modul
 (47, 'staff', '1', 'bibliography', '', '', 'Admin upload image file _slims_img_cache_200_x_139.49329359165_1.png.png.png', '2021-06-08 09:58:00'),
 (48, 'staff', '1', 'bibliography', '', '', 'Admin update bibliographic data (Mengenal Pahlawan Nasional 1) with biblio_id (16)', '2021-06-08 09:58:00'),
 (49, 'staff', '1', 'membership', 'Photo', 'Add', 'Admin upload image file member_1500001.png', '2021-06-08 10:02:04'),
-(50, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (Yoshua Ragil) with ID (1500001)', '2021-06-08 10:02:04');
+(50, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (Yoshua Ragil) with ID (1500001)', '2021-06-08 10:02:04'),
+(51, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address ::1', '2021-06-08 10:23:26'),
+(52, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address ::1', '2021-06-08 10:24:33'),
+(53, 'member', '1500001', 'circulation', 'Loan', 'Started', 'Admin start transaction with member (1500001)', '2021-06-08 10:27:07'),
+(54, 'member', '1500001', 'circulation', 'Loan', 'Add', 'Admin insert new loan (1500001) for member (1500001)', '2021-06-08 10:27:28'),
+(55, 'member', '1500001', 'circulation', 'Transaction', 'finished', 'Admin finish circulation transaction with member (1500001)', '2021-06-08 10:27:45'),
+(56, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address ::1', '2021-06-08 10:28:21'),
+(57, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address ::1', '2021-06-09 15:39:42'),
+(58, 'staff', '1', 'bibliography', 'Import', '', 'Importing 11 bibliographic records from file : buku1.csv', '2021-06-09 16:09:36'),
+(59, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Mengenal Pahlawan Nasional 1;Text;;978-602-7596-71-9;Esensi (Erlangga Group);2012;\"166 hlm; 25 cm x 17) with biblio_id (26)', '2021-06-09 16:10:18'),
+(60, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Bianca Castafiore;Text;;978-979-225-343-6;Gramedia Pustaka Utama;2010;\"44 hlm; ilus; 21 x 21 cm\";;1700158;Indonesia;;NONE;;;;<Michael Farr>;;<1700158>) with biblio_id (27)', '2021-06-09 16:10:18'),
+(61, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Takjub Bukti Kebesaran Allah;Text;;978-979-335-112-8;Aku Anak saleh;2005;vi + 91 hlm) with biblio_id (28)', '2021-06-09 16:10:18'),
+(62, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Doa Untuk Sebuah Negeri;Text;;978-979-943-545-5;Asy-Syaamil Press & Grafika;2001;xii + 125 hlm) with biblio_id (29)', '2021-06-09 16:10:18'),
+(63, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Robin Pendekar Sherwood - Si Lelaki Berkerudung;Text;;978-979-523-018-2;Dian Rakyat;1990;ii + 150 hlm) with biblio_id (30)', '2021-06-09 16:10:18'),
+(64, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Seni Menganyam;Text;;978-979-121-602-9;Citra Cipta Purwosari;2006;vi + 78 hlm) with biblio_id (31)', '2021-06-09 16:10:18'),
+(65, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Misteri Penginapan Tua (The Pale House);Text;;978-979-22-8014-2;PT Gramedia Pustaka Utama;2014;\"336 hlm; 11 x 18 cm\";;1600079;Indonesia;;NONE;;;;<Agatha Christie>;;<1600079>) with biblio_id (32)', '2021-06-09 16:10:18'),
+(66, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Assalamualaikum Beijing;Text;;978-602-9055-25-2;Asma Nadia Publishing House;2014;\"360 hlm; 13 x 20 cm\";;1600084;Indonesia;;NONE;;;;<Asma Nadia>;;<1600084>) with biblio_id (33)', '2021-06-09 16:10:18'),
+(67, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Pesantren Impian;Text;;978-602-9055-29-0;Asma Nadia Publishing House;2014;\"vi+314 hlm; 13 x 20 cm\";;1600085;Indonesia;;NONE;;;;<Asma Nadia>;;<1600085>) with biblio_id (34)', '2021-06-09 16:10:18'),
+(68, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Pemanfaatan Tumbuh-tumbuhan Alami untuk Kesehatan dan Pengobatan Alternatif;Text;;;Lembaga Litbangpemling;;\"iv+76 hlm; 15) with biblio_id (35)', '2021-06-09 16:10:18'),
+(69, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (sehatan dan Pengobatan Alternatif;Text;;;Lembaga Litbangpemling;;\"iv+76 hlm; 15) with biblio_id (36)', '2021-06-09 16:10:18'),
+(70, 'staff', '1', 'bibliography', 'Import', '', 'Importing 11 bibliographic records from file : buku1.csv', '2021-06-09 16:10:38'),
+(71, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Mengenal Pahlawan Nasional 1) with biblio_id (37)', '2021-06-09 16:12:06'),
+(72, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Bianca Castafiore) with biblio_id (38)', '2021-06-09 16:12:06'),
+(73, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Takjub Bukti Kebesaran Allah) with biblio_id (39)', '2021-06-09 16:12:06'),
+(74, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Doa Untuk Sebuah Negeri) with biblio_id (40)', '2021-06-09 16:12:06'),
+(75, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Robin Pendekar Sherwood - Si Lelaki Berkerudung) with biblio_id (41)', '2021-06-09 16:12:06'),
+(76, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Seni Menganyam) with biblio_id (42)', '2021-06-09 16:12:06'),
+(77, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Misteri Penginapan Tua (The Pale House)) with biblio_id (43)', '2021-06-09 16:12:06'),
+(78, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Assalamualaikum Beijing) with biblio_id (44)', '2021-06-09 16:12:06'),
+(79, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Pesantren Impian) with biblio_id (45)', '2021-06-09 16:12:06'),
+(80, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (Pemanfaatan Tumbuh-tumbuhan Alami untuk Kesehatan dan Pengobatan Alternatif) with biblio_id (46)', '2021-06-09 16:12:06'),
+(81, 'staff', '1', 'bibliography', '', '', 'Admin DELETE bibliographic data (sehatan dan Pengobatan Alternatif) with biblio_id (47)', '2021-06-09 16:13:59'),
+(82, 'staff', 'admin', 'Login', '', '', 'Login FAILED for user admin from address ::1', '2021-06-10 11:37:39'),
+(83, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address ::1', '2021-06-10 11:37:47'),
+(84, 'member', '1500001', 'circulation', 'Loan', 'Started', 'Admin start transaction with member (1500001)', '2021-06-10 11:39:08'),
+(85, 'member', '1500001', 'circulation', 'Transaction', 'finished', 'Admin finish circulation transaction with member (1500001)', '2021-06-10 11:39:57'),
+(86, 'member', '1500001', 'circulation', 'Loan', 'Started', 'Admin start transaction with member (1500001)', '2021-06-10 11:40:06'),
+(87, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address ::1', '2021-06-10 11:41:48'),
+(88, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address ::1', '2021-06-10 11:42:50'),
+(89, 'member', '1500001', 'circulation', 'Loan', 'Started', 'Admin start transaction with member (1500001)', '2021-06-10 11:43:44'),
+(90, 'member', '1500001', 'circulation', 'Transaction', 'finished', 'Admin finish circulation transaction with member (1500001)', '2021-06-10 11:44:08'),
+(91, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (Ricko) with ID (1500002)', '2021-06-10 11:48:03'),
+(92, 'member', '1500002', 'Login', '', '', 'Login success for member 1500002 from address ::1', '2021-06-10 11:48:37'),
+(93, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 11:49:16'),
+(94, 'staff', '1', 'membership', 'Update', 'OK', 'Admin update member data (Yoshua Ragil) with ID (1500001)', '2021-06-10 11:49:47'),
+(95, 'member', '1500001', 'Login', '', '', 'Login success for member 1500001 from address ::1', '2021-06-10 11:49:55'),
+(96, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 11:50:33'),
+(97, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (Adi) with ID (1500003)', '2021-06-10 12:30:50'),
+(98, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (riska) with ID (1500004)', '2021-06-10 12:31:36'),
+(99, 'staff', '1', 'membership', 'Add', 'OK', 'Admin add new member (intan) with ID (1500005)', '2021-06-10 12:32:23'),
+(100, 'member', '1500002', 'circulation', 'Loan', 'Started', 'Admin start transaction with member (1500002)', '2021-06-10 12:37:59'),
+(101, 'member', '1500002', 'circulation', 'Loan', 'Add', 'Admin insert new loan (1600084) for member (1500002)', '2021-06-10 12:38:31'),
+(102, 'member', '1500002', 'circulation', 'Transaction', 'finished', 'Admin finish circulation transaction with member (1500002)', '2021-06-10 12:38:43'),
+(103, 'member', '1500002', 'Login', '', '', 'Login success for member 1500002 from address ::1', '2021-06-10 12:39:02'),
+(104, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 12:39:18'),
+(105, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address ::1', '2021-06-10 12:39:38'),
+(106, 'member', '1500001', 'Login', '', '', 'Login success for member 1500001 from address ::1', '2021-06-10 12:40:06'),
+(107, 'member', '', 'Login', '', '', 'Log Out from address ::1', '2021-06-10 12:40:20'),
+(108, 'staff', 'admin', 'Login', '', '', 'Login success for user admin from address 127.0.0.1', '2021-06-11 09:30:39'),
+(109, 'staff', '1', 'system', 'Global Config', 'Update', 'Admin change application global configuration', '2021-06-11 09:31:23'),
+(110, 'staff', '1', 'system', '', '', 'Admin Log Out from application from address 127.0.0.1', '2021-06-11 09:33:32');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -1532,16 +1651,16 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`user_id`, `username`, `realname`, `passwd`, `email`, `user_type`, `user_image`, `social_media`, `last_login`, `last_login_ip`, `groups`, `admin_template`, `forgot`, `input_date`, `last_update`) VALUES
-(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-08 09:51:29', '::1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
+(1, 'admin', 'Admin', '$2y$10$cAfXKsJuIaL7oiptG5iMGu/gg2wA2U37Pq.tMUGS4LQkWM3IMg4M.', NULL, NULL, NULL, NULL, '2021-06-11 09:30:39', '127.0.0.1', 'a:1:{i:0;s:1:\"1\";}', 'a:2:{s:5:\"theme\";s:9:\"nightmode\";s:3:\"css\";s:34:\"admin_template/nightmode/style.css\";}', NULL, '2021-06-04', '2021-06-04');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_group`
+-- Table structure for table `user_group`
 --
 
 CREATE TABLE `user_group` (
@@ -1552,7 +1671,7 @@ CREATE TABLE `user_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data untuk tabel `user_group`
+-- Dumping data for table `user_group`
 --
 
 INSERT INTO `user_group` (`group_id`, `group_name`, `input_date`, `last_update`) VALUES
@@ -1561,7 +1680,7 @@ INSERT INTO `user_group` (`group_id`, `group_name`, `input_date`, `last_update`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `visitor_count`
+-- Table structure for table `visitor_count`
 --
 
 CREATE TABLE `visitor_count` (
@@ -1573,17 +1692,26 @@ CREATE TABLE `visitor_count` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
+-- Dumping data for table `visitor_count`
+--
+
+INSERT INTO `visitor_count` (`visitor_id`, `member_id`, `member_name`, `institution`, `checkin_date`) VALUES
+(1, '1500001', 'Yoshua Ragil', 'STMIK Bina Patria', '2021-06-08 10:27:45'),
+(2, '1500001', 'Yoshua Ragil', 'STMIK Bina Patria', '2021-06-10 11:39:57'),
+(3, '1500002', 'Ricko', 'STMIK Bina Patria', '2021-06-10 12:38:43');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `backup_log`
+-- Indexes for table `backup_log`
 --
 ALTER TABLE `backup_log`
   ADD PRIMARY KEY (`backup_log_id`);
 
 --
--- Indeks untuk tabel `biblio`
+-- Indexes for table `biblio`
 --
 ALTER TABLE `biblio`
   ADD PRIMARY KEY (`biblio_id`),
@@ -1597,7 +1725,7 @@ ALTER TABLE `biblio` ADD FULLTEXT KEY `notes_ft_idx` (`notes`);
 ALTER TABLE `biblio` ADD FULLTEXT KEY `labels` (`labels`);
 
 --
--- Indeks untuk tabel `biblio_attachment`
+-- Indexes for table `biblio_attachment`
 --
 ALTER TABLE `biblio_attachment`
   ADD KEY `biblio_id` (`biblio_id`),
@@ -1605,7 +1733,7 @@ ALTER TABLE `biblio_attachment`
   ADD KEY `biblio_id_2` (`biblio_id`,`file_id`);
 
 --
--- Indeks untuk tabel `biblio_author`
+-- Indexes for table `biblio_author`
 --
 ALTER TABLE `biblio_author`
   ADD PRIMARY KEY (`biblio_id`,`author_id`),
@@ -1613,13 +1741,13 @@ ALTER TABLE `biblio_author`
   ADD KEY `author_id` (`author_id`);
 
 --
--- Indeks untuk tabel `biblio_custom`
+-- Indexes for table `biblio_custom`
 --
 ALTER TABLE `biblio_custom`
   ADD PRIMARY KEY (`biblio_id`);
 
 --
--- Indeks untuk tabel `biblio_log`
+-- Indexes for table `biblio_log`
 --
 ALTER TABLE `biblio_log`
   ADD PRIMARY KEY (`biblio_log_id`),
@@ -1635,13 +1763,13 @@ ALTER TABLE `biblio_log` ADD FULLTEXT KEY `rawdata` (`rawdata`);
 ALTER TABLE `biblio_log` ADD FULLTEXT KEY `additional_information` (`additional_information`);
 
 --
--- Indeks untuk tabel `biblio_relation`
+-- Indexes for table `biblio_relation`
 --
 ALTER TABLE `biblio_relation`
   ADD PRIMARY KEY (`biblio_id`,`rel_biblio_id`);
 
 --
--- Indeks untuk tabel `biblio_topic`
+-- Indexes for table `biblio_topic`
 --
 ALTER TABLE `biblio_topic`
   ADD PRIMARY KEY (`biblio_id`,`topic_id`),
@@ -1649,13 +1777,13 @@ ALTER TABLE `biblio_topic`
   ADD KEY `topic_id` (`topic_id`);
 
 --
--- Indeks untuk tabel `comment`
+-- Indexes for table `comment`
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`comment_id`);
 
 --
--- Indeks untuk tabel `content`
+-- Indexes for table `content`
 --
 ALTER TABLE `content`
   ADD PRIMARY KEY (`content_id`),
@@ -1664,7 +1792,7 @@ ALTER TABLE `content` ADD FULLTEXT KEY `content_title` (`content_title`);
 ALTER TABLE `content` ADD FULLTEXT KEY `content_desc` (`content_desc`);
 
 --
--- Indeks untuk tabel `files`
+-- Indexes for table `files`
 --
 ALTER TABLE `files`
   ADD PRIMARY KEY (`file_id`);
@@ -1672,33 +1800,33 @@ ALTER TABLE `files` ADD FULLTEXT KEY `file_name` (`file_name`);
 ALTER TABLE `files` ADD FULLTEXT KEY `file_dir` (`file_dir`);
 
 --
--- Indeks untuk tabel `files_read`
+-- Indexes for table `files_read`
 --
 ALTER TABLE `files_read`
   ADD PRIMARY KEY (`filelog_id`);
 
 --
--- Indeks untuk tabel `fines`
+-- Indexes for table `fines`
 --
 ALTER TABLE `fines`
   ADD PRIMARY KEY (`fines_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- Indeks untuk tabel `group_access`
+-- Indexes for table `group_access`
 --
 ALTER TABLE `group_access`
   ADD PRIMARY KEY (`group_id`,`module_id`);
 
 --
--- Indeks untuk tabel `holiday`
+-- Indexes for table `holiday`
 --
 ALTER TABLE `holiday`
   ADD PRIMARY KEY (`holiday_id`),
   ADD UNIQUE KEY `holiday_dayname` (`holiday_dayname`,`holiday_date`);
 
 --
--- Indeks untuk tabel `item`
+-- Indexes for table `item`
 --
 ALTER TABLE `item`
   ADD PRIMARY KEY (`item_id`),
@@ -1708,14 +1836,14 @@ ALTER TABLE `item`
   ADD KEY `biblio_id_idx` (`biblio_id`);
 
 --
--- Indeks untuk tabel `kardex`
+-- Indexes for table `kardex`
 --
 ALTER TABLE `kardex`
   ADD PRIMARY KEY (`kardex_id`),
   ADD KEY `fk_serial` (`serial_id`);
 
 --
--- Indeks untuk tabel `loan`
+-- Indexes for table `loan`
 --
 ALTER TABLE `loan`
   ADD PRIMARY KEY (`loan_id`),
@@ -1724,14 +1852,14 @@ ALTER TABLE `loan`
   ADD KEY `input_date` (`input_date`,`last_update`,`uid`);
 
 --
--- Indeks untuk tabel `loan_history`
+-- Indexes for table `loan_history`
 --
 ALTER TABLE `loan_history`
   ADD PRIMARY KEY (`loan_id`),
   ADD KEY `member_name` (`member_name`);
 
 --
--- Indeks untuk tabel `member`
+-- Indexes for table `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`member_id`),
@@ -1739,20 +1867,20 @@ ALTER TABLE `member`
   ADD KEY `member_type_id` (`member_type_id`);
 
 --
--- Indeks untuk tabel `member_custom`
+-- Indexes for table `member_custom`
 --
 ALTER TABLE `member_custom`
   ADD PRIMARY KEY (`member_id`);
 
 --
--- Indeks untuk tabel `mst_author`
+-- Indexes for table `mst_author`
 --
 ALTER TABLE `mst_author`
   ADD PRIMARY KEY (`author_id`),
   ADD UNIQUE KEY `author_name` (`author_name`,`authority_type`);
 
 --
--- Indeks untuk tabel `mst_carrier_type`
+-- Indexes for table `mst_carrier_type`
 --
 ALTER TABLE `mst_carrier_type`
   ADD PRIMARY KEY (`id`),
@@ -1760,14 +1888,14 @@ ALTER TABLE `mst_carrier_type`
   ADD KEY `code` (`code`);
 
 --
--- Indeks untuk tabel `mst_coll_type`
+-- Indexes for table `mst_coll_type`
 --
 ALTER TABLE `mst_coll_type`
   ADD PRIMARY KEY (`coll_type_id`),
   ADD UNIQUE KEY `coll_type_name` (`coll_type_name`);
 
 --
--- Indeks untuk tabel `mst_content_type`
+-- Indexes for table `mst_content_type`
 --
 ALTER TABLE `mst_content_type`
   ADD PRIMARY KEY (`id`),
@@ -1775,20 +1903,20 @@ ALTER TABLE `mst_content_type`
   ADD KEY `code` (`code`);
 
 --
--- Indeks untuk tabel `mst_custom_field`
+-- Indexes for table `mst_custom_field`
 --
 ALTER TABLE `mst_custom_field`
   ADD PRIMARY KEY (`dbfield`),
   ADD UNIQUE KEY `field_id` (`field_id`);
 
 --
--- Indeks untuk tabel `mst_frequency`
+-- Indexes for table `mst_frequency`
 --
 ALTER TABLE `mst_frequency`
   ADD PRIMARY KEY (`frequency_id`);
 
 --
--- Indeks untuk tabel `mst_gmd`
+-- Indexes for table `mst_gmd`
 --
 ALTER TABLE `mst_gmd`
   ADD PRIMARY KEY (`gmd_id`),
@@ -1796,41 +1924,41 @@ ALTER TABLE `mst_gmd`
   ADD UNIQUE KEY `gmd_code` (`gmd_code`);
 
 --
--- Indeks untuk tabel `mst_item_status`
+-- Indexes for table `mst_item_status`
 --
 ALTER TABLE `mst_item_status`
   ADD PRIMARY KEY (`item_status_id`),
   ADD UNIQUE KEY `item_status_name` (`item_status_name`);
 
 --
--- Indeks untuk tabel `mst_label`
+-- Indexes for table `mst_label`
 --
 ALTER TABLE `mst_label`
   ADD PRIMARY KEY (`label_id`),
   ADD UNIQUE KEY `label_name` (`label_name`);
 
 --
--- Indeks untuk tabel `mst_language`
+-- Indexes for table `mst_language`
 --
 ALTER TABLE `mst_language`
   ADD PRIMARY KEY (`language_id`),
   ADD UNIQUE KEY `language_name` (`language_name`);
 
 --
--- Indeks untuk tabel `mst_loan_rules`
+-- Indexes for table `mst_loan_rules`
 --
 ALTER TABLE `mst_loan_rules`
   ADD PRIMARY KEY (`loan_rules_id`);
 
 --
--- Indeks untuk tabel `mst_location`
+-- Indexes for table `mst_location`
 --
 ALTER TABLE `mst_location`
   ADD PRIMARY KEY (`location_id`),
   ADD UNIQUE KEY `location_name` (`location_name`);
 
 --
--- Indeks untuk tabel `mst_media_type`
+-- Indexes for table `mst_media_type`
 --
 ALTER TABLE `mst_media_type`
   ADD PRIMARY KEY (`id`),
@@ -1838,73 +1966,73 @@ ALTER TABLE `mst_media_type`
   ADD KEY `code` (`code`);
 
 --
--- Indeks untuk tabel `mst_member_type`
+-- Indexes for table `mst_member_type`
 --
 ALTER TABLE `mst_member_type`
   ADD PRIMARY KEY (`member_type_id`),
   ADD UNIQUE KEY `member_type_name` (`member_type_name`);
 
 --
--- Indeks untuk tabel `mst_module`
+-- Indexes for table `mst_module`
 --
 ALTER TABLE `mst_module`
   ADD PRIMARY KEY (`module_id`),
   ADD UNIQUE KEY `module_name` (`module_name`,`module_path`);
 
 --
--- Indeks untuk tabel `mst_place`
+-- Indexes for table `mst_place`
 --
 ALTER TABLE `mst_place`
   ADD PRIMARY KEY (`place_id`),
   ADD UNIQUE KEY `place_name` (`place_name`);
 
 --
--- Indeks untuk tabel `mst_publisher`
+-- Indexes for table `mst_publisher`
 --
 ALTER TABLE `mst_publisher`
   ADD PRIMARY KEY (`publisher_id`),
   ADD UNIQUE KEY `publisher_name` (`publisher_name`);
 
 --
--- Indeks untuk tabel `mst_relation_term`
+-- Indexes for table `mst_relation_term`
 --
 ALTER TABLE `mst_relation_term`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indeks untuk tabel `mst_servers`
+-- Indexes for table `mst_servers`
 --
 ALTER TABLE `mst_servers`
   ADD PRIMARY KEY (`server_id`);
 
 --
--- Indeks untuk tabel `mst_supplier`
+-- Indexes for table `mst_supplier`
 --
 ALTER TABLE `mst_supplier`
   ADD PRIMARY KEY (`supplier_id`),
   ADD UNIQUE KEY `supplier_name` (`supplier_name`);
 
 --
--- Indeks untuk tabel `mst_topic`
+-- Indexes for table `mst_topic`
 --
 ALTER TABLE `mst_topic`
   ADD PRIMARY KEY (`topic_id`),
   ADD UNIQUE KEY `topic` (`topic`,`topic_type`);
 
 --
--- Indeks untuk tabel `mst_voc_ctrl`
+-- Indexes for table `mst_voc_ctrl`
 --
 ALTER TABLE `mst_voc_ctrl`
   ADD PRIMARY KEY (`vocabolary_id`);
 
 --
--- Indeks untuk tabel `plugins`
+-- Indexes for table `plugins`
 --
 ALTER TABLE `plugins`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indeks untuk tabel `reserve`
+-- Indexes for table `reserve`
 --
 ALTER TABLE `reserve`
   ADD PRIMARY KEY (`reserve_id`),
@@ -1912,7 +2040,7 @@ ALTER TABLE `reserve`
   ADD KEY `item_code_idx` (`item_code`);
 
 --
--- Indeks untuk tabel `search_biblio`
+-- Indexes for table `search_biblio`
 --
 ALTER TABLE `search_biblio`
   ADD UNIQUE KEY `biblio_id` (`biblio_id`),
@@ -1928,7 +2056,7 @@ ALTER TABLE `search_biblio` ADD FULLTEXT KEY `collection_types` (`collection_typ
 ALTER TABLE `search_biblio` ADD FULLTEXT KEY `labels` (`labels`);
 
 --
--- Indeks untuk tabel `serial`
+-- Indexes for table `serial`
 --
 ALTER TABLE `serial`
   ADD PRIMARY KEY (`serial_id`),
@@ -1936,20 +2064,20 @@ ALTER TABLE `serial`
   ADD KEY `fk_serial_gmd` (`gmd_id`);
 
 --
--- Indeks untuk tabel `setting`
+-- Indexes for table `setting`
 --
 ALTER TABLE `setting`
   ADD PRIMARY KEY (`setting_id`),
   ADD UNIQUE KEY `setting_name` (`setting_name`);
 
 --
--- Indeks untuk tabel `stock_take`
+-- Indexes for table `stock_take`
 --
 ALTER TABLE `stock_take`
   ADD PRIMARY KEY (`stock_take_id`);
 
 --
--- Indeks untuk tabel `stock_take_item`
+-- Indexes for table `stock_take_item`
 --
 ALTER TABLE `stock_take_item`
   ADD PRIMARY KEY (`stock_take_id`,`item_id`),
@@ -1958,7 +2086,7 @@ ALTER TABLE `stock_take_item`
   ADD KEY `item_properties_idx` (`gmd_name`,`classification`,`coll_type_name`,`location`);
 
 --
--- Indeks untuk tabel `system_log`
+-- Indexes for table `system_log`
 --
 ALTER TABLE `system_log`
   ADD PRIMARY KEY (`log_id`),
@@ -1966,7 +2094,7 @@ ALTER TABLE `system_log`
   ADD KEY `id` (`id`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`),
@@ -1974,256 +2102,256 @@ ALTER TABLE `user`
   ADD KEY `realname` (`realname`);
 
 --
--- Indeks untuk tabel `user_group`
+-- Indexes for table `user_group`
 --
 ALTER TABLE `user_group`
   ADD PRIMARY KEY (`group_id`),
   ADD UNIQUE KEY `group_name` (`group_name`);
 
 --
--- Indeks untuk tabel `visitor_count`
+-- Indexes for table `visitor_count`
 --
 ALTER TABLE `visitor_count`
   ADD PRIMARY KEY (`visitor_id`),
   ADD KEY `member_id` (`member_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `backup_log`
+-- AUTO_INCREMENT for table `backup_log`
 --
 ALTER TABLE `backup_log`
   MODIFY `backup_log_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `biblio`
+-- AUTO_INCREMENT for table `biblio`
 --
 ALTER TABLE `biblio`
-  MODIFY `biblio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `biblio_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT untuk tabel `biblio_log`
+-- AUTO_INCREMENT for table `biblio_log`
 --
 ALTER TABLE `biblio_log`
-  MODIFY `biblio_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `biblio_log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
--- AUTO_INCREMENT untuk tabel `comment`
+-- AUTO_INCREMENT for table `comment`
 --
 ALTER TABLE `comment`
   MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `content`
+-- AUTO_INCREMENT for table `content`
 --
 ALTER TABLE `content`
   MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `files`
+-- AUTO_INCREMENT for table `files`
 --
 ALTER TABLE `files`
   MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `files_read`
+-- AUTO_INCREMENT for table `files_read`
 --
 ALTER TABLE `files_read`
   MODIFY `filelog_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `fines`
+-- AUTO_INCREMENT for table `fines`
 --
 ALTER TABLE `fines`
   MODIFY `fines_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `holiday`
+-- AUTO_INCREMENT for table `holiday`
 --
 ALTER TABLE `holiday`
   MODIFY `holiday_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT untuk tabel `item`
+-- AUTO_INCREMENT for table `item`
 --
 ALTER TABLE `item`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT untuk tabel `kardex`
+-- AUTO_INCREMENT for table `kardex`
 --
 ALTER TABLE `kardex`
   MODIFY `kardex_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `loan`
+-- AUTO_INCREMENT for table `loan`
 --
 ALTER TABLE `loan`
-  MODIFY `loan_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `loan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_author`
+-- AUTO_INCREMENT for table `mst_author`
 --
 ALTER TABLE `mst_author`
   MODIFY `author_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_carrier_type`
+-- AUTO_INCREMENT for table `mst_carrier_type`
 --
 ALTER TABLE `mst_carrier_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_coll_type`
+-- AUTO_INCREMENT for table `mst_coll_type`
 --
 ALTER TABLE `mst_coll_type`
   MODIFY `coll_type_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_content_type`
+-- AUTO_INCREMENT for table `mst_content_type`
 --
 ALTER TABLE `mst_content_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_custom_field`
+-- AUTO_INCREMENT for table `mst_custom_field`
 --
 ALTER TABLE `mst_custom_field`
   MODIFY `field_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_frequency`
+-- AUTO_INCREMENT for table `mst_frequency`
 --
 ALTER TABLE `mst_frequency`
   MODIFY `frequency_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_gmd`
+-- AUTO_INCREMENT for table `mst_gmd`
 --
 ALTER TABLE `mst_gmd`
-  MODIFY `gmd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `gmd_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_label`
+-- AUTO_INCREMENT for table `mst_label`
 --
 ALTER TABLE `mst_label`
   MODIFY `label_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_loan_rules`
+-- AUTO_INCREMENT for table `mst_loan_rules`
 --
 ALTER TABLE `mst_loan_rules`
-  MODIFY `loan_rules_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `loan_rules_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_media_type`
+-- AUTO_INCREMENT for table `mst_media_type`
 --
 ALTER TABLE `mst_media_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_member_type`
+-- AUTO_INCREMENT for table `mst_member_type`
 --
 ALTER TABLE `mst_member_type`
   MODIFY `member_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_module`
+-- AUTO_INCREMENT for table `mst_module`
 --
 ALTER TABLE `mst_module`
   MODIFY `module_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_place`
+-- AUTO_INCREMENT for table `mst_place`
 --
 ALTER TABLE `mst_place`
   MODIFY `place_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_publisher`
+-- AUTO_INCREMENT for table `mst_publisher`
 --
 ALTER TABLE `mst_publisher`
-  MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `publisher_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_relation_term`
+-- AUTO_INCREMENT for table `mst_relation_term`
 --
 ALTER TABLE `mst_relation_term`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_servers`
+-- AUTO_INCREMENT for table `mst_servers`
 --
 ALTER TABLE `mst_servers`
   MODIFY `server_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_supplier`
+-- AUTO_INCREMENT for table `mst_supplier`
 --
 ALTER TABLE `mst_supplier`
   MODIFY `supplier_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_topic`
+-- AUTO_INCREMENT for table `mst_topic`
 --
 ALTER TABLE `mst_topic`
   MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT untuk tabel `mst_voc_ctrl`
+-- AUTO_INCREMENT for table `mst_voc_ctrl`
 --
 ALTER TABLE `mst_voc_ctrl`
   MODIFY `vocabolary_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `reserve`
+-- AUTO_INCREMENT for table `reserve`
 --
 ALTER TABLE `reserve`
   MODIFY `reserve_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `serial`
+-- AUTO_INCREMENT for table `serial`
 --
 ALTER TABLE `serial`
   MODIFY `serial_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `setting`
+-- AUTO_INCREMENT for table `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `setting_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
--- AUTO_INCREMENT untuk tabel `stock_take`
+-- AUTO_INCREMENT for table `stock_take`
 --
 ALTER TABLE `stock_take`
   MODIFY `stock_take_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `system_log`
+-- AUTO_INCREMENT for table `system_log`
 --
 ALTER TABLE `system_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `user_group`
+-- AUTO_INCREMENT for table `user_group`
 --
 ALTER TABLE `user_group`
   MODIFY `group_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `visitor_count`
+-- AUTO_INCREMENT for table `visitor_count`
 --
 ALTER TABLE `visitor_count`
-  MODIFY `visitor_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `visitor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
