@@ -1,4 +1,7 @@
 <?php
+// url seting
+$sysconf['baseURL'] = '/slims9/index.php';
+
 // Main Setup
 $sysconf['template']['base'] 					= 'php';
 $sysconf['template']['responsive']  			= true;
